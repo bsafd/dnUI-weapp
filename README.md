@@ -91,8 +91,10 @@ dnUI组件库，微信小程序代码片段分享
 
 ## 赞赏
 
-![image](https://static.uookk.com/static/images/dnzs.jpg)
 
+|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) |
+| ------------ | 
+|  dnUI 想像你的想像 |
 
 #  部分截图
 
@@ -131,4 +133,7 @@ dnUI组件库，微信小程序代码片段分享
 
 ## 赞赏
 
-![image](https://static.uookk.com/static/images/dnzs.jpg)
+
+|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) |
+| ------------ | 
+|  dnUI 想像你的想像 |
