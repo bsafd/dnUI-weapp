@@ -17,9 +17,9 @@ dnUI组件库，微信小程序代码片段分享
 空了整理一份
 
 
-| ![](https://static.uookk.com/static/images/dnUI-QQgroup.jpg)  |
-| ------------ | 
-|  dnUI QQ交流群1：327284810 |
+| ![](https://static.uookk.com/static/images/dnUI-QQgroup.jpg)  | |
+| ------------ |  ------------ | 
+|  dnUI QQ交流群1：327284810 | |
 
 
 看很多都多端了，后续也同步支付宝小程序，百度小程序，头条小程序等
@@ -92,9 +92,9 @@ dnUI组件库，微信小程序代码片段分享
 ## 赞赏
 
 
-|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) |
-| ------------ | 
-|  dnUI 想像你的想像 |
+|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) | |
+| ------------ |  ------------ | 
+|  dnUI 想像你的想像 | |
 
 #  部分截图
 
@@ -134,6 +134,6 @@ dnUI组件库，微信小程序代码片段分享
 ## 赞赏
 
 
-|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) |
-| ------------ | 
-|  dnUI 想像你的想像 |
+|  ![赞赏](https://static.uookk.com/static/images/dnzs.jpg) | |
+| ------------ |  ------------ | 
+|  dnUI 想像你的想像 | |
