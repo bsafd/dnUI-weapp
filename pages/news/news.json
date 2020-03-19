@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新闻列表",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-loadmore": "../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../components/dn-Nomore/dn-Nomore"
+  }
+}

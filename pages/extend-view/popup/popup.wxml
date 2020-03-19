@@ -1,0 +1,117 @@
+<view class="container">
+  <!--header-->
+  <view class="dn-header">
+    <view class="dn-header-top">
+      <view class="dn-top-item" bindtap="screen">综合</view>
+      <view class="dn-top-item" bindtap="screen">销量</view>
+      <view class="dn-top-item" bindtap="screen">
+        <view>价格</view>
+        <view class="dn-price-arrow">
+          <dn-icon name="carettop" size="12" uk-class="dn-arrow dn-arrow-up" color="#444"></dn-icon>
+          <dn-icon name="caretdown" size="12" uk-class="dn-arrow dn-arrow-down" color="#444"></dn-icon>
+        </view>
+      </view>
+      <view class="dn-top-item" bindtap="screen">
+        <text class="text-bold">筛选</text>
+        <dn-icon name="screen" size="12" color="#5677fc" uk-class="ml-3px" bold="{{true}}"></dn-icon>
+      </view>
+    </view>
+    <view class="dn-header-bottom">
+      <view class="dn-bottom-item {{proDropIndex==0?'dn-btmItem-active':''}} " data-index="0" bindtap="btnDropChange">
+        <view class="dn-bottom-text {{proDropIndex==0?'text-active':''}}">品牌</view>
+        <dn-icon name="{{proDropIndex==0?'at':'ab'}}" size="14" color="{{proDropIndex==0?'#5677fc':'#444'}}" uk-class="ml-3px"></dn-icon>
+      </view>
+      <view class="dn-bottom-item {{proDropIndex==1?'dn-btmItem-active':''}}" data-index="1" bindtap="btnDropChange">
+        <view class="dn-bottom-text {{proDropIndex==1?'text-active':''}}">类型</view>
+        <dn-icon name="{{proDropIndex==1?'at':'ab'}}" size="14" color="{{proDropIndex==1?'#5677fc':'#444'}}" uk-class="ml-3px"></dn-icon>
+      </view>
+      <view class="dn-bottom-item {{proDropIndex==2?'dn-btmItem-active':''}}" data-index="2" bindtap="btnDropChange">
+        <view class="dn-bottom-text {{proDropIndex==2?'text-active':''}}">适用手机</view>
+        <dn-icon name="{{proDropIndex==2?'at':'ab'}}" size="14" color="{{proDropIndex==2?'#5677fc':'#444'}}" uk-class="ml-3px"></dn-icon>
+      </view>
+    </view>
+
+  </view>
+
+  <!--header-->
+
+  <!--header 顶部下拉选择框-->
+
+  <dn-top-dropdown show="{{dropShow}}" paddingbtm="110" translatey="216" bind:close="btnCloseDrop">
+    <scroll-view class="dn-scroll-box" scroll-y scroll-top="{{scrollTop}}">
+      
+      <view class="dn-drop-item  {{item.selected?'text-bold':''}}" wx:for="{{proDropData}}" wx:key="{{index}}" catchtap="btnSelected" data-index="{{index}}">
+        <dn-icon name="yes" size="16" color="#5677fc" bold="{{true}}" visible="{{item.selected}}" uk-class="v-middle"></dn-icon>
+        <text class="ml-3px v-middle">{{item.name}}</text>
+      </view>
+     
+    </scroll-view>
+    <view class="dn-drop-btnbox">
+      <view class="dn-drop-btn btn-white" hover-class="dn-white-hover" hover-stay-time="150" bindtap="reset">重置</view>
+      <view class="dn-drop-btn btn-primary" hover-class="btn-hover" hover-stay-time="150" bindtap="btnCloseDrop">确定</view>
+    </view>
+  </dn-top-dropdown>
+  <!--header 顶部下拉选择框-->
+
+  <view class="top-dropdown">
+    <dn-button type="white" shape="circle" data-index="0" bindtap="btnDropChange">顶部下拉列表</dn-button>
+  </view>
+
+  <!--下拉选择框 dropdownlist-->
+  <view class="dn-drop-input-box">
+    <dn-dropdown-list show="{{dropdownShow}}" top="94" height="400">
+      <dn-button type="white" shape="circle" slot="selectionbox" bind:click="dropDownList">下拉选择框
+        <dn-icon name="turningdown" size="20" uk-class="dn-animation {{dropdownShow?'dn-animation-show':''}}"></dn-icon>
+      </dn-button>
+      <view slot="dropdownbox" class="dn-selected-list">
+        <scroll-view scroll-y class="h-200px">
+          <block wx:for="{{dropdownlist}}" wx:key="{{index}}">
+            <dn-list dn-cell-class="dn-selected-item" border bind:click="dropDownList" last="{{dropdownlist.length-1==index}}">
+              <dn-icon name="{{item.icon}}" size="{{item.size}}" color="{{item.color}}"></dn-icon>
+              <text class="ml-3px-20">{{item.name}}</text>
+            </dn-list>
+          </block>
+        </scroll-view>
+      </view>
+    </dn-dropdown-list>
+  </view>
+  <!--下拉选择框-->
+
+  <view class="dn-share-box">
+    <dn-button type="white" shape="circle" bind:click="popup">底部分享弹窗</dn-button>
+  </view>
+
+
+  <!--底部分享弹窗-->
+  <dn-bottom-popup show="{{popupShow}}" bind:close="popup">
+    <view class="dn-share">
+      <view class="dn-share-title">分享到</view>
+      <scroll-view scroll-x>
+        <view class="dn-share-top">
+          <view class="dn-share-item {{shareList[0].share.length-1===index?'m-0':''}}" wx:for="{{shareList[0].share}}" wx:key="{{index}}" bindtap="popup">
+            <view class="dn-share-icon" hover-class="dn-hover" hover-stay-time="150">
+              <dn-icon name="{{item.icon}}" color="{{item.color}}" size="{{item.size?item.size:36}}"></dn-icon>
+            </view>
+            <view class="dn-share-text">{{item.name}}</view>
+          </view>
+          <view class="dn-empty">!</view>
+        </view>
+      </scroll-view>
+
+      <scroll-view scroll-x class="my-20-75">
+        <view class="dn-share-bottom">
+          <view class="dn-share-item {{shareList[1].operate.length-1===index?'m-0':''}}" wx:for="{{shareList[1].operate}}" wx:key="{{index}}" bindtap="popup">
+            <view class="dn-share-icon" hover-class="dn-hover" hover-stay-time="150">
+              <dn-icon name="{{item.icon}}" color="#404040" size="{{item.size}}" bold="{{index===2}}"></dn-icon>
+            </view>
+            <view class="dn-share-text">{{item.name}}</view>
+          </view>
+        </view>
+
+      </scroll-view>
+      <view class="dn-btn-cancle" bindtap="popup">取消</view>
+    </view>
+  </dn-bottom-popup>
+  <!--底部分享弹窗-->
+
+</view>

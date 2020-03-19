@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#ebedf6",
+  "backgroundColorBottom": "#ebedf6",
+  "navigationBarTitleText": "技术交流群",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge",
+    "dn-loadmore": "../../../components/dn-Loadmore/dn-Loadmore"
+  }
+}

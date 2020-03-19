@@ -1,0 +1,390 @@
+<view>
+  <!--header-->
+  <view class="dnHeader" style="height:{{height}}px;background:rgba(255,255,255,{{opcity}})">
+    <view class="dnHeaderTitle" style="padding-top:{{top}}px; opacity:{{opcity}}">
+      我的
+    </view>
+    <view class="dnHeaderIcon" style="margin-top:{{top}}px; opacity:{{opcity}}">
+      <dn-icon name="xiangzuo" color="{{opcity>=1?'#000':'#fff'}}" bindtap="back" size="20" class="dn-icon" style="background:rgba(0, 0, 0, {{iconOpcity}});"></dn-icon>
+    </view>
+  </view>
+  <!--header-->
+  <view class="dn-mybgBox">
+    <image src="/static/images/bg.jpg" class="dn-mybg" mode="widthFix"></image>
+    <view class="dn-headerCenter">
+      <image src="/static/demo/3.jpg" class="dn-avatar" bindtap="href" data-type="3"></image>
+      <view class="dn-info">
+        <view class="dn-nickname">
+          <text>DaNiu</text>
+          <dn-badge value="VIP" top="-22rpx" flash right="-10rpx" bgcolor="warning" uk-class="pos-rlt"></dn-badge>
+        </view>
+        <view class="dn-explain">这家伙很懒…</view>
+      </view>
+      <view class="dn-setBox">
+        <view class="pos-rlt" bindtap="href" data-type="1">
+          <dn-badge value="1" user-slot shape="circle" right="14rpx" bgcolor="white">
+            <dn-icon name="liuyan" color="#fff" size="{{20}}"></dn-icon>
+          </dn-badge>
+          <!-- <view class="dn-badge bg-white text-danger">1</view> -->
+        </view>
+        <view class="pos-rlt" bindtap="href" data-type="2">
+          <dn-icon name="shezhi" color="#fff" size="{{20}}"></dn-icon>
+        </view>
+      </view>
+    </view>
+    <view class="dn-headerBtm" bindtap="href" data-type="5">
+      <view class="dn-btmItem">
+        <view class="dn-btmNum">25</view>
+        <view class="dn-btmText">收藏夹</view>
+      </view>
+      <view class="dn-btmItem">
+        <view class="dn-btmNum">22</view>
+        <view class="dn-btmText">店铺关注</view>
+      </view>
+      <view class="dn-btmItem">
+        <view class="dn-btmNum">3</view>
+        <view class="dn-btmText">喜欢的内容</view>
+      </view>
+      <view class="dn-btmItem">
+        <view class="dn-btmNum">44</view>
+        <view class="dn-btmText">足迹</view>
+      </view>
+    </view>
+  </view>
+  <view class="dn-contentBox">
+    <view class="dn-box dn-orderBox">
+      <dn-list-cell arrow="{{true}}" padding="16rpx 30rpx" lineRight bind:click="href" data-type="4">
+        <view class="dn-media-body fs-15 text-bold">我的订单</view>
+        <view class="mr-4 text-muted fs-13">查看全部订单</view>
+      </dn-list-cell>
+
+      <view class="dn-grid dn-grid5 px-2">
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <dn-badge value="1" user-slot shape="circle" right="30rpx" top="-10rpx" uk-class="pos-abs">
+              <dn-icon name="pay" size="{{30}}"></dn-icon>
+            </dn-badge>
+            <text class="fs-12">待付款</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <dn-badge value="1" user-slot shape="circle" right="30rpx" top="-10rpx" uk-class="pos-abs">
+              <dn-icon name="baoguo" size="{{30}}"></dn-icon>
+            </dn-badge>
+            <text class="fs-12">待发货</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="guoqujian" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">待收货</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <dn-badge value="12" user-slot shape="circle" right="30rpx" top="-10rpx" uk-class="pos-abs">
+              <dn-icon name="liuyan" size="{{30}}"></dn-icon>
+            </dn-badge>
+            <text class="fs-12">评价</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="bg-white text-center py-3 ">
+            <dn-badge value="2" user-slot shape="circle" right="30rpx" top="-10rpx" uk-class="pos-abs">
+              <dn-icon name="shakehands" size="{{30}}"></dn-icon>
+            </dn-badge>
+            <text class="fs-12">退款/售后</text>
+          </view>
+        </view>
+
+      </view>
+
+     
+    </view>
+
+    <view class="dn-box dn-assetsBox" bindtap="href" data-type="6">
+      <dn-list-cell last="{{true}}" padding="16rpx 30rpx" hover="{{false}}">
+        <text class="text-bold fs-15">我的资产</text>
+      </dn-list-cell>
+
+      <view class="dn-grid dn-grid5 px-2 mt-1">
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-1">
+            <dn-badge dot user-slot shape="circle" right="50rpx" top="4rpx" uk-class="pos-abs">
+              <text class="h5">3</text>
+            </dn-badge>
+            <text class="fs-12">优惠券</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-1">
+            <dn-badge dot user-slot shape="circle" right="50rpx" top="4rpx" uk-class="pos-abs">
+              <text class="h5">7</text>
+            </dn-badge>
+            <text class="fs-12">积分</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-1">
+            <view class="">
+              <text class="h5">1</text>
+            </view>
+            <text class="fs-12">礼品卡</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-1">
+            <view class="">
+              <text class="h5">0</text>
+            </view>
+            <text class="fs-12">红包</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-1">
+            <view class="">
+              <text class="h5">20</text>
+            </view>
+            <text class="fs-12">津贴</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class="dn-box dn-assetsBox" bindtap="href" data-type="6">
+      <dn-list-cell last="{{true}}" padding="16rpx 30rpx" hover="{{false}}">
+        <text class="text-bold fs-15">我的资产</text>
+      </dn-list-cell>
+
+      <view class="dn-orderList mt-2" style="height:90rpx;">
+        <view class="dn-orderItem">
+          <view class="dn-assetsNum">
+            <text>3</text>
+            <view class="dn-badgeDot"></view>
+          </view>
+          <view class="dn-assetsText">优惠券</view>
+        </view>
+        <view class="dn-orderItem">
+          <view class="dn-assetsNum">
+            <text>7</text>
+            <view class="dn-badgeDot"></view>
+          </view>
+          <view class="dn-assetsText">积分</view>
+        </view>
+        <view class="dn-orderItem">
+          <view class="dn-assetsNum">
+            <text>0</text>
+          </view>
+          <view class="dn-assetsText">红包</view>
+        </view>
+        <view class="dn-orderItem">
+          <view class="dn-assetsNum">
+            <text>1</text>
+          </view>
+          <view class="dn-assetsText">礼品卡</view>
+        </view>
+        <view class="dn-orderItem">
+          <view class="dn-assetsNum">
+            <text>20</text>
+            <view class="dn-badgeDot"></view>
+          </view>
+          <view class="dn-assetsText">津贴</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-box  mt-2" bindtap="href" data-type="7">
+      <dn-list-cell arrow="{{true}}" padding="16rpx 30rpx" lineRight="{{true}}">
+        <view class="dn-media-body fs-15 text-bold">常用工具</view>
+        <view class="mr-4 text-muted fs-13">查看更多</view>
+       
+      </dn-list-cell>
+
+      <view class="dn-grid dn-grid4 p-2">
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3">
+            <dn-badge value="签到" bgcolor="gd-warning" user-slot uk-class="pos-abs">
+              <dn-icon name="gift" size="{{30}}"></dn-icon>
+            </dn-badge>
+            <text class="fs-12">免费领好礼</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="coinpurse" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">钱包</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="lingquanzhongxin" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">领券中心</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="service" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">客服服务</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="moneybag" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">每日返现</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="goodsnew" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">超值拼团</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="tuikuan1" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">闲置换钱</text>
+          </view>
+        </view>
+
+        <view class="dn-gridItem" bindtap="href" data-type="4">
+          <view class="text-center py-3 ">
+            <view class="">
+              <dn-icon name="dingdan" size="{{30}}" uk-class=""></dn-icon>
+            </view>
+            <text class="fs-12">开发票</text>
+          </view>
+        </view>
+
+       
+      </view>
+
+      <!-- <view class="dn-orderList tui-flex-wrap">
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_gift_3x.png" class="tui-tool-icon"></image>
+            <image src="/static/images/mall/my/icon_tab_3x.png" class="dn-productList-icon"></image>
+          </view>
+          <view class="tui-tool-text">免费领好礼</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_purse_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">钱包</view>
+        </view>
+        <view class=" tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_ticket_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">领券中心</view>
+        </view>
+        <view class=" tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_kefu_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">客服服务</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_fanxian_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">每日返现</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_tuan_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">超值拼团</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_zhihuan_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">闲置换钱</view>
+        </view>
+        <view class="tui-tool-item">
+          <view class="pos-rlt">
+            <image src="/static/images/mall/my/icon_kaipiao_3x.png" class="tui-tool-icon"></image>
+          </view>
+          <view class="tui-tool-text">开发票</view>
+        </view>
+      </view> -->
+    </view>
+
+    <!--为你推荐-->
+    <dn-divider size="{{28}}" bold="{{true}}" color="#333" width="50%">为你推荐</dn-divider>
+    <view class="dn-productList">
+      <view class="dn-productContainer">
+        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+          <!--商品列表-->
+          <view class="dn-productItem" hover-class="hover" hover-start-time="150" bindtap="detail">
+            <image src="/static/demo/{{item.img}}.jpg" class="dn-productImage" mode="widthFix" />
+            <view class="dn-productContent">
+              <view class="dn-productTitle">{{item.name}}</view>
+              <view>
+                <view class="pt-2">
+                  <text class="dn-productPrice">￥{{item.sale}}</text>
+                  <text class="dn-factoryPrice">￥{{item.factory}}</text>
+                </view>
+                <view class="dn-productPay">{{item.payNum}}人付款</view>
+              </view>
+            </view>
+          </view>
+          <!--商品列表-->
+          <!-- <template is="productItem" data="{{item,index:index}}" /> -->
+        </block>
+      </view>
+      <view class="dn-productContainer">
+        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+          <!--商品列表-->
+          <view class="dn-productItem" hover-class="hover" hover-start-time="150" bindtap="detail">
+            <image src="/static/demo/{{item.img}}.jpg" class="dn-productImage" mode="widthFix" />
+            <view class="dn-productContent">
+              <view class="dn-productTitle">{{item.name}}</view>
+              <view>
+                <view class="pt-2">
+                  <text class="dn-productPrice">￥{{item.sale}}</text>
+                  <text class="dn-factoryPrice">￥{{item.factory}}</text>
+                </view>
+                <view class="dn-productPay">{{item.payNum}}人付款</view>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!--加载loadding-->
+    <dn-loadmore visible="{{loadding}}" index="{{3}}" type="red"></dn-loadmore>
+  </view>
+</view>

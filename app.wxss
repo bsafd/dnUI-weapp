@@ -1,0 +1,64 @@
+/**app.wxss**/
+@import '/static/css/dncolor.wxss';
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.phcolor {
+  color: var(--text-disabled);
+  font-size: 32rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.opcity {opacity: 0.5;}
+.hover {background: #f7f7f9 !important;}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/*列表统一样式 */
+
+.list-item {
+  position: relative;
+}
+
+.list-item::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: 0;
+  right: 0;
+  left: 30rpx;
+}
+
+.last::after {
+  border-bottom: 0 !important;
+}
+
+/*按钮样式*/
+
+.btn-primary {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(-90deg, var(--info), var(--info-dk));
+  border-radius: 45rpx;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.btn-hover {
+  color: var(--text-hold);
+  background: linear-gradient(-90deg, var(--indigo), var(--dpurple));
+}
+

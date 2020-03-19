@@ -1,0 +1,10 @@
+{
+  "backgroundColorTop": "#FFDC1B",
+  "backgroundColorBottom": "#ffffff",
+  "navigationBarBackgroundColor": "#FFDC1B",
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "dn-icon": "../../components/dn-Icon/dn-Icon",
+    "dn-button": "../../components/dn-Button/dn-Button"
+  }
+}

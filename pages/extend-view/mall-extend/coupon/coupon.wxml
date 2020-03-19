@@ -1,0 +1,102 @@
+<view class="container">
+  <image src="/static/images/bg.jpg" mode="widthFix" class="w-100"></image>
+  <view class="w-100 p-2">
+    <radio-group>
+      <label wx:for="{{2}}" wx:key="{{index}}">
+
+        <dn-coupon waveleft waveright bgclass="bg-danger-lt"  userSlot pos="{{false}}" uk-class="mb-2">
+          <view slot="body" class="text-center">
+            <view class="h6 text-bold text-danger my-2">
+              <text class="" wx:if="{{index%2==0}}">¥</text>
+              <text class="h2 ">{{index%2==0?50*(index+1):2.5}}</text>
+              <text class="" wx:if="{{index%2!=0}}">折</text>
+            </view>
+            <view class="fs-12">满38元可用</view>
+          </view>
+          <view slot="get" class="dn-coupon-item-right p-0">
+            <view class="dn-coupon-content">
+              <view class="dn-coupon-title-box">
+                <view class="dn-coupon-btn">全场券</view>
+                <view class="dn-coupon-title">全部商品可用</view>
+              </view>
+              <view class="dn-coupon-rule text-sub">
+                <view class="dn-rule-box mb-1">
+                  <view class="dn-coupon-circle"></view>
+                  <view class="dn-coupon-text pl-1">不可叠加使用</view>
+                </view>
+                <view class="dn-rule-box">
+                  <view class="dn-coupon-circle"></view>
+                  <view class="dn-coupon-text pl-1">{{index%2==0?"自领取之日起30天有效":"2019-11-01至2019-12-31"}}</view>
+                </view>
+              </view>
+            </view>
+            <radio value="1" class="dn-coupon-radio" color="#e41f19" checked="{{index%2==0}}" />
+          </view>
+        </dn-coupon>
+      </label>
+    </radio-group>
+
+
+    <view class="" wx:for="{{5}}" wx:key="{{index}}">
+
+      <dn-coupon waveleft waveright bgclass="{{index>2?'bg-grey-lt':'bg-white'}}" type="{{parse.getSignUrl(index)}}" userSlot pos="{{false}}" uk-class="mb-2">
+        <view slot="body" class="text-center">
+          <view class="h6 text-bold text-danger my-2 {{index>2?'text-sub':''}}">
+            <text class="" wx:if="{{index%2==0}}">¥</text>
+
+            <!--面值>4位数的时候为true -->
+            <text class=" {{false?'h4':'h2'}} ">{{index%2==0?100*(index+1):9-index+1}}</text>
+            <text class="" wx:if="{{index%2!=0}}">折</text>
+          </view>
+          <view class="fs-12">满88元可用</view>
+        </view>
+        <view slot="get" class="dn-coupon-item-right p-0">
+          <view class="dn-coupon-content">
+            <view class="dn-coupon-title-box">
+              <view class="dn-coupon-btn {{index>2?'bg-light':''}}">全场券</view>
+              <view class="dn-coupon-title">全部商品可用</view>
+            </view>
+            <view class="dn-coupon-rule text-sub">
+              <view class="dn-rule-box mb-1">
+                <view class="dn-coupon-circle"></view>
+                <view class="dn-coupon-text pl-1">不可叠加使用</view>
+              </view>
+              <view class="dn-rule-box">
+                <view class="dn-coupon-circle"></view>
+                <view class="dn-coupon-text pl-1">{{index%2==0?"自领取之日起30天有效":"2020-01-01至2020-12-31"}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="dn-btn-box" wx:if="{{index<=2}}">
+            <dn-button type="danger" width="160rpx" height="50rpx" fontsize="24" plain="{{index%2!=0}}" shape="circle">{{index%2!=0?'立即使用':'立即领取'}}</dn-button>
+          </view>
+        </view>
+      </dn-coupon>
+
+      
+
+    </view>
+
+  </view>
+
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="{{3}}" type="red"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn}}" bgcolor="#f5f5f5"></dn-nomore>
+  <!--加载loadding-->
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getSignUrl: function(index) {
+      var couponType = "";
+      if (index === 1) {
+        couponType = "already"
+      } else if (index == 3) {
+        couponType = "expired"
+      } else if (index == 4) {
+        couponType = "useed"
+      }
+      return couponType
+    }
+  }
+</wxs>

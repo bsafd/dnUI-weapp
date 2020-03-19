@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "滚动消息",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon"
+  }
+}

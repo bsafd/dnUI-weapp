@@ -1,0 +1,6 @@
+<view class="dn-media {{align?'dn-media-center':''}} {{border?'dn-media-border':''}} {{indent ? indent:''}} {{bgclass ? bgclass : ''}} {{arrow?'dn-media-list-arrow':''}} {{last?'dn-media-border-no':''}} {{lineLeft?'dn-media-lineleft':''}} {{lineRight?'dn-media-lineright':''}} uk-class" 
+hover-class="{{hover?hoverClass:''}}" style="font-size: {{ size }}rpx;{{ color ? 'color:'+ color +' !important;' : '' }}padding:{{padding}};"
+  hover-stay-time="150" bindtap="handleClick">
+  <slot></slot>
+</view>
+

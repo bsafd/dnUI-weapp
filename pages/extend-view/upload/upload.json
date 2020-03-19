@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "图片上传",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-upload": "../../../components/dn-Upload/dn-Upload"
+  }
+}

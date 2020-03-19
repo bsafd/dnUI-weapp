@@ -1,0 +1,170 @@
+<!--pages/css/coupon/coupon.wxml-->
+<view class="container">
+  
+  <dn-coupon waveleft waveright type="useed" bgclass="bg-danger-lt" price="5" useprice="50" usetime="2020.02.01-2020.12.12" uk-class="m-2"></dn-coupon>
+  <dn-coupon waveleft waveright type="expired" bgclass="bg-info-lt" price="50" useprice="250" usetime="2020.02.01-2020.12.12" uk-class="m-2"></dn-coupon>
+  <dn-coupon waveleft waveright type="already" bgclass="bg-success-lt" price="100" useprice="500" usetime="2020.02.01-2020.12.12" uk-class="m-2"></dn-coupon>
+
+
+
+  <view class="text-center my-3">自定义</view>
+
+  <dn-coupon waveleft waveright type="already" userSlot pos="{{false}}" uk-class="m-2">
+    <view slot="body" class="text-center">
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20</text>
+      </view>
+      <view class="fs-12">满150元使用</view>
+    </view>
+    <view slot="get" class="">
+      <view class="my-4">
+        <text class="text-bold">全场券</text>
+        <text class="ml-1">全部商品可用</text>
+      </view>
+      <view class="fs-12 my-2">有效期: 2020.02.01至2020.12.12</view>
+      <view class="fs-12">自领取之日起30天有效</view>
+    </view>
+      
+  </dn-coupon>
+
+  <dn-coupon waveleft type="already" userSlot uk-class="m-2">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+
+  <dn-coupon waveleft type="already" userSlot bgclass="bg-success" uk-class="m-2">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">15.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+
+  <dn-coupon waveleft type="already" userSlot bgclass="bg-info" uk-class="m-2">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+
+  
+
+  <dn-coupon waveleft type="already" userSlot bgclass="coupon-yellow" uk-class="m-2 text-white">
+    <view slot="body">
+      <view class="text-bold">自定义背景色</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+  
+  <dn-coupon waveleft type="already" userSlot bgclass="coupon-bgwarning" uk-class="m-2 text-white">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+
+  <dn-coupon waveleft type="already" userSlot bgclass="coupon-bgdanger" uk-class="m-2 text-white">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+  
+  
+  <dn-coupon waveleft type="already" userSlot bgclass="coupon-bgsuccess" uk-class="m-2 text-white">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+
+  <dn-coupon waveleft type="already" userSlot bgclass="coupon-bginfo" uk-class="m-2 text-white">
+    <view slot="body">
+      <view class="text-bold">喵眼旗舰店</view>
+      <view class="h6 text-bold my-2">
+        <text class="">¥</text>
+        <text class="h2">20.00</text>
+        <text class="ml-1">通用券</text>
+      </view>
+      <view class="fs-12">全场通用,订单满150元使用</view>
+    </view>
+    <view slot="get" class="text-center">
+      <view class="h5 text-bold mb-1">副券</view>
+      <view class="fs-12 text-muted">2020.02.01</view>
+      <view class="fs-12 text-muted">2020.12.12</view>
+    </view>  
+  </dn-coupon>
+  
+</view>

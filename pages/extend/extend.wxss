@@ -1,0 +1,23 @@
+@import '/static/css/dnui.wxss';
+page {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.container {
+  width: 100%;
+  padding: 40rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bg-gd-1 {background-image:linear-gradient(45deg,#00c3ff,#ffff1c) !important;background-repeat:repeat-x}
+.bg-gd-2 {background:#f83f37;background:linear-gradient(45deg,#f83f37,#ab26aa) !important;background:-webkit-bg-linear-gradient(45deg,#f83f37,#ab26aa) !important;}
+.bg-gd-3 {background:#00acf0;background:linear-gradient(45deg,#00acf0,#6640b2) !important;background:-webkit-bg-linear-gradient(45deg,#00acf0,#6640b2) !important;}
+.bg-gd-4 {background:#1ebccd;background:linear-gradient(45deg,#1ebccd,#3a55b1) !important;background:-webkit-bg-linear-gradient(45deg,#1ebccd,#3a55b1) !important;}
+.bg-gd-5 {background:#22af47;background:linear-gradient(45deg,#22af47,#d0d962) !important;background:-webkit-bg-linear-gradient(45deg,#22af47,#d0d962) !important;}
+.bg-gd-6 {background:#ffbf36;background:linear-gradient(45deg,#ffbf36,#ff6028) !important;background:-webkit-bg-linear-gradient(45deg,#ffbf36,#ff6028) !important;}

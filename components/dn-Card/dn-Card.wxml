@@ -1,0 +1,51 @@
+
+
+<view class="dn-card {{full?'dn-card-full':''}} {{border?'dn-card-border':''}} {{round?'dn-card-round':''}} uk-class"
+   bindtap="handleClick" 
+   bindlongtap="longTap" 
+   hover-class="{{hoverClass?hoverClass:'ukhover'}}"
+   hover-start-time="{{hoverstime?'hoverstime':''}}"
+   hover-end-time="{{hoverstime?'hoveretime':''}}"
+   >
+  <view class="dn-card-img{{imagetype? '-'+imagetype : ''}}" wx:if="{{ imagetype=='top' }}">
+    <image mode="aspectFill" class="" style="width:100%;{{ imageheight?'height:'+imageheight+'rpx;':'' }}"  src='{{ image }}'/>
+  </view>
+  <view class="dn-card-media {{headerclass?headerclass:''}}" wx:if="{{avatar && title}}">
+    <image src='{{avatar}}' class="dn-card-media-image {{avatarclass?avatarclass:''}}" mode="aspectFill" wx:if="{{avatar}}" style=""></image>
+    <view class="dn-card-media-body">
+      <text wx:if="{{title}}" class="{{ titleclass ? titleclass : '' }}">{{title}}</text>
+      <view class="dn-card-subtitle" wx:if="{{ subtitle }}">{{ subtitle }}</view>
+    </view>
+    <text class="dn-card-sidetitle" wx:if="{{sidetitle}}">{{ sidetitle }}</text>
+  </view>
+  <view class="dn-card-header {{headerclass?headerclass:''}}" wx:if="{{!avatar && title}}">
+    <view class="dn-card-title">
+      <text class="{{titleclass ? titleclass : ''}}">{{title}}</text>
+      <view class="dn-card-subtitle" wx:if="{{ subtitle }}">{{ subtitle }}</view>
+    </view>
+    <view class="card-controls">
+      <text class="dn-card-sidetitle" wx:if="{{ sidetitle }}" style="margin-left:20rpx;">{{ sidetitle }}</text>
+    </view>
+  </view>
+  <view class="dn-card-img{{imagetype? '-'+imagetype : ''}}" wx:if="{{ image && imagetype!='top' && imagetype!='bottom' }}">
+    <image mode="aspectFill" class="" style="width:100%;{{ imageheight?'height:'+imageheight+'rpx;':'' }}"  src='{{ image }}'/>
+  </view>
+  <block wx:if="{{ slotcontent }}">
+    <view class="dn-card-content">
+      <slot name="content"></slot>
+    </view>
+  </block>
+  <block wx:if="{{ slotbody }}">
+    <view class="dn-card-body">
+      <slot name="body"></slot>
+    </view>
+  </block>
+  <block wx:if="{{ slotfooter }}">
+    <view class="dn-card-footer">
+      <slot name="footer"></slot>
+    </view>
+  </block>
+  <view class="dn-card-img{{imagetype? '-'+imagetype : ''}}" wx:if="{{ image && imagetype=='bottom' }}">
+    <image mode="aspectFill" class="" style="width:100%;{{ imageheight?'height:'+imageheight+'rpx;':'' }}"  src='{{ image }}'/>
+  </view>
+</view>

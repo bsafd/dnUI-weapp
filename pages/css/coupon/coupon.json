@@ -1,0 +1,10 @@
+{
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Coupon-优惠券",
+  "usingComponents": {
+    "dn-coupon": "../../../components/dn-Coupon/dn-Coupon"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "解锁DnUI",
+  "disableScroll": true,
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-keyboard": "../../../components/dn-Keyboard/dn-Keyboard",
+    "dn-keyboard-input": "../../../components/dn-KeyboardInput/dn-KeyboardInput"
+  }
+}

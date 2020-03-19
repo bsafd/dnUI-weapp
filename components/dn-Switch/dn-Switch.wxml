@@ -1,0 +1,11 @@
+<view class="dn-Switch is-{{type}} is-{{checked?'open':'close'}} is-{{size}} {{disabled?'is-disabled':''}} {{simple?'is-simple':''}} dn-switch-class" bindtap="{{disabled?'':'change'}}">
+    <view class="dn-Switch-Bg {{checked?'switchopen':'switchclose'}} {{checked?'bg-'+activeColor:'bg-'+color}}">
+        <i wx:if="{{checked && activeicon}}" class="switchicon switchopen {{activeicon}} icon-class"></i>
+        <i wx:if="{{!checked && icon}}" class="switchicon switchclose {{icon}} icon-class"></i>
+        <i wx:if="{{checked && activelabel}}" class="switchicon switchlabel switchopen">{{activelabel}}</i>
+        <i wx:if="{{!checked && label}}" class="switchicon switchlabel switchclose">{{label}}</i>
+    </view>
+    <view class="dn-Switch-Btn">
+        <i wx:if="{{loading}}" class="icon dn-loading-1"></i>
+    </view>
+</view>

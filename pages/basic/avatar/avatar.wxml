@@ -1,0 +1,231 @@
+<view class="container">
+  <vtu-navbar title="Switch"></vtu-navbar>
+  <view class="">
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">基础</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" square></dn-avatar>
+          <view class="fs-12 text-sub mt-1">square</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" round></dn-avatar>
+          <view class="fs-12 text-sub mt-1">round</view>
+        </view>
+      </view>
+    </view>
+
+    
+
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">边框</view>
+      <view class="dn-card-body bg-dark d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" border></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" square border></dn-avatar>
+          <view class="fs-12 text-sub mt-1">square</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" round border></dn-avatar>
+          <view class="fs-12 text-sub mt-1">round</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">文字</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar content="常规"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar content="UK" color="#5556F7" square></dn-avatar>
+          <view class="fs-12 text-sub mt-1">color</view>
+        </view>
+        <view class="">
+          <dn-avatar content="UK" color="#ff5722" bgcolor="#FEEDED" round></dn-avatar>
+          <view class="fs-12 text-sub mt-1">bgcolor</view>
+        </view>
+        <view class="">
+          <dn-avatar content="UK" color="#FFDC1B" bgclass="bg-dark" round></dn-avatar>
+          <view class="fs-12 text-sub mt-1">bgclass</view>
+        </view>
+      </view>
+
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar content="UK" color="#fff" bgclass="bg-info" fontsize="50" round size="lg"></dn-avatar>
+          <view class="fs-12 text-sub mt-1 ">fontsize</view>
+        </view>
+        <view class="">
+          <dn-avatar content="UK" color="#000" bgclass="bg-warning" fontsize="50" size="lg" weight="100"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">weight</view>
+        </view>
+        <view class="">
+          <dn-avatar content="UK" color="#fff" bgclass="bg-success" fontsize="50" size="lg" weight="700" round></dn-avatar>
+          <view class="fs-12 text-sub mt-1">weight</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">图标</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar icon="dni dni-servicefill"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar icon="dni dni-shequ" color="#ff5722" bgcolor="#FEEDED" size="lg" fontsize="60" round></dn-avatar>
+          <view class="fs-12 text-sub mt-1">fontsize</view>
+        </view>
+        <view class="">
+          <dn-avatar icon="dni dni-Fingerprint" color="#FFDC1B" bgclass="bg-dark" ></dn-avatar>
+          <view class="fs-12 text-sub mt-1">bgclass</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">点击</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="/static/demo/2.jpg" bind:click="select" data-index="常规"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/3.jpg" square bind:click="select" data-index="square"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">square</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/4.jpg" round bind:click="select" data-index="round"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">round</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/4.jpg" more bind:click="select" data-index="更多"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">更多</view>
+        </view>
+      </view>
+    </view>
+
+    
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">内置尺寸</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" size="xs"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">xs</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" size="sm"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">sm</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" size="lg"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">lg</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" size="xl"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">xl</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/1.jpg" size="xxl"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">xxl</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">自定义尺寸</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="/static/demo/demo.jpg" square width="150rpx"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">默认高=宽</view>
+        </view>
+        <view class="">
+          <dn-avatar src="/static/demo/demo2.jpg" square width="300rpx" height="150rpx"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">宽高独立设置</view>
+        </view>
+      </view>
+    </view>
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">单张上传</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar src="{{uploadImgPath1}}" round upload bind:change="uploadImg1" size="xxl" hover="opacity5"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="">
+          <dn-avatar src="{{uploadImgPath2}}" upload bind:change="uploadImg2" uploadicon="dni dni-jiahaofill" color="#FFD956" size="xxl" hover="opacity5"></dn-avatar>
+          <view class="fs-12 text-sub mt-1">自定义图标</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">多张上传不引用组件</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center text-center">
+        <view class="" wx:for="{{files}}" wx:for-items="{{item}}" wx:key="index">
+          <image src="{{item?item:'/static/demo/1.jpg'}}" class='dn-upload-img' bindtap="previewImage" mode="aspectFill" id="{{item}}"></image>
+          <view class="fs-12 text-sub mt-1">常规</view>
+        </view>
+        <view class="dn-upload-box">
+          <view class="dn-upload-item" wx:for="{{files}}" wx:key="index">
+            <image src="{{item}}" class='dn-upload-img' bindtap="previewImage" mode="aspectFill" id="{{item}}"></image>
+            <text class="dni dni-guanbifill dn-upload-del h6" data-index="{{index}}" catchtap="deleteImage"></text>
+          </view>
+          <view class="dn-upload-item dn-upload-add" hidden="{{files.length>=9}}" hover-class="opacity5" hover-stay-time="150" bindtap="chooseImage">
+            <text>+</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+     <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">场景</view>
+      <view class="dn-card-body text-center">
+        <view class="avatar-list avatar-overlap">
+          <dn-avatar src="/static/demo/demo.jpg" width="80rpx"  wx:for="[1,5]" wx:for-item="item" wx:key="index" hover="ml-0"></dn-avatar>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card ">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">场景</view>
+      <view class="dn-card-body bg-dark d-flex justify-content-around align-items-center text-center">
+        <view class="">
+          <dn-avatar content="UK" weight="100" color="#fff" bgclass="bg-info" fontsize="50" round size="lg">
+            <dn-badge slot="badge" value="10" flash right="2px" top="5rpx !important" dot uk-class="pos-abs"></dn-badge>
+          </dn-avatar> 
+        </view>
+        <view class="">
+          <dn-avatar content="UK" weight="100" color="#fff" bgclass="bg-info" fontsize="50" round size="lg">
+            <dn-badge slot="badge" value="10" right="0px" top="5rpx" flash shape="circle" uk-class="pos-abs"></dn-badge>
+          </dn-avatar> 
+        </view>
+        <view class="">
+          <dn-badge value="122" max="100" user-slot flash bgcolor="danger" top="-5rpx" left="60rpx" uk-class="mr-2">
+            <dn-avatar content="UK" weight="100" color="#fff" bgclass="bg-info" fontsize="50" round size="lg"></dn-avatar>
+          </dn-badge>
+        </view>
+      </view>
+    </view>
+
+  
+  </view>
+</view>

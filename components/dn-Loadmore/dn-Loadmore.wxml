@@ -1,0 +1,4 @@
+<view class="uk-class dn-loadmore" wx:if="{{visible}}">
+  <view class="{{'dn-loading-'+index}} {{(index==3 && type)?'dn-loading-'+type:''}}"></view>
+  <view class="dn-loadmore-tips">{{text}}</view>
+</view>

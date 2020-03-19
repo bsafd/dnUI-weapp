@@ -1,0 +1,4 @@
+<view class="uk-class dn-dropdown-box {{show?'dn-dropdown-show':''}}" style="height:{{height?height+'rpx':'auto'}}; background: {{bgcolor}};padding-bottom: {{paddingbtm}}rpx;transform: translateZ(0) translateY({{show?translatey+'rpx':'-100%'}});">
+  <slot></slot>
+</view>
+<view class="dn-dropdown-mask {{mask && show ?'dn-mask-show':''}}" bindtap="handleClose"></view>

@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="dn-cells">
+    <textarea class="dn-textarea" name="desc" placeholder="发表你的评论..." maxlength="500" placeholder-class="dn-phcolor" auto-focus/>
+    <view class="dn-textareaCounter">0/500</view>
+  </view>
+  <view class="dn-enclosure">
+    <dn-icon name="emojilight" size="25" class="mr-6"></dn-icon>
+    <dn-icon name="picture" size="25" class="mr-6"></dn-icon>
+    <dn-icon name="bangding" size="26" class="mr-6"></dn-icon>
+  </view>
+  <view class="mt-6d">
+    <dn-button>发表</dn-button>
+  </view>
+</view>

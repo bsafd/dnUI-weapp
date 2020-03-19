@@ -1,0 +1,78 @@
+<view class="container">
+  <vtu-navbar title="Tab" bind:load="navBarLoad"></vtu-navbar>
+  <view class="center Page_Margin">
+    <vtu-panel v-class="panel" title="基础用法">
+      <view  id="fixTab">
+        <dn-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
+          <dn-tab label="标签一" name="name1" v-class="style-content" badge="hot">1</dn-tab>
+          <dn-tab label="标签二" name="name2" v-class="style-content" badge="12">2</dn-tab>
+          <dn-tab label="标签三" name="name3" v-class="style-content">3</dn-tab>
+          <dn-tab label="标签四" name="name4" v-class="style-content">4</dn-tab>
+        </dn-tabs>
+      </view>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel" title="居中">
+      <dn-tabs value="{{value2}}" item-align="center" is-average="{{false}}" bind:change="change">
+        <dn-tab label="标签一" name="name1"></dn-tab>
+        <dn-tab label="标签二" name="name2"></dn-tab>
+        <dn-tab label="标签三" name="name3" badge="516" badge-max="100" badge-type="success"></dn-tab>
+      </dn-tabs>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel" title="滚动">
+      <dn-tabs value="{{value2}}" bind:change="change">
+        <dn-tab label="标签一" name="name1"></dn-tab>
+        <dn-tab label="标签二" name="name2" badge-is-dot="{{true}}"></dn-tab>
+        <dn-tab label="标签三" name="name3"></dn-tab>
+        <dn-tab label="标签四" name="name4"></dn-tab>
+        <dn-tab label="标签5" name="name5"></dn-tab>
+        <dn-tab label="标签6" name="name6"></dn-tab>
+        <dn-tab label="标签7" name="name7"></dn-tab>
+        <dn-tab label="标签8" name="name8"></dn-tab>
+        <dn-tab label="很长的标签9" name="name9"></dn-tab>
+      </dn-tabs>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel" title="自定义样式">
+      <view class="Tab_Span">
+        <dn-tabs value="{{value2}}" bind:change="change" active-color="#fff" bg-color="#eee" active-bg-color="#07c160" line="{{false}}">
+          <dn-tab label="标签一" name="name1"></dn-tab>
+          <dn-tab label="标签二" name="name2"></dn-tab>
+          <dn-tab label="标签三" name="name3"></dn-tab>
+          <dn-tab label="标签四" name="name4"></dn-tab>
+          <dn-tab label="标签5" name="name5"></dn-tab>
+          <dn-tab label="标签6" name="name6"></dn-tab>
+          <dn-tab label="标签7" name="name7"></dn-tab>
+          <dn-tab label="标签8" name="name8"></dn-tab>
+          <dn-tab label="很长的标签9" name="name9"></dn-tab>
+        </dn-tabs>
+      </view>
+      <view class="Tab_Span">
+        <dn-tabs value="{{value2}}" bind:change="change" color="#909399" active-color="#f44" bg-color="#f5f7fa" active-bg-color="#fff">
+          <dn-tab label="标签一" name="name1"></dn-tab>
+          <dn-tab label="标签二" name="name2"></dn-tab>
+          <dn-tab label="标签三" name="name3"></dn-tab>
+          <dn-tab label="标签四" name="name4"></dn-tab>
+        </dn-tabs>
+      </view>
+      <view class="Tab_Span">
+        <dn-tabs value="{{value2}}" bind:change="change" v-class="style5" round tab-class="style5-tab" tab-li-class="style5-tab-li">
+          <dn-tab label="标签一" name="name1" v-class="style-content block">内容1</dn-tab>
+          <dn-tab label="标签二" name="name2" v-class="style-content block">内容2</dn-tab>
+          <dn-tab label="标签三" name="name3" v-class="style-content block">内容3</dn-tab>
+          <dn-tab label="标签四" name="name4" v-class="style-content block">内容4</dn-tab>
+        </dn-tabs>
+      </view>
+    </vtu-panel>
+
+    <vtu-panel v-class="panel" title="图标">
+      <dn-tabs value="{{value2}}" bind:change="change" hidden-slot="{{true}}">
+        <dn-tab label="标签一" name="name1" icon="iconfont icon-shangchuan"></dn-tab>
+        <dn-tab label="标签二" name="name2" icon="iconfont icon-share"></dn-tab>
+        <dn-tab label="标签三" name="name3" icon="iconfont icon-dianhua"></dn-tab>
+        <dn-tab label="标签四" name="name4" icon="iconfont icon-sousuo"></dn-tab>
+      </dn-tabs>
+    </vtu-panel>
+  </view>
+</view>

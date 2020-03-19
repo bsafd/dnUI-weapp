@@ -1,0 +1,17 @@
+<view class="dn-imgPicker" style="grid-template-columns: repeat({{grid}}, calc((100% - {{(grid-1)*10}}px)/{{grid}}))">
+  <view class="dn-imgPickerItem" wx:for="{{imageList}}" wx:key="index">
+    <image src="{{item}}" class="dn-imgPickerItemImage image-class" catchtap="previewImage" data-item="{{item}}" data-index="{{index}}" mode="{{mode}}"></image>
+    <view wx:if="{{!forbidDel}}" class="delete dn-imgPicker-icon" catchtap="delImage" data-index="{{index}}"></view>
+    <view wx:if="{{statusArr[index]!=1}}" class="dn-uploadmask">
+      <view class="dn-uploadloading" wx:if="{{statusArr[index]==2}}"></view>
+      <text class="dn-uploadtips">{{statusArr[index]==2?'上传中...':'上传失败'}}</text>
+      <view class="dn-uploadmask-btn" wx:if="{{statusArr[index]==3}}" catchtap="reUpLoad" data-index="{{index}}" hover-class="dn-uploadhover" hover-stay-time="150">
+        重新上传
+      </view>
+    </view>
+  </view>
+  <view class="dn-imgPickerItem Add" wx:if="{{!forbidAdd && imageList.length < limit}}" bindtap="chooseImage" hover-class="dn-uploadhover">
+    <text class="{{uploadIcon?uploadIcon:'dn-imgPicker-icon dn-imgPicker-addicon'}}"></text>
+  </view>
+</view>
+

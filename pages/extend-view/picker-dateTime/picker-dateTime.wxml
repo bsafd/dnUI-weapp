@@ -1,0 +1,32 @@
+<view class="container">
+		<view class="header">
+			<view class="title">日期时间选择器</view>
+			<view class="sub-title">picker-view扩展，日期时间选择器 </view>
+			<view class="sub-title tui-primary">您选择的结果为：{{result}}</view>
+		</view>
+		<view class="px-4 py-1">
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="1">选择日期 年月日</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="2">选择日期 年月</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="3">选择时间</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="4">日期+时间</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="5">设置默认显示 2019-09-12 18:01</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="6">年份区间 2019-2021</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="show" data-type="7">改变按钮字体颜色</dn-button>
+			</view>
+		</view>
+		<dn-datetime id="tui-dateTime-ctx" type="{{type}}" startYear="{{startYear}}" endYear="{{endYear}}" cancelColor="{{cancelColor}}" color="{{color}}"
+		 setDateTime="{{setDateTime}}" bindconfirm="change"></dn-datetime>
+	</view>

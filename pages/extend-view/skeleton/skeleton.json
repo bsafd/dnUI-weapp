@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "骨架屏",
+  "usingComponents": {
+    "dn-skeleton": "/components/dn-Skeleton/dn-Skeleton"
+  }
+}

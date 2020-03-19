@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "操作菜单",
+  "usingComponents": {
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-actionsheet": "../../../components/dn-ActionSheet/dn-ActionSheet"
+  }
+}

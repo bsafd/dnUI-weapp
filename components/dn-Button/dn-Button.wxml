@@ -1,0 +1,64 @@
+<button class="dn-btn {{'dn-btn-'+size}} {{plain?'bg-'+type+'-outline':'bg-'+(type || 'gd')}} {{parse.getDisabledClass(disabled,type)}} {{parse.getShapeClass(shape,plain)}}  {{parse.getShadowClass(type,shadow,plain)}} uk-class" 
+  hover-class="{{parse.getHoverClass(disabled,type,plain,shadow)}}"
+  loading="{{loading}}"
+  disabled="{{disabled}}"
+  open-type="{{ openType }}" 
+  app-parameter="{{ appParameter }}" 
+  hover-stop-propagation="{{ hoverStopPropagation }}" 
+  bindtap="handleClick" 
+  session-from="{{ sessionFrom }}" 
+  send-message-title="{{ sendMessageTitle }}" 
+  send-message-path="{{ sendMessagePath }}"
+  send-message-img="{{ sendMessageImg }}" 
+  show-message-card="{{ showMessageCard }}" 
+  bindcontact="bindcontact" 
+  bindgetuserinfo="bindgetuserinfo" 
+  bindgetphonenumber="bindgetphonenumber" 
+  binderror="binderror" 
+  form-type="{{formType}}" 
+  hidden="{{hidden}}"
+  style="{{bgColor?'background-color:'+bgColor+';':''}}{{width?'width:'+width+';':''}} {{padding?'padding-left:0;padding-right:0;width:'+width+';':''}} {{height?'height:'+height+';':''}} {{height?'line-height:'+height+';':''}} {{fontsize?'font-size:'+fontsize+'rpx;':''}}{{fontColor?'Color:'+fontColor:''}}">
+  <slot></slot>
+</button>
+<!-- {{width!=''?'width:'+width:''}};{{height!=''?'height:'+height:''}};{{height!=''?'line-height:'+height:''}};{{font-size!=''?'font-size:'+font-size+'rpx':''}};{{color!=''?'color:black':'color:white'}} -->
+
+<wxs module="parse">
+  module.exports = {
+    getShadowClass: function(type, shadow, plain) {
+      var className = '';
+      if (shadow && type != 'white' && !plain) {
+        //className = 'bg-' + type +'-shadow'; 
+        className = 'shadow-blur';
+      }
+      return className;
+    },
+    getDisabledClass: function(disabled, type) {
+      var className = '';
+      if (disabled && type != 'white' && type != 'gray') {
+        className = type == 'gd' ? 'bg-gd-disabled' : 'opacity5';
+      }
+      return className;
+    },
+    getShapeClass: function(shape, plain) {
+      var className = '';
+      if (shape == 'circle') {
+        className = plain ? 'dn-round-outline' : 'dn-round';
+      } else if (shape == "radius") {
+        className = plain ? 'dn-noradius-outline' : 'dn-noradius';
+      }
+      return className;
+    },
+    getHoverClass: function(disabled, type, plain,shadow) {
+      var className = '';
+      if (!disabled) {
+        // className = plain ? 'opacity5' : ('bg-' + (type || 'gd') + '-hover');
+        if (shadow) {
+          className = 'shadowhover';
+        }else{
+          className = plain ? 'opacity5' : (type=='gd'?'bg-gd-hover':'ukhoverdk');
+        }
+      }
+      return className;
+    }
+  }
+</wxs>

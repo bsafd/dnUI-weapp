@@ -1,0 +1,44 @@
+<view class="container">
+  <view class='dn-notice-board'>
+    <view class="dn-icon-bg">
+      <dn-icon uk-class="dn-rolling-icon" name-="shengyinfill" size='18' color='#f54f46'></dn-icon>
+    </view>
+    <view class="dn-scorll-view" bindtap='detail'>
+      <view class="dn-notice {{animation?'dn-animation':''}}">B站10分日本动漫已消失，9.9分仅剩12部，这一部动漫包揽三席！</view>
+    </view>
+  </view>
+
+  <view class="dn-subject">纵向滚动</view>
+  <view class="dn-rolling-news">
+    <dn-icon uk-class="dn-rolling-icon" name-="shengyinfill" size='18' color='#5677fc'></dn-icon>
+    <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="dn-swiper">
+      <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="dn-swiper-item">
+        <view class="dn-news-item" bindtap='detail'>{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!--搜索框-->
+  <view class="dn-searchbox">
+
+    <view class="dn-rolling-search">
+      <dn-icon uk-class="dn-rolling-icon" name-="sousuo" size='18' color='#999'></dn-icon>
+      <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="3000" class="dn-swiper">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="dn-swiper-item">
+          <view class="dn-news-item" bindtap='detail'>{{item}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+  </view>
+
+  <view class="dn-subject">横向滚动</view>
+  <view class="dn-rolling-news">
+    <dn-icon uk-class="dn-rolling-icon" name-="shengyinfill" size='18' color='#5677fc'></dn-icon>
+    <swiper autoplay="{{true}}" circular="{{true}}" interval="3000" class="dn-swiper">
+      <swiper-item wx:for="{{newsList}}" wx:key="{{index}}" class="dn-swiper-item">
+        <view class="dn-news-item" bindtap='detail'>{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

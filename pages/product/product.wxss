@@ -1,0 +1,4 @@
+@import '/static/css/dnui.wxss';
+cardcar.container{
+  padding-bottom: env(safe-area-inset-bottom);
+}

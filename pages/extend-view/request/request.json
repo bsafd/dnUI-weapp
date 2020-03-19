@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "网络请求",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-button": "../../../../components/dn-Button/dn-Button"
+  }
+}

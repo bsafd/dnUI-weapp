@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "演示：商品列表",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-card": "../../components/dn-Card/dn-Card",
+    "dn-loadmore": "../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../components/dn-Nomore/dn-Nomore"
+  }
+}

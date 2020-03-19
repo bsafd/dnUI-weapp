@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Flex</view>
+    <view class="sub-title">Flex布局</view>
+  </view>
+  <view class="d-flex-box">
+    <view class="d-flex">
+      <view class="text-center bg-success-lt dn-col-12">12：100%</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt dn-col-6">6：50%</view>
+      <view class="text-center bg-info-lt dn-col-6">6：50%</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt dn-col-4">4：33.33%</view>
+      <view class="text-center bg-info-lt dn-col-4">4：33.33%</view>
+      <view class="text-center bg-dorange-lt dn-col-4">4：33.33%</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt dn-col-4">3：25%</view>
+      <view class="text-center bg-info-lt dn-col-4">3：25%</view>
+      <view class="text-center bg-dorange-lt dn-col-4">3：25%</view>
+      <view class="text-center bg-warning-lt dn-col-4">3：25%</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt dn-col-8">8：66.66%</view>
+      <view class="text-center bg-info-lt dn-col-4">4：33.33%</view>
+    </view>
+
+    <view class="d-flex">
+      <view class="text-center bg-info-lt d-flex-1">UOOKK UI</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt d-flex-1">UOOKK UI</view>
+      <view class="text-center .bg-warning-lt d-flex-1">UOOKK UI</view>
+    </view>
+    <view class="d-flex">
+      <view class="text-center bg-success-lt d-flex-1">UOOKK UI</view>
+      <view class="text-center bg-warning-lt d-flex-1">UOOKK UI</view>
+      <view class="text-center bg-dorange-lt d-flex-1">UOOKK UI</view>
+    </view>
+    <view class="d-flex justify-content-between">
+      <view class="text-center bg-success-lt dn-col-4">col-4</view>
+      <view class="text-center bg-warning-lt dn-col-4">col-4</view>
+    </view>
+    <view class="d-flex justify-content-end">
+      <view class="text-center bg-success-lt dn-col-4">col-4</view>
+      <view class="text-center bg-warning-lt dn-col-4">col-4</view>
+    </view>
+    <view class="d-flex justify-content-center">
+      <view class="text-center bg-success-lt dn-col-6">col-6</view>
+      <view class="text-center bg-warning-lt dn-col-4">col-4</view>
+    </view>
+    <view class="d-flex justify-content-around">
+      <view class="text-center bg-success-lt dn-col-3 ">UOOKK UI</view>
+      <view class="text-center bg-warning-lt  dn-col-3">UOOKK UI</view>
+      <view class="text-center bg-dorange-lt dn-col-3">UOOKK UI</view>
+    </view>
+    <view class="d-flex justify-content-between">
+      <view class="text-center bg-success-lt dn-col-6 mr">col-6 </view>
+      <view class="text-center bg-warning-lt  dn-col-6 ">col-6</view>
+    </view>
+    <view class="d-flex justify-content-between">
+      <view class="text-center bg-success-lt dn-col-4 mr">col-4</view>
+      <view class="text-center bg-warning-lt  dn-col-4 mr">col-4</view>
+      <view class="text-center bg-dorange-lt dn-col-4">col-4</view>
+    </view>
+  </view>
+</view>

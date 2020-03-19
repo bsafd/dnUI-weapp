@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Countdown</view>
+    <view class="sub-title">倒计时 </view>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">默认使用</view>
+    <dn-countdown time="{{timeList[0]}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">改变颜色,缩放字体</view>
+    <dn-countdown time="{{timeList[1]}}" color="#e41f19" bcolor="#e41f19" colonColor="#e41f19" scale="{{true}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">边框与背景重合</view>
+    <dn-countdown time="{{timeList[1]}}" bcolor="#fff"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">改变背景</view>
+    <dn-countdown time="{{timeList[0]}}" color="#fff" bcolor="#e41f19" bgcolor="#e41f19" colonColor="#e41f19"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">改变大小</view>
+    <dn-countdown time="{{timeList[1]}}" height="{{30}}" width="{{30}}" size="{{26}}" colonsize="{{32}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">去掉小时</view>
+    <dn-countdown time="{{timeList[2]}}" hours="{{false}}" scale="{{true}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">倒计时结束执行事件</view>
+    <dn-countdown time="{{timeList[3]}}" color="#e41f19" bcolor="#e41f19" colonColor="#e41f19" scale="{{true}}" bind:end="endOfTime"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">冒号替换成文字</view>
+    <dn-countdown time="{{timeList[4]}}" scale="{{true}}" isColon="{{false}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">去掉边框</view>
+    <dn-countdown time="{{timeList[4]}}" bcolor="transparent" isColon="{{false}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">显示剩余天数</view>
+    <dn-countdown time="{{timeList[4]}}" scale="{{true}}" isColon="{{false}}" days="{{true}}"></dn-countdown>
+  </view>
+  <view class="d-flex align-items-center justify-content-between p-4 my-1 bg-white">
+    <view class="h6">去掉秒数</view>
+    <dn-countdown time="{{timeList[4]}}" scale="{{true}}" isColon="{{false}}" days="{{true}}" seconds="{{false}}"></dn-countdown>
+  </view>
+</view>

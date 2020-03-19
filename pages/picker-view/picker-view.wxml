@@ -1,0 +1,42 @@
+<view class="conatiner">
+  <view class="search-box">
+    <view class="s-input">
+      <dn-icon name="sousuo" size="16" class="mr-2"></dn-icon>
+      <input placeholder-class="phcolor" class="input" name="input" placeholder="请输入关键字" confirm-type="search" bindconfirm="search" bindinput="bindViewInput" value='{{searchKey}}' />
+      <view hidden="{{iconHidden}}"><dn-icon name="del" size="16" class="mr-2" bindtap="resetInput"></dn-icon></view>
+    </view>
+    <view class="s-input s-select" bindtap="showPicker">
+      <text class="text  wid27">{{text[0]}}</text>
+      <dn-icon name="jiantouyou" color="#ccc" size="16" class="mr-2"></dn-icon>
+      <text class="text  wid27">{{text[1]}}</text>
+      <dn-icon name="jiantouyou" color="#ccc" size="16" class="mr-2"></dn-icon>
+      <text class="text wid46">{{text[2]}}</text>
+      <dn-icon name="xialajiantouxiao" color="#999" size="12" class="mr-2"></dn-icon>
+    </view>
+  </view>
+  <view class="btn-select">
+    <dn-button shape="circle" type="primary" uk-class="mb-3" bindtap="showPicker">请选择</dn-button>
+    <dn-button shape="circle" disabled="{{iconHidden}}" type="primary" uk-class="mb-3" bindtap="resetInput">清空</dn-button>
+  </view>
+
+  <!--picker-view start-->
+  <view class="mask-screen" bindtap="hidePicker" hidden="{{!showPickerStatus}}"></view>
+  <view class="picker-box" animation="{{animationData}}" hidden="{{!showPickerStatus}}">
+    <view class="picker-header list-item">
+      <view class="btn-cancle" hover-class="opcity" hover-stay-time="150" catchtap="hidePicker">取消</view>
+      <view class="btn-sure" hover-class="opcity" hover-stay-time="150" catchtap="picker">确定</view>
+    </view>
+    <picker-view indicator-style="height: 50px;" class="picker-view" value="{{value}}" bindchange="columnPicker">
+      <picker-view-column>
+        <view wx:for="{{proviceArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{cityArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{districtArr}}" class="item">{{item}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+  <!--picker-view end-->
+</view>

@@ -1,0 +1,6 @@
+<view class="dn-timeaxis-item uk-class">
+  <slot name="content"></slot>
+  <view class="dn-node" style='background:{{bgcolor}}'>
+    <slot name="node"></slot>
+  </view>
+</view>

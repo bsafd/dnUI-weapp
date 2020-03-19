@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-card": "../../../../components/dn-Card/dn-Card",
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-steps": "../../../components/dn-Steps/steps/steps",
+    "dn-step": "../../../components/dn-Steps/step/step"
+  }
+}

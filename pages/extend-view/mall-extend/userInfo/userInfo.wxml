@@ -1,0 +1,32 @@
+<view class="dn-userinfoBox">
+		<dn-list-cell padding="0" arrow="{{true}}">
+			<view class="dn-listCell">
+				<view>头像</view>
+				<image src="/static/demo/3.jpg" class="dn-avatar"></image>
+			</view>
+		</dn-list-cell>
+		<dn-list-cell padding="0" hover="{{false}}">
+			<view class="dn-listCell pr-3">
+				<view>用户名</view>
+				<view class="dn-content">UOOKK</view>
+			</view>
+		</dn-list-cell>
+		<dn-list-cell padding="0" arrow="{{true}}">
+			<view class="dn-listCell">
+				<view>昵称</view>
+				<view class="dn-content">DaNiu</view>
+			</view>
+		</dn-list-cell>
+		<dn-list-cell padding="0" arrow="{{true}}">
+			<view class="dn-listCell">
+				<view>性别</view>
+				<view class="dn-content">男</view>
+			</view>
+		</dn-list-cell>
+		<dn-list-cell padding="0" arrow="{{true}}" last="{{true}}">
+			<view class="dn-listCell">
+				<view>出生日期</view>
+				<view class="dn-content">1986-09-27</view>
+			</view>
+		</dn-list-cell>
+	</view>

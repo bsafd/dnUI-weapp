@@ -1,0 +1,13 @@
+{
+  "backgroundColorTop": "#5556F7",
+  "navigationBarBackgroundColor": "#5556F7",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "List DEMO",
+  "usingComponents": {
+    "dn-list": "../../../components/dn-List/dn-List",
+    "dn-avatar": "../../../components/dn-Avatar/dn-Avatar",
+    "dn-tag": "../../../components/dn-Tag/dn-Tag",
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge"
+  }
+}

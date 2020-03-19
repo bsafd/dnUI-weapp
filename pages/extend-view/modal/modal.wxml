@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Modal</view>
+    <view class="sub-title">modal弹框</view>
+  </view>
+
+  <view class="py-1 px-4">
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click='show'>一般弹框</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click='show2'>提示文本样式</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show3">单个按钮</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show4">多个按钮</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show5">圆角按钮</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show6">按钮颜色</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show7">遮罩不可点</dn-button>
+    <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show8">自定义弹窗内容</dn-button>
+     <dn-button type="white" shape="circle" uk-class="mt-4" bind:click="show9">自定义输入框</dn-button>
+  </view>
+  <dn-modal show="{{modal}}" bind:click="handleClick" bind:cancel="hide" title="提示" content="确定退出登录吗？"></dn-modal>
+  <dn-modal show="{{modal2}}" bind:click="handleClick2" bind:cancel="hide2" content="确定退出登录吗？" color="#333" size="32"></dn-modal>
+  <dn-modal show="{{modal3}}" bind:click="handleClick3" bind:cancel="hide3" content="您还未登录，请先登录" button="{{button3}}"></dn-modal>
+  <dn-modal show="{{modal4}}" bind:click="handleClick4" bind:cancel="hide4" content="请选择支付方式" button="{{button4}}"></dn-modal>
+  <dn-modal show="{{modal5}}" bind:click="handleClick5" bind:cancel="hide5" content="确定退出登录吗？" color="#333" size="32" shape="circle"></dn-modal>
+  <dn-modal show="{{modal6}}" bind:click="handleClick6" bind:cancel="hide6" content="确定退出登录吗？" color="#333" size="32" button="{{button6}}"></dn-modal>
+  <dn-modal show="{{modal7}}" bind:click="handleClick7" bind:cancel="hide7" content="您还未登录，请先登录" button="{{button3}}" maskClosable="{{false}}"></dn-modal>
+
+  <dn-modal show="{{modal8}}" bind:cancel="hide8" custom="{{true}}" width="60%" padding="40rpx">
+    <view class="text-center">
+      <image src="../../../static/demo/demo.jpg" mode="aspectFill" class="avatar avatar-xxl mb-4 mx-auto shadow-blur"></image>
+      <view class="p2 h6">我是自定内容</view>
+      <dn-button type="primary" shape="circle" size="sm" shadow uk-class="mt-4" bind:click="handleClick8">确定</dn-button>
+    </view>
+  </dn-modal>
+
+  <dn-modal show="{{modal9}}" bind:cancel="hide9" custom="{{true}}" fadein="{{true}}">
+    <view class="text-center">
+      <view class="h5 pb-3">邮箱</view>
+      <input placeholder="请输入邮箱" class="demo-input" />
+      <dn-button shape="circle" bind:click="hide9" size="small">立即提交</dn-button>
+    </view>
+  </dn-modal>
+</view>

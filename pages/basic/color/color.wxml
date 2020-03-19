@@ -1,0 +1,495 @@
+<view class="container">
+  <view class="fs-14 text-bold mb-1 mt-4">
+    主色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y demo">
+    <view class="dn-gridItem">
+      <view class="bg-primary shadow-blur">
+        <view>bg-primary</view>
+        <view class="color">#FFDC1B</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-primary-lt shadow-blur">
+        <view>primary-lt</view>
+        <view class="color">#FFFBE9</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-primary-dk shadow-blur">
+        <view>bg-primary-dk</view>
+        <view class="color">#F5C01F</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 mt-4">
+    辅色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y demo">
+    <view class="dn-gridItem">
+      <view class="bg-success shadow-blur">
+        <view>success</view>
+        <view class="color">#15c377</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-info shadow-blur">
+        <view>info</view>
+        <view class="color">#5556F7</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-danger shadow-blur">
+        <view>danger</view>
+        <view class="color">#F8696A</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-warning shadow-blur">
+        <view>warning</view>
+        <view class="color">#FFDC1B</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 mt-4">
+    字体颜色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y demo">
+    <view class="dn-gridItem">
+      <view class="text-white shadow-blur" style="background:var(--text-basic)">
+        <view>text-basic</view>
+        <view class="color">#303133</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="text-white shadow-blur" style="background:var(--text-common)">
+        <view>text-common</view>
+        <view class="color">#606266</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="text-white shadow-blur" style="background:var(--text-sub)">
+        <view>text-sub</view>
+        <view class="color">#909399</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="text-white shadow-blur" style="background:var(--text-hold)">
+        <view>text-hold</view>
+        <view class="color">#C0C4CC</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 mt-4">
+    边框颜色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y demo">
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--border-basic)">
+        <view>border-basic</view>
+        <view class="color">#DCDFE6</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--border-common)">
+        <view>border-common</view>
+        <view class="color">#E4E7ED</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--border-sub)">
+        <view>border-sub</view>
+        <view class="color">#EBEEF5</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--border-hold)">
+        <view>border-hold</view>
+        <view class="color">#F2F6FC</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 mt-4">
+    背景颜色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y demo">
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--bg-page)">
+        <view>页面背景</view>
+        <view class="color">#fafafa</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class=" shadow-blur" style="background:var(--bg-disabled)">
+        <view>只读颜色</view>
+        <view class="color">#e6e6e7</view>
+      </view>
+    </view>
+    
+  </view>
+
+ 
+  <view class="fs-14 text-bold mb-1 mt-4">
+    渐变色
+  </view>
+  <view class="dn-grid dn-grid2 gap-2 gap-y democolor">
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-red shadow-blur">
+        <view>red</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-orange shadow-blur">
+        <view>orange</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-green shadow-blur">
+        <view>green</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-purple shadow-blur">
+        <view>purple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-pink shadow-blur">
+        <view>pink</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-blue shadow-blur">
+        <view>blue</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd shadow-blur">
+        <view>gd</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-danger shadow-blur">
+        <view>danger</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-info shadow-blur">
+        <view>info</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-success shadow-blur">
+        <view>success</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-warning shadow-blur">
+        <view>warning</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="gd-color bg-gd-primary shadow-blur">
+        <view>primary</view>
+      </view>
+    </view>
+    
+    
+
+  </view>
+
+ 
+  <view class="fs-14 text-bold mb-1 mt-4">
+    配色
+  </view>
+  <view class="dn-grid dn-grid3 gap-2 gap-y democolor">
+    <view class="dn-gridItem">
+      <view class="bg-breez shadow-blur">
+        <view>breez</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-accent shadow-blur">
+        <view>accent</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-red shadow-blur">
+        <view>red</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-pink shadow-blur">
+        <view>pink</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-purple shadow-blur">
+        <view>purple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-dpurple shadow-blur">
+        <view>dpurple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-indigo shadow-blur">
+        <view>indigo</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-blue shadow-blur">
+        <view>blue</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lblue shadow-blur">
+        <view>lblue</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-cyan shadow-blur">
+        <view>cyan</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-teal shadow-blur">
+        <view>teal</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-green shadow-blur">
+        <view>green</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lgreen shadow-blur">
+        <view>lgreen</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lime shadow-blur">
+        <view>lime</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-yellow text-basic shadow-blur">
+        <view>yellow</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-amber shadow-blur">
+        <view>amber</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-orange shadow-blur">
+        <view>orange</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-dorange shadow-blur">
+        <view>dorange</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-brown shadow-blur">
+        <view>brown</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-slate shadow-blur">
+        <view>slate</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-grey shadow-blur">
+        <view>grey</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-white text-basic shadow-blur">
+        <view>white</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-light text-basic shadow-blur">
+        <view>light</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-simple shadow-blur">
+        <view>simple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-dark shadow-blur">
+        <view>dark</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-black shadow-blur">
+        <view>black</view>
+      </view>
+    </view>
+
+    
+  </view>
+
+  <view class="fs-14 text-bold mb-1 mt-4">
+    浅配色
+  </view>
+  <view class="dn-grid dn-grid3 gap-2 gap-y democolor">
+    <view class="dn-gridItem">
+      <view class="bg-breez-lt">
+        <view>breez</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-accent-lt">
+        <view>accent</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-red-lt">
+        <view>red</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-pink-lt">
+        <view>pink</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-purple-lt">
+        <view>purple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-dpurple-lt">
+        <view>dpurple</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-indigo-lt">
+        <view>indigo</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-blue-lt">
+        <view>blue</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lblue-lt">
+        <view>lblue</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-cyan-lt">
+        <view>cyan</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-teal-lt">
+        <view>teal</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-green-lt">
+        <view>green</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lgreen-lt">
+        <view>lgreen</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-lime-lt">
+        <view>lime</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-yellow-lt">
+        <view>yellow</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-amber-lt">
+        <view>amber</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-orange-lt">
+        <view>orange</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-dorange-lt">
+        <view>dorange</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-brown-lt">
+        <view>brown</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-slate-lt">
+        <view>slate</view>
+      </view>
+    </view>
+    <view class="dn-gridItem">
+      <view class="bg-grey-lt">
+        <view>grey</view>
+      </view>
+    </view>
+
+    
+  </view>
+  <view class="my-2 p-3 text-center shadow-top">
+    <view>shadow-top</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-bottom">
+    <view>shadow-bottom</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-1">
+    <view>shadow-1</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-2">
+    <view>shadow-2</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-3">
+    <view>shadow-3</view>
+  </view>
+  <view class="my-2 p-3 bg-white text-center shadow-default">
+    <view>默认阴影</view>
+  </view>
+  <view class="my-2 p-3 bg-white text-center shadow-warp">
+    <view>翘边阴影</view>
+  </view>
+  <view class="my-2 p-3 bg-warning text-center shadow-blur">
+    <view>根据背景色改变阴影</view>
+  </view>
+  <view class="my-2 p-3 bg-red text-center shadow-blur">
+    <view>根据背景色改变阴影</view>
+  </view>
+
+  <view class="my-2 p-3 text-center shadow-blur" style="background-image:url(https://img.alicdn.com/imgextra/https://img.alicdn.com/bao/uploaded/i1/374632943/O1CN01sV55IJ1XbwChdE9JH_!!374632943.jpg_430x430q90.jpg);background-size:cover;">
+    <view>根据背景图而改变的阴影</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-blur" style="background-image:url(https://img.alicdn.com/imgextra/i1/2100258080/O1CN01isdctQ29YgkvAYepb_!!2100258080.jpg);background-size:cover;">
+    <view>根据背景图而改变的阴影</view>
+  </view>
+  <view class="my-2 p-3 text-center shadow-blur" style="background-image:url(https://img.alicdn.com/imgextra/i2/3300112355/O1CN01i6mXFZ1TGdIlv1icW_!!3300112355.jpg_430x430q90.jpg);background-size:cover;">
+    <view>根据背景图而改变的阴影</view>
+  </view>
+
+  
+</view>

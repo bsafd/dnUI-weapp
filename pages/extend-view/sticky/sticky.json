@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "吸顶容器",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "sticky": "../../../components/dn-Sticky/dn-Sticky"
+  }
+}

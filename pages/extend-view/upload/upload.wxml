@@ -1,0 +1,9 @@
+	<view class="container">
+		<view class="header">
+			<view class="title">upload</view>
+			<view class="sub-title">图片上传，需要根据上传接口实际返回数据进行调整 </view>
+		</view>
+		<view class="dn-box-upload">
+			<dn-upload serverUrl="{{serverUrl}}"  bind:complete="result" bind:remove="remove"></dn-upload>
+		</view>
+	</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "扩展tips",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-tips":"/components/extend/dn-Tips/dn-Tips"
+  }
+}

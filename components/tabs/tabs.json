@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dn-badge": "../dn-Badge/dn-Badge"
+  }
+}

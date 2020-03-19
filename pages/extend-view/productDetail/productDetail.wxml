@@ -1,0 +1,303 @@
+<view class="container">
+  <!--header-->
+  <view class="productHeader" style="height:{{height}}px;background:rgba(255,255,255,{{opcity}})">
+    <view class="productTitle" style="padding-top:{{top}}px; opacity:{{opcity}}">
+      商品详情
+    </view>
+    <view class="productHeaderIcon" style="margin-top:{{top}}px">
+      <dn-icon name="xiangzuo" color="{{opcity>=1?'#000':'#fff'}}" bindtap="back" size="20" class="dn-icon" style="background:rgba(0, 0, 0, {{iconOpcity}});"></dn-icon>
+      <dn-icon name="view-more-fill" color="{{opcity>=1?'#000':'#fff'}}" size="20" class="dn-icon ml-2" style="background:rgba(0, 0, 0, {{iconOpcity}});" catchtap="openMenu"></dn-icon>
+      <dn-badge type="red" value="5"  shape="circle" top="0px" right="-2px" uk-class="pos-abs"></dn-badge>
+    </view>
+  </view>
+  <!--header-->
+
+  <!--banner-->
+  <view class="productBanner">
+    <swiper autoplay="true" interval="5000" duration="150" circular="{{true}}" style="height:{{scrollH}}px" bindchange="bannerChange">
+      <block wx:for="{{banner}}" wx:key="{{index}}">
+        <swiper-item data-index="{{index}}" catchtap="previewImage">
+          <image src="{{item}}" class="productBannerImage" mode="aspectFill" style="height:{{scrollH}}px" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <dn-tag type="rgba" uk-class="productBannerTag" shape="circleLeft" size="sm">{{bannerIndex+1}}/{{banner.length}}</dn-tag>
+  </view>
+
+  <!--banner-->
+
+  <view class="productDetail">
+    <view class="productDetailTitle dn-borderRadius">
+      <view class="dn-proPricebox px-3">
+        <view class="d-flex align-items-center">
+          <view>￥<text class="h3">49</text>.00</view>
+          <dn-tag size="sm" plain="{{true}}" type="success" shape="circle" uk-class="dn-scale">新品</dn-tag>
+        </view>
+        <view class="dn-collection dn-size" bindtap="collecting">
+          <dn-icon name="{{collected?'xihuanfill':'xihuan'}}" color="{{collected?'#ff201f':'#333'}}" size="20" uk-class="dn-icon-collection"></dn-icon>
+          <view class="dn-scale {{collected?'text-red':''}}">收藏</view>
+        </view>
+      </view>
+      <view class="dn-original-price text-sub">
+        价格
+        <text class="text-lt">￥199.00</text>
+      </view>
+      <view class="dn-pro-titbox">
+        <view class="pt-2">谈判官明星同款耳坠韩国气质简约显脸瘦的耳环女百搭个性长款耳钉 个性水滴耳环【A2】{{popupShow}}{{top}}</view>
+        <button open-type="share" class="dn-share-btn dn-share-position">
+          <dn-tag type="light" uk-class="dn-tag-share dn-size" shape="circleLeft" size="sm">
+            <dn-icon name="zhuanfa" color="#999" size="15"></dn-icon>
+            <text class="pl-1 text-sub">分享</text>
+          </dn-tag>
+        </button>
+      </view>
+      <view class="px-3">
+        <view class="py-2 dn-size text-sub">此商品将于2019-06-28,10点结束闪购特卖，时尚美饰联合专场</view>
+        <view class="dn-sale-info dn-size text-sub">
+          <view>快递：0.00</view>
+          <view>月销2000</view>
+          <view>浙江杭州</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="bg-white dn-radius-all mt-3">
+      <view class="dn-list-cell" bindtap="coupon">
+        <view class="text-bold dn-cell-title">领券</view>
+        <view class="dn-tag-coupon-box">
+          <dn-tag size="sm" type="red" shape="circle" uk-class="mr-2">满99减8</dn-tag>
+          <dn-tag size="sm" type="red" shape="circle" uk-class="mr-2">满59减5</dn-tag>
+        </view>
+        <dn-icon name="gengduo" size="20" class="dn-right t-4" color="#666"></dn-icon>
+      </view>
+
+      <view class="dn-list-cell dn-last" bindtap="showPopup">
+        <view class="text-bold dn-cell-title">促销</view>
+        <view>
+          <view class="dn-promotion-box">
+            <dn-tag size="sm" type="danger" plain="{{true}}" uk-class="dn-inline-block">多买优惠</dn-tag>
+            <text>满1件，立减最低1件商品价格，包邮（限中国内地）</text>
+          </view>
+          <view class="dn-promotion-box">
+            <dn-tag size="sm" type="danger" plain="{{true}}" uk-class="dn-inline-block">满额返券</dn-tag>
+            <text>满2件，立减最低2件商品价格，包邮（限中国内地）</text>
+          </view>
+          <view class="dn-promotion-box">
+            <dn-tag size="sm" type="danger" plain="{{true}}" uk-class="dn-inline-block">特别赠品</dn-tag>
+            <text>满3件，立减最低3件商品价格，包邮（限中国内地）</text>
+          </view>
+        </view>
+        <dn-icon name="gengduo" size="20" class="dn-right t-4" color="#666"></dn-icon>
+      </view>
+
+    </view>
+
+    <view class="bg-white mt-3 dn-radius-all">
+      <view class="dn-list-cell" bindtap="showPopup" >
+        <view class="text-bold dn-cell-title">已选</view>
+        <view class="">个性水滴耳环【A2】,1个，可选服务</view>
+        <dn-icon name="gengduo" size="20" class="dn-right" color="#666"></dn-icon>
+      </view>
+      <view class="dn-list-cell" bindtap="showPopup">
+        <view class="text-bold dn-cell-title">送至</view>
+        <view class="w-76p">
+          <view class="dn-addr-item">北京朝阳区三环到四环之间</view>
+          <view class="dn-addr-item">今日23:59前完成下单，预计6月28日23:30前发货，7月1日24:00前送达</view>
+        </view>
+        <dn-icon name="gengduo" size="20" class="dn-right" color="#666"></dn-icon>
+      </view>
+      <view class="dn-list-cell dn-last">
+        <view class="text-bold dn-cell-title">运费</view>
+        <view class="">在线支付免运费</view>
+      </view>
+      <view class="dn-guarantee">
+        <view class="dn-guarantee-item">
+          <dn-icon name="zhengquetishi" size="14" color="#999"></dn-icon>
+          <text class="pl-4px">可配送海外</text>
+        </view>
+        <view class="dn-guarantee-item">
+          <dn-icon name="zhengquetishi" size="14" color="#999"></dn-icon>
+          <text class="pl-4px">店铺发货&售后</text>
+        </view>
+        <view class="dn-guarantee-item">
+          <dn-icon name="zhengquetishi" size="14" color="#999"></dn-icon>
+          <text class="pl-4px">7天无理由退货</text>
+        </view>
+        <view class="dn-guarantee-item">
+          <dn-icon name="zhengquetishi" size="14" color="#999"></dn-icon>
+          <text class="pl-4px">闪电退款</text>
+        </view>
+        <view class="dn-guarantee-item">
+          <dn-icon name="zhengquetishi" size="14" color="#999"></dn-icon>
+          <text class="pl-4px">极速审核</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="bg-white mt-3 dn-radius-all">
+      <view class="dn-list-cell dn-last justify-content-between">
+        <view class="text-bold dn-cell-title">评价</view>
+        <view bindtap="common">
+          <text class="text-danger pr-1">查看全部</text>
+          <dn-icon name="gengduo" size="20" color="#ff201f"></dn-icon>
+        </view>
+      </view>
+
+      <view class="fs-13 px-3">
+        <view class="d-flex align-items-center">
+          <image src="../../../static/demo/2.jpg" class="avatar avatar-sm mr-2"></image>
+          <view>z***9</view>
+        </view>
+        <view class="py-1">物流很快，很适合我的风格❤</view>
+        <view class="fs-12 text-sub">颜色：叠层钛钢流苏耳环（A74）</view>
+      </view>
+
+      <view class="dn-cmt-btn">
+        <dn-tag shape="circle" plain="{{true}}" type="dark" uk-class="dn-tag-cmt" bindtap="common">查看全部评价</dn-tag>
+      </view>
+    </view>
+
+    <view class="pt-1">
+      <dn-nomore text="宝贝详情" visible="{{true}}" bgcolor="#f7f7f7"></dn-nomore>
+    </view>
+    <view class="dn-product-img dn-radius-all">
+      <image src="https://www.thorui.cn/img/detail/{{index+1}}.jpg" wx:for="{{20}}" wx:key="{{index}}" mode="widthFix"></image>
+    </view>
+    <dn-nomore text="已经到最底了" visible="{{true}}" bgcolor="#f7f7f7"></dn-nomore>
+    <view class="dn-safearea-bottom"></view>
+  </view>
+
+  <!--底部操作栏-->
+  <view class="dn-operation">
+    <view class="dn-operation-left dn-col-5">
+      <view class="dn-operation-item" hover-class="opacity5" hover-stay-time="150" bindtap="common">
+        <dn-icon name="servicefill" size="22" color='#333'></dn-icon>
+        <view class="fs-11 text-sub dn-scale-small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opacity5" hover-stay-time="150" bindtap="common">
+        <dn-icon name="dianpu" size="22" color='#333'></dn-icon>
+        <view class="fs-11 text-sub dn-scale-small">店铺</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opacity5" hover-stay-time="150" bindtap="common">
+        <dn-icon name="gouwuche1" size="22" color='#333'></dn-icon>
+        <view class="fs-11 text-sub dn-scale-small">购物车</view>
+        <dn-badge type="red" size="sm" value="2" shape="circle" uk-class="dn-badge-class"></dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right dn-right-flex dn-col-7">
+      <dn-button type="red" uk-class="dn-btn-equals" shape="circle" size="sm" class="d-flex-1" bindtap="showPopup">加入购物车</dn-button>
+      <dn-button type="warning" uk-class="dn-btn-equals" shape="circle" size="sm" class="d-flex-1" bindtap="submit">立即购买</dn-button>
+    </view>
+  </view>
+  <!--底部操作栏--->
+
+  <!--顶部下拉菜单-->
+  <dn-top-dropdown uk-class="dn-top-dropdown" bgcolor="rgba(76, 76, 76, 0.95);" show="{{menuShow}}" height="0" bind:close="closeMenu">
+    <view class="dn-menu-box px-3">
+      <view class="dn-menu-header" style="padding-top:{{top}}px;">
+        功能直达
+      </view>
+      <view class="dn-menu-itembox">
+        <block wx:for="{{topMenu}}" wx:key="{{index}}">
+          <view class="dn-menu-item" hover-class="dn-opcity" hover-stay-time="150" bindtap="common">
+            <view class="dn-badge-box">
+              <dn-icon name="{{item.icon}}" color="#fff" size="{{item.size}}"></dn-icon>
+              <dn-badge type="red" uk-class="dn-menu-badge" size="sm" wx:if="{{item.badge}}">{{item.badge}}</dn-badge>
+            </view>
+            <view class="dn-menu-text">{{item.text}}</view>
+          </view>
+        </block>
+      </view>
+      <dn-icon name="up" color="#fff" size="26" class="dn-icon-up" catchtap="closeMenu"></dn-icon>
+    </view>
+
+  </dn-top-dropdown>
+  <!---顶部下拉菜单-->
+
+  <!--底部选择层-->
+  <dn-bottom-popup show="{{popupShow}}" uk-class="dn-popup" bind:close="hidePopup">
+    <view class="dn-popup-box">
+      <view class="dn-product-box px-3">
+        <image src="/static/demo/1.jpg" class="dn-popup-img"></image>
+        <view class="dn-popup-price">
+          <view class="dn-amount text-bold">￥<text class="h3">49</text>.00</view>
+          <view class="dn-number">货号: 20201103999388</view>
+        </view>
+      </view>
+      <scroll-view scroll-y class="dn-popup-scroll">
+        <view class="dn-scrollview-box">
+          <view class="text-bold dn-attrTitle">颜色</view>
+          <view class="dn-attrList">
+            <view class="dn-attrItem {{attrItem==1?'dn-attrActive':''}}" bindtap="attrItemActive" data-index="1">
+              五角星钻耳线
+            </view>
+            <view class="dn-attrItem {{attrItem==2?'dn-attrActive':''}}" bindtap="attrItemActive" data-index="2">
+              米子珍珠耳线
+            </view>
+            <view class="dn-attrItem {{attrItem==3?'dn-attrActive':''}}" bindtap="attrItemActive" data-index="3">
+              花朵镶钻耳线
+            </view>
+            <view class="dn-attrItem {{attrItem==4?'dn-attrActive':''}}" bindtap="attrItemActive" data-index="4">
+              扇子珍珠流苏耳线
+            </view>
+            <view class="dn-attrItem  {{attrItem==5?'dn-attrActive':''}}" bindtap="attrItemActive" data-index="5">
+              扇子珍珠流苏耳线耳线
+            </view>
+          </view>
+
+          <view class="dn-number-box text-bold dn-attrTitle">
+            <view class="dn-attrTitle">数量</view>
+            <dn-numberbox max="99" min="1" value="{{value}}" bind:change="change"></dn-numberbox>
+          </view>
+          <view class="text-bold dn-attrTitle">尺寸</view>
+          <view class="dn-attrList">
+            <view class="dn-attrItem">
+              5cm
+            </view>
+            <view class="dn-attrItem">
+              8cm
+            </view>
+            <view class="dn-attrItem">
+              12cm
+            </view>
+            <view class="dn-attrItem">
+              16cm
+            </view>
+            <view class="dn-attrItem dn-attrActive">
+              18cm
+            </view>
+          </view>
+
+          <view class="text-bold dn-attrTitle">
+            保障服务
+          </view>
+          <view class="dn-attrList">
+            <view class="dn-attrItem">
+              半年掉钻保 ￥4.0
+            </view>
+          </view>
+
+          <view class="text-bold dn-attrTitle">
+            只换不修
+          </view>
+          <view class="dn-attrList">
+            <view class="dn-attrItem">
+              三月意外换￥2.0
+            </view>
+            <view class="dn-attrItem">
+              半年意外换￥2.0
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+      <view class="dn-operation dn-operation-right dn-right-flex dn-popup-btn">
+        <dn-button type="red" uk-class="dn-btn-equals" shape="circle" size="sm" class="d-flex-1" bind:click="hidePopup">加入购物车</dn-button>
+        <dn-button type="warning" uk-class="dn-btn-equals" shape="circle" size="sm" class="d-flex-1" bind:click="submit">立即购买</dn-button>
+      </view>
+
+      <dn-icon name="close-fill" color="#999" class="dn-icon-close" size="20" bindtap="hidePopup"></dn-icon>
+    </view>
+  </dn-bottom-popup>
+  <!--底部选择层-->
+
+</view>

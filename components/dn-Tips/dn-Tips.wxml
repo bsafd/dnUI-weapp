@@ -1,0 +1,10 @@
+<block wx:if="{{position=='top'}}">
+  <view class="uk-class dn-toptips  {{type?'bg-'+type+'':'bg-warning'}} {{show?'dn-top-show':''}}">{{msg}}</view>
+</block>
+<block wx:else>
+  <view class='dn-tips-class dn-toast {{position=="center"?"dn-centertips":"dn-bottomtips"}}  {{show?"dn-toast-show":""}}'>
+    <view class="dn-tips-content {{type?'bg-'+type+'':'bg-warning'}}">
+      {{msg}}
+    </view>
+  </view>
+</block>

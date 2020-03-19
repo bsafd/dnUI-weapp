@@ -1,0 +1,13 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#F5F6FA",
+  "backgroundColorBottom": "#F5F6FA",
+  "navigationBarTitleText": "消息 ",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge",
+    "dn-list": "../../../components/dn-List/dn-List"
+  }
+}

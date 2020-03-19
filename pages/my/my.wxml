@@ -1,0 +1,75 @@
+<!--pages/my/my.wxml-->
+<view class='container'>
+  <view class='top-container bg-warning'>
+    <!-- <image class='bg-img' src='../../static/images/my/mine_bg_3x.png'></image> -->
+    <view hidden='{{!isLogin}}'>
+      <view hidden='{{isLogin}}' class='w-100 pos-abs px-3 d-flex align-items-center justify-content-between' >
+        <view hover-class="opcity" hover-stay-time="150" bindtap="edit" class="mr-2">
+          <dn-icon name="shezhifill" size="16"></dn-icon>      
+        </view>
+        <view bindtap='logout' hover-class="opcity" hover-stay-time="150">
+          <dn-icon name="power" color="#333" size="16" uk-class="d-inline-block"></dn-icon>
+        </view>
+      </view>
+    </view>
+    <view class='d-flex justify-content-center align-items-center h-100 mb-4'>
+      <view hidden='{{isLogin}}'>
+        <navigator url='../login/login' hover-class="opcity" hover-stay-time="150" class="d-flex flex-column"  hidden='{{isLogin}}'>
+          <image class='avatar avatar-xl avatar-border' src='../../static/demo/2.jpg'></image>
+          <text class='text-center mt-2'>请登录</text>
+        </navigator>
+      </view>
+      <view hidden='{{!isLogin}}'>
+        <view class="d-flex flex-column" >
+          <image class='avatar avatar-xl avatar-border align-self-center' src='../../static/demo/5.jpg'></image>
+          <text class='text-center mt-2'>{{memberName}}</text>
+        </view>
+      </view>
+    </view>
+
+    
+  </view>
+
+  <view class='dn-card dn-card-round shadow-1' style="margin-top:-70rpx;z-index:222">
+    <view class='dn-card-body d-flex justify-content-around'>
+      <view data-url='../myWashTicket/myWashTicket' bindtap='tapEvent'  data-index="1" class='d-flex align-items-center flex-row' hover-class="opcity" hover-stay-time="150">
+        <view class="avatar avatar-lg avatar-i bg-warning-lt"><dn-icon name="wx" size="50"></dn-icon> </view> 
+        <text class='ml-2'>优壳dnUI</text>
+      </view> 
+      <view bindtap='github' class='d-flex align-items-center flex-row' hover-class="opcity" hover-stay-time="150">
+        <view class="avatar avatar-lg avatar-i bg-warning-lt"><dn-icon name="github" size="50"></dn-icon></view> 
+        <text class='ml-2'>GitHub</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='dn-card dn-card-round shadow-1 p-3'>
+
+  <view class=' dn-grid dn-grid3'>
+    
+    <view class='dn-gridItem'>
+      <view bindtap="previewReward" class='d-flex flex-column align-items-center mb-2' hover-class="opcity" hover-stay-time="150">
+         <view class="avatar avatar-lg avatar-i bg-warning-lt"><dn-icon size="30" name="liwufill"></dn-icon></view> 
+        <text class='fs-12 mt-1'>赞赏</text>
+      </view>
+    </view>
+    <view class='dn-gridItem'>
+      <view  class='d-flex flex-column align-items-center mb-2' hover-class="opcity" hover-stay-time="150">
+        <button open-type="feedback" class="btn-feedback"> </button>
+         <view class="avatar avatar-lg avatar-i bg-warning-lt"><dn-icon size="30" name="liuyanfill"></dn-icon></view> 
+        <text class='fs-12 mt-1'>反馈</text>
+      
+      </view>
+    </view>
+    <view class='dn-gridItem'>
+      <view bindtap='tapEvent' data-index="3"  class='d-flex flex-column align-items-center mb-2' hover-class="opcity" hover-stay-time="150">
+         <view class="avatar avatar-lg avatar-i bg-warning-lt"><dn-icon size="30" name="formfill"></dn-icon></view> 
+        <text class='fs-12 mt-1'>日志</text>
+      </view>
+    </view>
+    
+  </view>
+  </view>
+
+<dn-modal show="{{zansan}}" bind:click="handleClickzansan" title="支持一下" images="https://static.uookk.com/dnzs.jpg" color="#333" size="32" button="{{zansanbutton}}"></dn-modal>
+</view>

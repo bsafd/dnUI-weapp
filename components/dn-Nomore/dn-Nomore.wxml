@@ -1,0 +1,5 @@
+<view class="uk-class dn-loadmore" wx:if="{{visible}}">
+  <view class="{{isDot?'dn-nomore-dot':'dn-nomore'}}">
+    <view style="background:{{bgcolor}}" class="{{isDot?'dn-dot-text':'dn-text'}}">{{isDot?dotText:text}}</view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "picker三级联动",
+  "usingComponents": {
+    "dn-button": "../../../components/dn-Button/dn-Button"
+  }
+}

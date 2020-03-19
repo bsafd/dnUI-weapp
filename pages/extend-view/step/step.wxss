@@ -1,0 +1,9 @@
+/* pages/step/step.wxss */
+@import '/static/css/dnui.wxss';
+page {
+  background:#fff !important;
+  --primary:#5556F7  !important;
+  --primary-lt:#EAEAFD !important;
+  --primary-dk:#4C4DD9 !important;
+}
+.bg-primary{background-color:var(--primary) !important;color:#fff !important;}

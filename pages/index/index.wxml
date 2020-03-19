@@ -1,0 +1,59 @@
+<view class="pb-4">
+  <view class="d-flex justify-content-center  my-4">
+    <view class="h1 pos-rlt d-flex align-items-center" bindtap="doc">
+      <image src="../../static/images/logo.jpg" mode="aspectFill" class="avatar mr-1"></image>
+      <text style="font-weight:200">DnUI</text>
+      <view class="dn-badge">文档</view>
+    </view>
+  </view>
+  
+  
+  <view class="px-3">
+    <view class="demoList">
+      <block wx:for-items="{{list}}" wx:key="index">
+        <view class="demoListItem">
+          <view id="{{item.id}}" class="d-flex catname {{item.open ? 'catnameshow' : ''}}" bindtap="kindToggle">
+            <view class="d-flex-1 text-bold ">{{item.name}}</view>
+            <view  wx:if="{{item.status}}" class="mr-4">
+              <dn-badge value="{{item.status}}" shape="round" bgcolor="black" flash uk-class="pos-rlt" top="4rpx"></dn-badge>
+            </view>
+            <text class="dni {{item.icon}} h4"></text>
+          </view>
+          <view class="democontent {{item.open ? 'democontentshow' : ''}}">
+            <view class="dn-media-list-border px-2 {{item.open ? 'dn-listshow' : ''}}">
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="item">
+                <navigator wx:if="{{page.page!='subway'}}" url="{{parse.getPageUrl(page.page)}}" class="dn-media dn-media-center dn-media-list-arrow">
+                    <view class="dn-media-body">{{page.name}}</view>
+                    <view  wx:if="{{page.status}}" class="mr-4">
+                      <dn-badge value="{{page.status}}" shape="round" bgcolor="black" flash uk-class="pos-abs" top="36rpx" right="60rpx"></dn-badge>
+                    </view>
+                </navigator>
+                <view class="dn-media dn-media-center dn-media-list-arrow" hover-class="hover" hover-stay-time="150" wx:else bindtap="href" data-page="{{page.page}}">
+                  <view class="dn-media-body">{{page.name}}33</view>
+                </view>
+                
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getPageUrl:function(page) {
+    var pageUrl;
+      if (page.indexOf("/")>0){
+        pageUrl = '../' + page + '/' + page.split("/")[1];
+      }else{
+        pageUrl = '../' + page + '/' + page;
+      }
+      if (page == 'friendsList-2') {
+        pageUrl = '../extend-view/' + page + '/' + page;
+      }
+      return pageUrl
+    }
+  }
+</wxs>

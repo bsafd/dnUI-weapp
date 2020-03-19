@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Badge",
+  "usingComponents": {
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge"
+  }
+}

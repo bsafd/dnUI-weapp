@@ -1,0 +1,163 @@
+<view class="container">
+  <!--tabbar-->
+  <view class="dn-tabbar">
+    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+      <view class="dn-tabbar-item {{current==index?'text-dorange':''}}" data-index="{{index}}" bindtap="tabbarSwitch">
+        <dn-icon name="{{current==index?item.icon+'fill':item.icon}}" color="{{current==index?'#ff5722':'#666'}}" size="{{item.size}}"></dn-icon>
+        <view class="scale8" style="">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+  <!--tabbar-->
+  
+  <!--header-->
+  <view class="dn-header">
+    <view class="dn-category" hover-class="opcity" hover-stay-time="150" bindtap="classify">
+      <dn-icon name="qiapianxingshi" color="#333" size="20" uk-class=""></dn-icon>
+      <view class="dn-category-scale">分类</view>
+    </view>
+    <view class="dn-rolling-search">
+      <icon type="search" size='13' color='#999'></icon>
+      <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="8000" class="dn-swiper">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="{{index}}" class="dn-swiper-item" bindtap="search">
+          <view class="dn-hot-item">{{item}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!--header-->
+  <view class="dn-header-banner">
+    <view class="dn-hot-search">
+      <view>热搜</view>
+      <view class="dn-hot-tag" bindtap="search">自热火锅</view>
+      <view class="dn-hot-tag" bindtap="search">华为手机</view>
+      <view class="dn-hot-tag" bindtap="search">有机酸奶</view>
+      <view class="dn-hot-tag" bindtap="search">苹果手机</view>
+    </view>
+    <view class="dn-banner-bg">
+      <view class="dn-primary-bg dn-route-left"></view>
+      <view class="dn-primary-bg dn-route-right"></view>
+      <!--banner-->
+      <view class="dn-banner-box">
+        <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="dn-banner-swiper" circular="{{true}}">
+          <swiper-item wx:for="{{banner}}" wx:key="{{index}}" catchtap="detail">
+            <image src="/static/demo/{{item}}" class="dn-slide-image" mode="aspectFill" />
+          </swiper-item>
+        </swiper>
+      </view>
+    </view>
+  </view>
+
+  <view class="dn-grid dn-grid5 bg-white text-center" style="padding-top:100rpx;padding-bottom:20rpx;">
+    <view class="dn-gridItem" wx:for="{{category}}" wx:key="{{index}}" data-key="{{item.name}}" bindtap="more">
+      <image src="/static/images/mall/category/{{item.img}}" class="avatar avatar-square bg-white" mode="scaleToFill"></image>
+      <view class="my-1 fs-12">{{item.name}}</view>
+    </view>
+  </view>
+
+  <view class="my-2 bg-white px-2">
+    <view class="h6 text-bold py-2 text-center" bindtap="more">
+      <text>新人专享</text>
+      <dn-icon name="arrowright" size="20" color="#555"></dn-icon>
+    </view>
+    <view class="d-flex radius-5 overflow ">
+      <image src="/static/images/mall/activity/activity_1.jpg" class="d-flex-1" mode="widthFix"  bindtap="coupon"></image>
+      <image src="/static/images/mall/activity/activity_2.jpg" class="d-flex-1" mode="widthFix"  bindtap="detail"></image>
+    </view>
+  </view>
+
+  <view class="my-2 bg-white">
+    <view class="h6 text-bold py-2 d-flex align-items-center justify-content-center" bindtap="more">
+      <dn-icon name="caretleft" size="10" color="#999"></dn-icon>
+      <text class="mx-1">新品推荐</text>
+      <dn-icon name="caretright" size="10" color="#999"></dn-icon>
+    </view>
+    <view class="overflow">
+    <view class="dn-grid gap-1 gap-y px-1">
+      <view class="dn-gridItem" wx:for="{{newProduct}}" wx:key="{{index}}" bindtap="detail">
+        <dn-badge user-slot icon="{{item.type==1?'labelnewfill':'labelhotfill'}}" fontsize="50" color="{{item.type==1?'#15c377':'#F7494B'}}" right="auto"  top="15rpx" left="0rpx" bgcolor="info" uk-class="">
+          <view class="dn-newitem bg-warning-lt ">
+            <view class="dn-col-8">
+              <view class="text-twoline mt-2 fs-12 text-dark ">{{item.name}}</view>
+              <view class="pt-2">
+                <text class="text-danger fs-12">￥{{item.present}}</text>
+                <text class="dn-neworiginal fs-10">￥{{item.original}}</text>
+              </view>
+            </view>
+            <view class="dn-col-4">
+                <image src="/static/demo/{{index+4}}.jpg" class="avatar avatar-lg shadow-blur"></image> 
+            </view>
+          </view>
+        </dn-badge>
+      </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="my-2">
+    <view class="h6 text-bold py-2 text-center">
+      <text>热门推荐</text>
+    </view>
+    <view class="overflow mx-2">
+    <view class="dn-grid dn-grid2 gap-1 gap-y">
+      <view class="dn-gridItem">
+        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+          <template is="productItem" data="{{item,index:index}}" />
+        </block>
+      </view>
+      <view class="dn-gridItem">
+        <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+          <template is="productItem" data="{{item,index:index}}" />
+        </block>
+      </view>
+    </view>
+    </view>
+  </view>
+
+  <!--模板-->
+  <template name="productItem">
+    <!--商品列表-->
+    <dn-card
+      round
+      full
+      image="../../static/demo/{{item.img}}.jpg"
+      imagetype="top"
+      imageheight="300"  
+      slotbody
+      uk-class=""
+      bind:click="detail" 
+      hover 
+      hover-start-time="150">
+        <view slot="body">
+          <view class="fs-14 text-twoline">{{item.name}}</view>
+          <view class="pt-2">
+            <text class="h6 text-bold text-dorange">￥{{item.sale}}</text>
+            <text class="fs-12 text-sub text-lt ml-2">￥{{item.factory}}</text>
+          </view>
+          <view class="fs-12 text-hold mt-1">{{item.payNum}}人付款</view>
+        </view>
+     
+    </dn-card>
+
+    <!-- <view class="tui-pro-item" hover-class="hover" hover-start-time="150" bindtap="detail">
+      <image src="../../../static/images/mall/product/{{item.img}}.jpg" class="tui-pro-img" mode="widthFix" />
+      <view class="tui-pro-content">
+        <view class="tui-pro-tit">{{item.name}}</view>
+        <view>
+          <view class="tui-pro-price">
+            <text class="tui-sale-price">￥{{item.sale}}</text>
+            <text class="tui-factory-price">￥{{item.factory}}</text>
+          </view>
+          <view class="tui-pro-pay">{{item.payNum}}人付款</view>
+        </view>
+      </view>
+    </view> -->
+    <!--商品列表-->
+  </template>
+
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="3" type="red"></dn-loadmore>
+  <!-- <tui-nomore visible="{{!pullUpOn}}"></tui-nomore> -->
+  <!--加载loadding-->
+  <view class="dn-safearea-bottom"></view>
+</view>

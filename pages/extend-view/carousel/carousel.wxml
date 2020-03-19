@@ -1,0 +1,59 @@
+<view class="container">
+
+  <!--banner-->
+  <view class="dn-banner-box">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="dn-banner-swiper" circular="{{true}}" previous-margin="60rpx" next-margin="60rpx" bindchange="change">
+      <swiper-item wx:for="{{banner}}" wx:key="{{index}}" class="dn-banner-item">
+        <image src="../../../static/demo/{{item}}" class="dn-slide-image shadow-blur {{current!=index?'dn-banner-scale':''}}" mode="scaleToFill" bindtap="detail" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--banner-->
+
+  <!--headlines-->
+  <view class="dn-rolling-news list-item">
+    <dn-icon name="news" size='22' color='#555'></dn-icon>
+    <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="4000" class="dn-swiper">
+      <swiper-item wx:for="{{headlines}}" wx:key="{{index}}" class="dn-swiper-item">
+        <view class="dn-news-item">{{item}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--headlines-->
+  <!--classify-->
+  <view class="dn-classify-box">
+    <view class="dn-classify-item" wx:for="{{classify}}" wx:key="{{index}}" bindtap="more" data-key="{{item.name}}">
+      <image src="../../../static/demo/{{item.img}}.jpg" class="dn-classify-img" />
+      <view class="dn-classify-name">{{item.name}}</view>
+    </view>
+  </view>
+  <!--classify-->
+  <view class="dn-spike-box">
+    <view class="dn-spike-title list-item">限时秒杀</view>
+    <!--商品列表-->
+    <swiper indicator-dots="{{false}}" autoplay="true" interval="5000" duration="400" circular="{{true}}" display-multiple-items="{{2}}" vertical="true" class="dn-spike-swiper">
+      <swiper-item wx:for="{{productList}}" wx:key="{{index}}">
+        <view class="dn-pro-item list-item" hover-class="hover" hover-start-time="150" bindtap="detail">
+          <image src="../../../static/demo/{{item.img}}.jpg" class="dn-pro-img" mode="widthFix" />
+          <view class="dn-pro-content">
+            <view class="dn-pro-tit">{{item.name}}</view>
+            <view class="dn-pro-btmbox">
+              <view class="dn-pro-price">
+                <text class="dn-sale-price">￥{{item.sale}}</text>
+                <text class="dn-factory-price">￥{{item.factory}}</text>
+              </view>
+              <view class="dn-countdown">
+                <view class="dn-countdown-text">剩余</view>
+                <dn-countdown time="{{item.time}}" color="#e41f19" bcolor="#e41f19" colonColor="#e41f19"></dn-countdown>
+                <view class="dn-countdown-text">结束</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <!--商品列表-->
+
+  </view>
+
+</view>

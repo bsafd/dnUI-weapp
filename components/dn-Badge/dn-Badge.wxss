@@ -1,0 +1,43 @@
+/* color start*/
+@import '/static/css/dncolor.wxss';
+.dn-badge{position: relative;text-align:center;}
+.dn-badge-content{
+    color: #fff;
+    font-size: 10px;
+    padding: 0px 4px;
+    display: inline-block;
+    line-height: 1.5 !important;
+    z-index: 1;
+    border-radius: 1000px;
+    background: var(--danger);
+    min-height: 15px;
+    min-width: 15px;
+}
+.dn-badge-content.badgeSlot{position: relative;z-index: 11;}
+.dn-badge-content.is-bubble{border-radius: 1000px 1000px 1000px 2px;}
+.dn-badge-content.is-dot{
+    width: 8px;
+    height: 8px;
+    padding: 0px;
+    top: -4px !important;
+    border-radius: 1000px;
+    min-height: inherit;
+    min-width: inherit;
+} 
+.dn-badge-content.is-circle{border-radius: 50px;} 
+.dn-badge-content.is-square{border-radius:0px;} 
+.dn-badge-content.is-ring {position:relative;min-width:10px;min-height:10px;line-height: 0 !important;padding:0;border-radius:100%;vertical-align:middle}
+.dn-badge-content.is-ring::after {content:'';position:absolute;top:2px;left:2px;width:6px;height:6px;border-radius:50%;background-color:#fff;-webkit-transform:scale(1);transform:scale(1);-webkit-transition:.3s;transition:.3s}
+.dn-badge-content.dni{padding:0px !important;line-height:0 !important;border-radius: 0px;background:transparent !important;}
+.dn-badge-sm {transform: scale(0.8);transform-origin: center center;}
+.dn-badge-lg {transform: scale(1.5);transform-origin: center center;}
+.dn-badge-ring.dn-badge-lg::after {transform: scale(1.2);transform-origin: center center;}
+.dn-badge-xl {padding-left:5px;transform: scale(2.0);transform-origin: center center;}
+.dn-badge-ring.dn-badge-xl::after {transform: scale(1.0) !important;transform-origin: center center;}
+.dn-badge-flash {overflow:initial;position:relative;}
+.dn-badge-flash::before{z-index:2;content:'';display:block;position:absolute;width:100%;height:100%;left:0;background-color:inherit;border-radius:inherit;transition:opacity .3s,transform .3s;animation:pulse-animation 1s cubic-bezier(0.24,0,0.38,1) infinite;}
+@keyframes pulse-animation {
+	0% {opacity:1;transform:scale(1);}
+	50% {opacity:0;transform:scale(1.5);}
+	100% {opacity:0;transform:scale(1.5);}
+}

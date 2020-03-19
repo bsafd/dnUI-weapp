@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "扩展alert",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-alert": "/components/extend/alert/alert",
+    "dn-button": "/components/dn-Button/dn-Button"
+  }
+}

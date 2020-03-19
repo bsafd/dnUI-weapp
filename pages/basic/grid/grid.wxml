@@ -1,0 +1,87 @@
+<view class="container">
+  <view class="fs-14 text-bold mb-1 m-4">
+    两列
+  </view>
+
+  <view class="overflow">
+  <view class="dn-grid dn-grid2 gap-1 gap-y">
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+        <view class="dn-gridItem">
+          <navigator url="../{{item.url}}/{{item.url}}" hover-class='none'>
+          <view class="bg-white text-center py-3">
+            <view class="">
+              <text class="dni {{item.icon}} h2" />
+            </view>
+            <text class="fs-12">{{item.name}}</text>
+          </view>
+          </navigator>
+        </view>
+    </block>
+  </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 m-4">
+    三列
+  </view>
+  <view class="overflow">
+  <view class="dn-grid dn-grid3 gap-1 gap-y">
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+        <view class="dn-gridItem">
+          <navigator url="../{{item.url}}/{{item.url}}" hover-class='none'>
+          <view class="bg-white text-center py-3">
+            <view class="">
+              <text class="dni {{item.icon}} h2" />
+            </view>
+            <text class="fs-12">{{item.name}}</text>
+          </view>
+          </navigator>
+        </view>
+    </block>
+  </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 m-4">
+    四列
+  </view>
+  <view class="overflow">
+  <view class="dn-grid dn-grid4 gap-1 gap-y">
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+        <view class="dn-gridItem">
+          <navigator url="../{{item.url}}/{{item.url}}" hover-class='none'>
+          <view class="bg-white text-center py-3">
+            <view class="">
+              <text class="dni {{item.icon}} h2" />
+            </view>
+            <text class="fs-12">{{item.name}}</text>
+          </view>
+          </navigator>
+        </view>
+    </block>
+  </view>
+  </view>
+
+  <view class="fs-14 text-bold mb-1 m-4">
+    五列
+  </view>
+  <view class="overflow">
+  <view class="dn-grid dn-grid5 gap-1 gap-y">
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+        <view class="dn-gridItem">
+          <navigator url="../{{item.url}}/{{item.url}}" hover-class='none'>
+          <view class="bg-white text-center py-3">
+            <view class="">
+              <text class="dni {{item.icon}} h2" />
+            </view>
+            <text class="fs-12">{{item.name}}</text>
+          </view>
+          </navigator>
+        </view>
+    </block>
+  </view>
+  </view>
+
+  
+
+  
+</view>
+

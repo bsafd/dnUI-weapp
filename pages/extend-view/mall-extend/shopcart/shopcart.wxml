@@ -1,0 +1,139 @@
+<view class="container">
+  <view class="dn-editGoods">
+    <view>
+      购物车共<text class="text-danger text-bold">2</text>件商品</view>
+    <view>
+    <dn-button type="dark" shape="circle" plain="{{true}}" width="160rpx" height="60rpx" fontsize="{{24}}" bind:click="editGoods">{{isEdit?"完成":"编辑商品"}}</dn-button>
+    </view>
+  </view>
+  <checkbox-group>
+    <view class="dn-cartCell  mt-12px" wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="dn-activity" wx:if="{{index%2==0}}">
+        <view class="text-bold">满3件享受优惠</view>
+        <view class="dn-buy">去凑单
+          <dn-icon name="ar" size="{{15}}" color="#333"></dn-icon>
+        </view>
+      </view>
+      <dn-swipe-action actions="{{actions}}" bind:change="handlerButton" params="{{item}}">
+        <view class="dn-goodsItem" slot="content">
+          <label class="dn-checkbox">
+            <checkbox color="#fff"></checkbox>
+          </label>
+          <image src="/static/demo/{{index%2==0?'1.jpg':'4.jpg'}}" class="dn-goodsImage" />
+          <view class="dn-goodsInfo">
+            <view class="dn-goodsTitle">
+              {{index%2==0?"欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜":"百雀羚套装女补水保湿护肤品"}}
+            </view>
+            <view class="dn-goodsModel">
+              <view class="dn-goodsModelText">{{index%2==0?"440ml;10件;套装":"500ml;2支"}}</view>
+              <dn-icon name="ab" size="{{12}}" color="#333"></dn-icon>
+            </view>
+            <view class="dn-goodsPriceBox">
+              <view class="dn-goodsPrice">￥500</view>
+              <tui-numberbox value="{{item.buyNum}}" height="28" width="56" min="1"  iconsize="22" iconcolor="#666" index="{{index}}" bind:change="changeNum"></tui-numberbox>
+            </view>
+          </view>
+        </view>
+      </dn-swipe-action>
+      <view class="dn-goodsSubInfo" wx:if="{{index%2==0}}">赠品：柔色尽情丝柔口红唇膏1支柔色尽情丝柔口红唇膏1支</view>
+    </view>
+  </checkbox-group>
+
+  <!--商品失效-->
+  <view class="dn-cartCell  mt-12px">
+    <view class="dn-activity">
+      <view class="text-bold">失效商品</view>
+      <view class="dn-buy">
+        <dn-button type="dark" plain="{{true}}" shape="circle" width="200rpx" height="56rpx" fontsize="24">清空失效商品</dn-button>
+      </view>
+    </view>
+    <view class="{{index!==0?'pt-4':''}}" wx:for="{{2}}" wx:key="{{index}}">
+      <dn-swipe-action actions="{{actions2}}">
+        <view class="dn-goodsItem" slot="content">
+          <view class="dn-checkbox pr-0">
+            <view class="dn-invalidText">失效</view>
+          </view>
+          <image src="/static/demo/8.jpg" class="dn-goodsImage opcity" />
+          <view class="dn-goodsInfo">
+            <view class="dn-goodsTitle text-sub">
+              欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜彩粉嫩透亮修颜霜透亮修颜霜透亮修颜霜
+            </view>
+            <view class="dn-goodsPriceBox align-items-center">
+              <view class="fs-12 text-sub">产品失效</view>
+              <view class="tui-btn-alike">
+                <dn-button type="dark" plain="{{true}}" shape="circle" width="120rpx" height="48rpx" fontsize="{{24}}">找相似</dn-button>
+              </view>
+            </view>
+          </view>
+        </view>
+      </dn-swipe-action>
+    </view>
+  </view>
+
+  <!--猜你喜欢-->
+
+  <dn-divider size="{{28}}" bold="{{true}}" color="#333" width="50%">
+    <dn-icon name="like" size="{{18}}" color="#e41f19"></dn-icon>
+    <text class="">猜你喜欢</text>
+  </dn-divider>
+  <view class="dn-productList">
+    <view class="dn-productContainer">
+      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+        <!--商品列表-->
+        <view class="dn-productItem" hover-class="hover" hover-start-time="150" bindtap="detail">
+          <image src="/static/demo/{{item.img}}.jpg" class="dn-productImage" mode="widthFix" />
+          <view class="dn-productContent">
+            <view class="dn-productTitle">{{item.name}}</view>
+            <view>
+              <view class="pt-2">
+                <text class="dn-productPrice">￥{{item.sale}}</text>
+                <text class="dn-factoryPrice">￥{{item.factory}}</text>
+              </view>
+              <view class="dn-productPay">{{item.payNum}}人付款</view>
+            </view>
+          </view>
+        </view>
+        <!--商品列表-->
+        <!-- <template is="productItem" data="{{item,index:index}}" /> -->
+      </block>
+    </view>
+    <view class="dn-productContainer">
+      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <!--商品列表-->
+        <view class="dn-productItem" hover-class="hover" hover-start-time="150" bindtap="detail">
+          <image src="/static/demo/{{item.img}}.jpg" class="dn-productImage" mode="widthFix" />
+          <view class="dn-productContent">
+            <view class="dn-productTitle">{{item.name}}</view>
+            <view>
+              <view class="pt-2">
+                <text class="dn-productPrice">￥{{item.sale}}</text>
+                <text class="dn-factoryPrice">￥{{item.factory}}</text>
+              </view>
+              <view class="dn-productPay">{{item.payNum}}人付款</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!--tabbar-->
+  <view class="dn-tabbar">
+    <view class="dn-checkAll">
+      <checkbox-group>
+        <label class="dn-checkbox">
+          <checkbox color="#fff"></checkbox>
+          <text class="pl-1">全选</text>
+        </label>
+      </checkbox-group>
+      <view class="fs-14" wx:if="{{!isEdit}}">合计:
+        <text class="text-bold">￥800</text> </view>
+    </view>
+    <view>
+      <dn-button width="200rpx" height="70rpx" fontsize="{{30}}" type="danger" shape="circle" wx:if="{{!isEdit}}" bind:click="btnPay">去结算(0)</dn-button>
+      <dn-button width="200rpx" height="70rpx" fontsize="{{30}}" type="danger" shape="circle" plain="{{true}}" wx:else>删除</dn-button>
+    </view>
+  </view>
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="{{3}}" type="red"></dn-loadmore>
+</view>

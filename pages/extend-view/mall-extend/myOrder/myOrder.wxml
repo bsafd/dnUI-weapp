@@ -1,0 +1,94 @@
+<view class="container">
+  <dn-tabs tabs="{{tabs}}" isFixed="{{scrollTop>=0}}" currentTab="{{currentTab}}" selectedColor="#E41F19" sliderBgColor="#E41F19" padding="0 20rpx" bind:change="change"></dn-tabs>
+  <!--选项卡逻辑自己实现即可，此处未做处理-->
+  <view class="{{scrollTop>=0?'mt-8':''}}">
+    <view class="dn-orderItem" wx:for="{{3}}" wx:key="{{index}}">
+      <dn-list-cell hover="{{false}}" lineLeft="{{false}}">
+        <view class="dn-goodsTitle">
+          <view>订单号：T201910000</view>
+          <view class="dn-orderStatus">已完成</view>
+        </view>
+      </dn-list-cell>
+      <block wx:for="{{2}}" wx:key="{{index}}">
+        <dn-list-cell padding="0" bindclick="detail">
+          <view class="dn-goodsItem">
+            <image src="/static/demo/{{index+2}}.jpg" class="dn-goodsImage"></image>
+            <view class="dn-goodsCenter">
+              <view class="dn-goodsName">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+              <view class="dn-goodsAttr">黑色，50ml</view>
+            </view>
+            <view class="dn-priceRight">
+              <view>￥298.00</view>
+              <view>x2</view>
+            </view>
+          </view>
+        </dn-list-cell>
+      </block>
+      <dn-list-cell hover="{{false}}" last="{{true}}">
+        <view class="dn-goodsPrice">
+          <view>共4件商品 合计：</view>
+          <view class="fs-12">￥</view>
+          <view class="dn-priceLarge">1192</view>
+          <view class="fs-12">.00</view>
+        </view>
+      </dn-list-cell>
+      <view class="dn-orderBtn">
+        <view class="ml-2">
+          <dn-button type="dark" plain="{{true}}" width="148rpx" height="56rpx" fontsize="{{26}}" shape="circle">查看发票</dn-button>
+        </view>
+        <view class="ml-2">
+          <dn-button type="dark" plain="{{true}}" width="148rpx" height="56rpx" fontsize="{{26}}" shape="circle">评价晒单</dn-button>
+        </view>
+        <view class="ml-2">
+          <dn-button type="danger" plain="{{true}}" width="148rpx" height="56rpx" fontsize="{{26}}" shape="circle">再次购买</dn-button>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-orderItem">
+      <dn-list-cell hover="{{false}}" lineLeft="{{false}}">
+        <view class="dn-goodsTitle">
+          <view>订单号：T201910000</view>
+          <view class="dn-orderStatus">已取消</view>
+        </view>
+      </dn-list-cell>
+      <block wx:for="1" wx:key="{{index}}">
+        <dn-list-cell padding="0" bind:click="detail">
+          <view class="dn-goodsItem">
+            <image src="/static/demo/{{index+4}}.jpg" class="dn-goodsImage"></image>
+            <view class="dn-goodsCenter">
+              <view class="dn-goodsName">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+              <view class="dn-goodsAttr">黑色，50ml</view>
+            </view>
+            <view class="dn-priceRight">
+              <view>￥298.00</view>
+              <view>x2</view>
+            </view>
+          </view>
+        </dn-list-cell>
+      </block>
+      <dn-list-cell hover="{{false}}" last="{{true}}">
+        <view class="dn-goodsPrice">
+          <view>共4件商品 合计：</view>
+          <view class="fs-12">￥</view>
+          <view class="dn-priceLarge">596</view>
+          <view class="fs-12">.00</view>
+        </view>
+      </dn-list-cell>
+      <view class="dn-orderBtn">
+        <view class="ml-2">
+          <dn-button type="black" plain="{{true}}" width="148rpx" height="56rpx" size="{{26}}" shape="circle">删除订单</dn-button>
+        </view>
+        <view class="ml-2">
+          <dn-button type="danger" plain="{{true}}" width="148rpx" height="56rpx" size="{{26}}" shape="circle">再次购买</dn-button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="{{3}}" type="red"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn}}" bgcolor="#fafafa"></dn-nomore>
+  <!--加载loadding-->
+
+</view>

@@ -1,0 +1,31 @@
+@import '/static/css/dnui.wxss';
+
+.container {
+  padding: 8rpx 30rpx 110rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.dn-cmtTitle {
+  font-size: 30rpx;
+  font-weight: bold;
+  position: relative;
+  padding: 20rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.dn-cmtTitle::after {
+  content: '';
+  position: absolute;
+  left: -18rpx;
+  top: 32%;
+  width: 6rpx;
+  height: 36%;
+  background: var(--primary);
+}
+.dn-safearea-bottom {
+  width: 100%;
+  height: env(safe-area-inset-bottom);
+}
+
+
+

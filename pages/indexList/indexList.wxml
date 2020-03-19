@@ -1,0 +1,51 @@
+<view class="page">
+  <scroll-view class="scrollList" scroll-y scroll-into-view="{{scrollViewId}}" style="height:{{winHeight}}px">
+    <view class="search-bar">
+      <view class="search-bar-form">
+        <view class="search-bar-box">
+          <icon class="icon-search-in-box" type="search" size="16"></icon>
+          <input confirm-type="search" class="search-bar-input" placeholder="请输入搜索关键词" placeholder-class="phcolor" value="{{inputVal}}"  bindinput="inputTyping" bindconfirm="searchCity"/>
+          <view class="icon-clear" wx:if="{{inputShowed}}" bindtap="clearInput">
+            <icon type="clear" size="15"></icon>
+          </view>
+        </view>
+      </view>
+       <button class="btn-primary" hover-class="btn-hover" bindtap="searchCity">搜索</button>
+    </view>
+    <view class="dn-media-list search-result" wx:if="{{inputShowed}}">
+      <view class="dn-media dn-media-center dn-media-border indent-lg" hover-class="bg-light" wx:for="{{searchResult}}"  wx:key="index" bindtap="selectCity" data-name="{{item}}" hover-stay-time='150' >
+        <image src="../../static/demo/{{(index%2===0 && index!==0)?'1.jpg':'2.jpg'}}" mode="aspectFill" class="avatar avatar-lg"></image>
+        <view class="dn-media-body">
+          
+            <view class="">{{item.name}}</view>
+            <view class="text-sub fs-12 mt-1">{{item.mobile}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!inputShowed}}">
+      <view class="dn-media-list  city-list">
+        <block wx:for="{{lists}}" wx:key="index" wx:for-item="list" wx:if="{{list.data[0]}}">
+          <view class="dn-media-list-header" id="{{list.letter}}">
+            {{list.letter=="well"?'#':list.letter}}
+          </view>
+          <view class="dn-media dn-media-center dn-media-border indent-lg" hover-class="bg-light" wx:for="{{list.data}}"  wx:key="index" bindtap="selectCity" data-name="{{item.name}}" hover-stay-time='150'>
+              
+              <image src="../../static/demo/{{(index%2===0 && index!==0)?'1.jpg':'2.jpg'}}"  mode="aspectFill" class="avatar avatar-lg"></image>
+              <view class="dn-media-body {{list.data.length-1==index?'dn-media-border-no':''}}">
+                <view class="">{{item.name}}</view>
+                <view class="text-sub fs-12 mt-1">{{item.mobile}}</view>
+              </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="dn-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
+    <text wx:for="{{lists}}"  wx:key="index" wx:for-item="items" class="dn-indexed-list-text" style="height:{{indexBarItemHeight}}px">
+				{{items.letter=="well"?'#':items.letter}}
+			</text>
+  </view>
+  <view class="dn-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
+    {{lists[touchmoveIndex].letter=="well"?"#":lists[touchmoveIndex].letter}}
+  </view>
+</view>

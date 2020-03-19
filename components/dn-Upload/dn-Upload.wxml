@@ -1,0 +1,16 @@
+<view class="dn-container">
+  <view class="dn-upload-box">
+    <view class="dn-image-item" wx:for="{{imageList}}" wx:key="{{index}}">
+      <image src="{{item}}" class="dn-item-img" catchtap="previewImage" data-index="{{index}}" mode="aspectFill"></image>
+      <view wx:if="{{!forbidDel}}" class="dn-img-del" catchtap="delImage" data-index="{{index}}"></view>
+      <view wx:if="{{statusArr[index]!=1}}" class="dn-upload-mask">
+        <view class="dn-upload-loading" wx:if="{{statusArr[index]==2}}"></view>
+        <text class="dn-tips">{{statusArr[index]==2?'上传中...':'上传失败'}}</text>
+        <view class="dn-mask-btn" wx:if="{{statusArr[index]==3}}" catchtap="reUpLoad" data-index="{{index}}" hover-class="dn-hover" hover-stay-time="150">重新上传</view>
+      </view>
+    </view>
+    <view wx:if="{{!forbidAdd && imageList.length < limit}}" class="dn-upload-add" bindtap="chooseImage">
+      <view class="dn-upload-icon dn-icon-plus"></view>
+    </view>
+  </view>
+</view>

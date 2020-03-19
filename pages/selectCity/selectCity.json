@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "城市选择",
+  "usingComponents": {
+    "dn-icon": "../../components/dn-Icon/dn-Icon"
+  }
+}

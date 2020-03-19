@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="d-flex align-items-center py-3">
+    <view class="dn-search-input">
+      <icon type="search" size='13' color='#333'></icon>
+      <input confirm-type="search" placeholder="大家都在搜：2019退役球星" auto-focus="{{true}}" placeholder-class="fs-14 text-sub" class="dn-search-input" value="{{key}}" bindinput="input"/>
+       <icon type="clear" size='13' color='#bcbcbc' bindtap="cleanKey" hidden="{{!key}}"></icon>
+    </view>
+    <view class="dn-search-cancle" bindtap="back">取消</view>
+  </view>
+
+  <view wx:if="{{history.length>0}}">
+    <view class="d-flex align-items-center justify-content-between py-3">
+      <view class="fs-14 text-bold">搜索历史</view>
+      <dn-icon name="delete" size='16' color='#333' bindtap="openActionSheet" class="p-1"></dn-icon>
+    </view>
+    <view class="gap-items">
+      <block wx:for="{{history}}" wx:key="{{index}}">
+        <dn-tag type="light" uk-class="mr-1 mb-2" shape="circle">{{item}}</dn-tag>
+      </block>
+    </view>
+  </view>
+
+  <view class="tui-search-hot">
+    <view class="py-3">
+      <view class="fs-14 text-bold">大家正在搜</view>
+    </view>
+    <view class="tui-hot-content">
+      <block wx:for="{{hot}}" wx:key="{{index}}">
+        <dn-tag type="light" uk-class="mr-1 mb-2" shape="circle">{{item}}</dn-tag>
+      </block>
+    </view>
+  </view>
+  <dn-actionsheet show="{{showActionSheet}}" tips="{{tips}}" bind:click="itemClick" bind:cancel="closeActionSheet"></dn-actionsheet>
+</view>

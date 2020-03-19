@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "搜索",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#fff",
+  "backgroundColorBottom": "#fff",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-tag": "../../../components/dn-Tag/dn-Tag",
+    "dn-actionsheet": "../../../components/dn-ActionSheet/dn-ActionSheet"
+  }
+}

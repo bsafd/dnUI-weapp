@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="dn-bg"></view>
+  <view class="dn-content">
+    <view class="dn-form">
+      <image src="/static/images/mall/img_recharge_success.png" class="dn-icon"></image>
+      <view class="dn-title">订单支付成功</view>
+      <view class="dn-subTitle">感谢您购买我们的产品</view>
+      <view class="dn-btnBox">
+        <dn-button type="danger" width="240rpx" height="70rpx" fontsize="{{28}}" plain="{{true}}" shape="circle" bind:click="go" data-page="1">返回首页</dn-button>
+        <dn-button type="danger" shadow="{{true}}" width="240rpx" height="70rpx" fontsize="{{28}}" shape="circle" bind:click="go" data-page="2">查看订单</dn-button>
+      </view>
+    </view>
+  </view>
+  <view class="dn-tips">
+    <view class="text-sub">温馨提示:</view>
+    <view class="text-hold">
+      付款成功后，UOOKK不会以付款异常、卡单、系统升级为由联系您。请勿泄露银行卡号、手机验证码，否则会造成钱款损失！谨防电话诈骗！
+    </view>
+  </view>
+</view>

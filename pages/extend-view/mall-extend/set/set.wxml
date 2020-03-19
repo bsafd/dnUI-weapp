@@ -1,0 +1,46 @@
+<view class="dn-settingBox">
+		<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}" bind:click="href" data-type="1">
+			<view class="dn-listCell fs-17">
+				<image src="/static/demo/3.jpg" class="dn-avatar"></image>
+				<view>DaNiu.</view>
+			</view>
+		</dn-list-cell>
+		<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}" bind:click="href" data-type="2">
+			<view class="dn-listCell">
+				地址管理
+			</view>
+		</dn-list-cell>
+		<view class="mt-2 ">
+			<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}">
+				<view class="dn-listCell">
+					账户与安全
+				</view>
+			</dn-list-cell>
+			<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}">
+				<view class="dn-listCell">
+					支付设置
+				</view>
+			</dn-list-cell>
+			<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}">
+				<view class="dn-listCell">
+					消息提醒设置
+				</view>
+			</dn-list-cell>
+		</view>
+		<view class="mt-2 ">
+			<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}">
+				<view class="dn-listCell">
+					关于我们
+				</view>
+			</dn-list-cell>
+			<dn-list-cell padding="0" border="{{false}}" arrow="{{true}}">
+				<view class="dn-listCell">
+					意见反馈
+				</view>
+			</dn-list-cell>
+		</view>
+
+		<view class="dn-exit">
+			<dn-button type="primary" height="88rpx">退出登录</dn-button>
+		</view>
+	</view>

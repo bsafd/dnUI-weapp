@@ -1,0 +1,176 @@
+<view class="container">
+  
+  <view class="dn-card-header">
+    <view class="dn-card-title text-bold">
+      type定义颜色
+      <view class="dn-card-subtitle">支持所有的颜色属性</view>
+    </view>
+  </view>
+
+  <view class="">
+    <dn-tag uk-class="m-1">标签</dn-tag>
+    <dn-tag type="success" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="warning" uk-class="m-1" shape="circle">标签</dn-tag>
+    <dn-tag type="danger" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="info" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="white" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="light" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="simple" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="dark" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="black" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="breez" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="accent" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="red" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="pink" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="purple" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="dpurple" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="indigo" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="blue" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lblue" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="cyan" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="teal" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="green" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lgreen" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lime" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="yellow" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="amber" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="orange" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="dorange" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="brown" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="slate" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="grey" uk-class="m-1">标签</dn-tag>
+  </view>
+
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      自定义标签
+      <view class="dn-card-subtitle">bgcolor,fontcolor,bordercolor</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag type="default" bgcolor="#0092ee" fontcolor="#fff" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="default" bordercolor="#0092ee" fontcolor="#0092ee" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="default" shape="circle" bgcolor="#fa292e" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="default" shape="circle" bgcolor="#E3FBF8" fontcolor="#08DDC1" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="default" size="sm" bgcolor="#f2545b" fontcolor="#fff" uk-class="m-1">标签</dn-tag>
+    
+  </view>
+
+  
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      浅色标签
+      <view class="dn-card-subtitle">支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag type="success-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="warning-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="danger-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="info-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="breez-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="accent-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="red-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="pink-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="purple-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="dpurple-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="indigo-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="blue-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lblue-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="cyan-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="teal-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="green-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lgreen-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="lime-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="yellow-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="amber-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="orange-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="dorange-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="brown-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="slate-lt" uk-class="m-1">标签</dn-tag>
+    <dn-tag type="grey-lt" uk-class="m-1">标签</dn-tag>
+  </view>
+
+
+
+
+
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      空心标签 plain
+      <view class="dn-card-subtitle">支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag plain uk-class="m-1">标准标签</dn-tag>
+    <dn-tag plain type="success" uk-class="m-1">标签</dn-tag>
+    <dn-tag plain type="warning" uk-class="m-1">标签</dn-tag>
+    <dn-tag plain type="danger" uk-class="m-1">标签</dn-tag>
+    <dn-tag plain shape="circle" type="info" uk-class="m-1">标签</dn-tag>
+  </view>
+
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      圆角标签 shape="circle"
+      <view class="dn-card-subtitle">支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag shape="circle" uk-class="m-1">标准标签</dn-tag>
+    <dn-tag shape="circle" type="success" uk-class="m-1">成功</dn-tag>
+    <dn-tag shape="circle" type="warning" uk-class="m-1">警告</dn-tag>
+    <dn-tag shape="circle" type="danger" uk-class="m-1">危险</dn-tag>
+    <dn-tag shape="circle" type="info" uk-class="m-1">信息</dn-tag>
+    <dn-tag shape="circle" type="success-lt" uk-class="m-1">成功</dn-tag>
+    <dn-tag shape="circle" type="warning-lt" uk-class="m-1">警告</dn-tag>
+    <dn-tag shape="circle" type="danger-lt" uk-class="m-1">危险</dn-tag>
+    <dn-tag shape="circle" type="info-lt" uk-class="m-1">信息</dn-tag>
+  </view>
+
+
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      标签大小  size="sm/xs"
+      <view class="dn-card-subtitle">支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag shape="circle" type="success" uk-class="m-1">标准标签</dn-tag>
+    <dn-tag shape="circle" size="sm" type="success-lt" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circle" size="sm" type="success" plain uk-class="m-1">标签</dn-tag>
+    <dn-tag shape="circle" size="xs" type="success" plain uk-class="m-1">标签</dn-tag>
+    <dn-tag shape="circleLeft" size="xs" type="success" plain uk-class="m-1">标签</dn-tag>
+    <dn-tag shape="circleRight" size="xs" type="success" plain uk-class="m-1">标签</dn-tag>
+  </view>
+
+
+ <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      shape="circleLeft"
+      <view class="dn-card-subtitle">半圆角标签支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag shape="circleLeft" uk-class="m-1">标准标签</dn-tag>
+    <dn-tag shape="circleLeft" size="sm" type="success" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleLeft" size="sm" type="danger" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleLeft" size="sm" type="success-lt" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleLeft" size="sm" type="success" plain uk-class="m-1">标签</dn-tag>
+  </view>
+
+
+  <view class="dn-card-header mt-4">
+    <view class="dn-card-title text-bold">
+      shape="circleRight"
+      <view class="dn-card-subtitle">半圆角标签支持所有的颜色属性</view>
+    </view>
+  </view>
+  <view class="">
+    <dn-tag shape="circleRight" uk-class="m-1">标准标签</dn-tag>
+    <dn-tag shape="circleRight" size="sm" type="success" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleRight" size="sm" type="danger" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleRight" size="sm" type="success-lt" uk-class="m-1">小型标签</dn-tag>
+    <dn-tag shape="circleRight" size="sm" type="success" plain uk-class="m-1">标签</dn-tag>
+  </view>
+
+</view>

@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="header">
+    <view class="title">ActionSheet</view>
+    <view class="sub-title">操作菜单 </view>
+  </view>
+  <view class="dn-btn-box">
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click='openActionSheet' data-type="1">默认操作</dn-button>
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click='openActionSheet' data-type="2">退出登录</dn-button>
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click="openActionSheet" data-type="3">提示文本样式</dn-button>
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click="openActionSheet" data-type="4">无提示操作</dn-button>
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click="openActionSheet" data-type="5">无取消按钮</dn-button>
+    <dn-button type="white" shape="circle" uk-class="dn-btn-mtop" bind:click="openActionSheet" data-type="6">Mask不可点击</dn-button>
+
+  </view>
+
+  <dn-actionsheet show="{{showActionSheet}}" tips="{{tips}}" item-list="{{itemList}}" mask-closable="{{maskClosable}}" color="{{color}}" size="{{size}}" is-cancel="{{isCancel}}" bind:click="itemClick" bind:cancel="closeActionSheet"></dn-actionsheet>
+</view>

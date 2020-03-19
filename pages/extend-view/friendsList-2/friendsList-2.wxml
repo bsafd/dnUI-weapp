@@ -1,0 +1,36 @@
+<view class="container">
+  <!--searchbox-->
+  <view class="dn-searchbox">
+    <view class="dn-search-input" bindtap="search">
+      <icon type="search" size='15' color='#999'></icon>
+      <text class="dn-search-text">搜索</text>
+    </view>
+  </view>
+  <view class="dn-media dn-media-center bg-white" hover-class="dn-media-hover" hover-start-time="150" bindtap="detail">
+    <image src="../../../static/images/logo.jpg" mode="aspectFill" class="avatar"></image>
+    <view class="dn-media-body">新的朋友</view>
+  </view>
+  <!--searchbox-->
+  <!--联系人列表-->
+  <dn-sticky scrollTop="{{scrollTop}}" stickyHeight="66rpx" index="{{mainIndex}}" bind:change="stickyChange" wx:for-items="{{lists}}" wx:for-index="mainIndex" wx:key="index" wx:for-item="list">
+   <!--tips:sticky组件中最好不要嵌套其他自定义组件-->
+    <view class="dn-media-list-header" slot="header">
+      {{list.letter=="well"?'#':list.letter}}
+    </view>
+    <view slot="content" class="dn-media dn-media-center dn-media-border indent bg-white"  hover-class="dn-media-hover" hover-start-time="150" wx:for-items="{{list.data}}" wx:key="index" bindtap="detail">
+      <image src="../../../static/demo/{{(index%2===0 && index!==0)?'1.jpg':'2.jpg'}}" mode="aspectFill" class="avatar"></image>
+      <view class="dn-media-body {{list.data.length-1==index?'dn-media-border-no':''}}">{{item.name}}</view>
+    </view>
+  </dn-sticky>
+
+  <!--联系人列表-->
+  <view class="dn-footer" wx:if="{{lists.length>0}}">120位联系人</view>
+  <view class="dn-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
+    <view wx:for="{{lists}}" wx:key="index" wx:for-item="items" class="dn-indexed-list-text" style="height:{{indexBarItemHeight}}px">
+      {{items.letter=="well"?'#':items.letter}}
+    </view>
+  </view>
+  <view class="dn-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
+    <text>{{lists[touchmoveIndex].letter=="well"?"#":lists[touchmoveIndex].letter}}</text>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<view class="dn-tabbar {{isFixed?'dn-tabbar-fixed':''}} {{shadow?'dn-tabbarshadow':''}}" style="background:{{backgroundColor}};{{borderColor?'border-top: 1rpx solid'+borderColor+';':''}}">
+  <block wx:for="{{tabBar}}" wx:key="{{index}}">
+    <view class="dn-tabbar-item {{item.hump?'dn-item-hump':''}}" style="background:{{item.hump?backgroundColor:'none'}}" bindtap="tabbarSwitch" data-index="{{index}}">
+      <view class="dn-icon-box {{item.hump?'dn-tabbar-hump':''}}">
+        <image src="{{current==index?item.selectedIconPath:item.iconPath}}" class="{{item.hump?'':'dn-tabbar-icon'}}" wx:if="{{item.iconPath}}"></image>
+        <text class="{{item.hump?'':'dn-tabbar-icon'}} {{current==index?item.selectedIcon:item.icon}}" style="color:{{current==index?selectedColor:color}};font-size:{{item.size?item.size+'rpx':'52rpx'}}" wx:if="{{item.icon}}"></text>
+        <view class="{{item.isDot?'dn-badge-dot':'dn-badge'}}" style="color:{{badgeColor}};background:{{badgeBgColor}}" wx:if="{{item.num>0}}">{{item.isDot?"":item.num}}</view>
+      </view>
+      <view class="dn-text-scale {{item.hump?'dn-text-hump':''}}" style="color:{{current==index?selectedColor:color}}">{{item.text}}</view>
+    </view>
+  </block>
+  <view class="{{hump?'dn-hump-box':''}} {{shadow?'dn-humpshadow':''}}" style="background:{{backgroundColor}};{{borderColor?'border-top: 1rpx solid'+borderColor+';':''}}" wx:if="{{hump}}"></view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "领券中心",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#F5F5F5",
+  "backgroundColorBottom": "#F5F5F5",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-button": "/components/dn-Button/dn-Button",
+    "dn-coupon": "/components/dn-Coupon/dn-Coupon",
+    "dn-loadmore": "/components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "/components/dn-Nomore/dn-Nomore"
+  }
+}

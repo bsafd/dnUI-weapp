@@ -1,0 +1,109 @@
+<!--pages/step/step.wxml-->
+
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">基础用法</view>
+    <view class="">
+      <dn-button bind:click="next1" type="primary" plain width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" shape="number">
+      <dn-step title="待支付" des="描述问题"></dn-step>
+      <dn-step title="待发货" des="描述问题"></dn-step>
+      <dn-step title="待收货" des="描述问题"></dn-step>
+      <dn-step title="待评价" des="描述问题"></dn-step>
+    </dn-steps>
+  </view>
+</view>
+
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">居中</view>
+    <view class="">
+      <dn-button bind:click="next1" type="dark" shape="circle" width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" shape="icon" align-center>
+      <dn-step title="待支付" des="描述问题" icon="dni dni-shoucangfill"></dn-step>
+      <dn-step title="待发货" des="描述问题" icon="dni dni-xihuanfill"></dn-step>
+      <dn-step title="待收货" des="描述问题" icon="dni dni-shakehandsfill" active-icon="dni dni-del" active-color="red"></dn-step>
+      <dn-step title="待评价" des="描述问题" icon="dni dni-write1" active-color="orange"></dn-step>
+    </dn-steps>
+  </view>
+</view>
+
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">点状-添加状态</view>
+    <view class="">
+      <dn-button bind:click="next1" type="success" shape="circle" width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" shape="spot" align-center>
+      <dn-step title="待支付" des="描述问题"></dn-step>
+      <dn-step title="待发货" des="描述问题" status="wait"></dn-step>
+      <dn-step title="待收货" des="描述问题" status="warning"></dn-step>
+      <dn-step title="待评价" des="描述问题"></dn-step>
+    </dn-steps>
+  </view>
+</view>
+
+
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">圆角-自定义颜色</view>
+    <view class="">
+      <dn-button bind:click="next1" type="gd" shape="circle" width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" shape="square" active-color="#ff5722" align-center>
+      <dn-step title="待支付" des="描述问题"></dn-step>
+      <dn-step title="待发货" des="描述问题"></dn-step>
+      <dn-step title="待收货" des="描述问题"></dn-step>
+      <dn-step title="待评价" des="描述问题"></dn-step>
+    </dn-steps>
+  </view>
+</view>       
+
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">自定义icon</view>
+    <view class="">
+      <dn-button bind:click="next1" type="danger" shape="circle" width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" shape="icon" align-center>
+      <dn-step title="待支付" des="描述问题" icon="dni dni-warnfill"></dn-step>
+      <dn-step title="待发货" des="描述问题" icon="dni dni-wenhaofill"></dn-step>
+      <dn-step title="待收货" des="描述问题" icon="dni dni-tishifill" active-icon="dni dni-creativefill" active-color="red"></dn-step>
+      <dn-step title="待评价" des="描述问题" icon="dni dni-appreciatefill" active-color="orange"></dn-step>
+    </dn-steps>
+  </view>
+</view>
+        
+<view class="dn-card mt-2 mb-4">
+  <view class="dn-card-header dn-card-header-border">
+    <view class="dn-card-title text-bold">竖直-自定义内容</view>
+    <view class="">
+      <dn-button bind:click="next1" type="white" shape="circle" width="130rpx" height="50rpx" fontsize="24">下一步</dn-button>
+    </view>
+  </view>
+  <view class="dn-card-body">
+    <dn-steps value="{{value1}}" direction="vertical" shape="spot">
+      <dn-step title="已到达北京" des="2012-12-22 12:33:23 已到达北京三里屯快递站"></dn-step>
+      <dn-step title="已发往郑州" des="2012-12-22 17:43:22 已扫描装车，发往郑州转运站"></dn-step>
+      <dn-step title="待收货" des="查看装货进度" name="name3" icon="dni dni-shequ"></dn-step>
+      <dn-step title="待评价" name="name4"></dn-step>
+      <vtu-progress slot="name3" value="95" circle color="red" stroke-width="5px"></vtu-progress>
+      <vtu-rate slot="name4" value="1" count="5" size="16px" disabled="{{value1 != 3}}" bind:change="bindChange" active-color="red"></vtu-rate>
+    </dn-steps>
+  </view>
+</view>    
+
+        
+

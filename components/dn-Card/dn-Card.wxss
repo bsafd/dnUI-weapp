@@ -1,0 +1,2 @@
+@import '/static/css/dnui.wxss';
+.bold{font-weight:600}

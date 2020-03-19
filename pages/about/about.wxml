@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="mt-4 d-flex align-items-center justify-content-center">
+    <view class="dn-cube-box" bindtap='log'>
+      <view class="dn-cube dn-cube-1 bg-gd">DN UI</view>
+      <view class="dn-cube dn-cube-2 bg-gd-primary">大牛UI</view>
+      <view class="dn-cube dn-cube-3 bg-gd-danger">UOOKK</view>
+      <view class="dn-cube dn-cube-4 bg-gd-warning">优壳构建</view>
+      <view class="dn-cube dn-cube-5 bg-gd-success">魏大牛</view>
+      <view class="dn-cube dn-cube-6 bg-dark">V{{version}}</view>
+    </view>
+  </view>
+
+  <view class="h4 text-center text-bold" >
+    <view class="h2 text-center text-bold text-3d text-white">我是魏大牛</view>
+    <view class="mt-4 h1 text-center text-bold text-grad" style="font-weight:200;">想像你的想像</view>
+    <view class="mt-3 text-center text-grad" style="font-weight:200;font-size:120rpx;">UOOKK</view>
+    <view class="mt-4 fs-12 text-bold text-warning" style="font-weight:200;">为了让小兄弟们更方便些，做了一个自己的框架，还有H5版本，当然优壳构建器还有PC版本，还做了一个图片类小应用</view>
+  </view>
+
+</view>

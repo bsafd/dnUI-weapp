@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "日期时间选择",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-button":"../../../../components/dn-Button/dn-Button",
+    "dn-datetime":"../../../../components/dn-DateTime/dn-DateTime"
+  }
+}

@@ -1,0 +1,10 @@
+@import '/static/css/dnui.wxss';
+.container {
+		padding: 20rpx 0 120rpx 0;
+		box-sizing: border-box;
+	}
+
+.mt-50px {
+		margin-top:100rpx;
+}
+	

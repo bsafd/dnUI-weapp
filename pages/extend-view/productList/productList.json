@@ -1,0 +1,16 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#F7F7F7",
+  "backgroundColorBottom": "#F7F7F7",
+  "navigationBarTitleText": "商品列表 ",
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-top-dropdown": "../../../components/dn-TopDropdown/dn-TopDropdown",
+    "dn-drawer": "../../../components/dn-Drawer/dn-Drawer",
+    "dn-loadmore": "../../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../../components/dn-Nomore/dn-Nomore"
+  }
+}

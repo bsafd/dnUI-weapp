@@ -1,0 +1,80 @@
+<view class="container">
+  <vtu-navbar title="Switch"></vtu-navbar>
+  <view class="">
+    
+
+    
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">基础用法</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker serverUrl="{{serverUrl}}" fileKeyName="fileAee" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">基础数据</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" serverUrl="{{serverUrl}}" fileKeyName="fileA" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">最大限制数(limit=3)</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" limit="3" serverUrl="{{serverUrl}}" fileKeyName="fileB" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">每行数量(grid=3)</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" grid="3" fileKeyName="b" serverUrl="{{serverUrl}}" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">每行数量(col=3)</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" fileKeyName="b" serverUrl="{{serverUrl}}" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">大小限制 maxSize="1024"</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" serverUrl="{{serverUrl}}" maxSize="1024" bind:complete="result" bind:remove="remove"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">图片宽度限制 maxWidth:500px</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" maxWidth="500"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">图片高度限制 maxHeight:500px</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" maxHeight="500"> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">禁止删除和添加 forbidDel & forbidAdd</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" forbidDel forbidAdd> </dn-imgpicker>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">监听事件</view>
+      <view class="dn-card-body text-center">
+        <dn-imgpicker value="{{files}}" bind:change="change" bind:remove="remove" bind:preview="preview"> </dn-imgpicker>
+      </view>
+    </view>
+
+    
+  </view>
+</view>

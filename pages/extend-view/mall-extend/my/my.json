@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "dn-button": "../../../../components/dn-Button/dn-Button",
+    "dn-list-cell": "../../../../components/dn-List/dn-List",
+    "dn-icon": "../../../../components/dn-Icon/dn-Icon",
+    "dn-badge": "../../../../components/dn-Badge/dn-Badge",
+    "dn-grid": "../../../../components/dn-Grid/dn-Grid",
+    "dn-divider": "../../../../components/dn-Divider/dn-Divider",
+    "dn-loadmore": "../../../../components/dn-Loadmore/dn-Loadmore"
+  }
+}

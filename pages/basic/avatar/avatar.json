@@ -1,0 +1,11 @@
+{
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Avatar-头像",
+  "usingComponents": {
+    "dn-avatar": "../../../components/dn-Avatar/dn-Avatar",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "collapse折叠面板",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-collapse": "../../../components/dn-Collapse/dn-Collapse",
+    "dn-list": "../../../components/dn-List/dn-List"
+  }
+}

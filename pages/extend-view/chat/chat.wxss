@@ -1,0 +1,37 @@
+@import '/static/css/dnui.wxss';
+page {
+  background: #ebedf6;
+}
+
+.container {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 146rpx;
+  box-sizing: border-box;
+}
+
+.dn-label{
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 36rpx;
+  padding: 12rpx 16rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.dn-chat-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:28rpx;
+  font-size: 28rpx;
+  color: #666;
+  padding-top: 36rpx;
+}
+
+
+

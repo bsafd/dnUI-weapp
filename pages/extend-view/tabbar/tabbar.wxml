@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="dn-card-title">
+    <view class="h5">Tabbar</view>
+    <view class="dn-card-subtitle">类似uni-app原生tabbar组件，可用于自定义tabbar</view>
+  </view>
+  <view class="mt-50px">
+    <view class="dn-card-title">图片</view>
+    <dn-tabbar tabBar="{{tabBar}}" shadow isFixed="{{false}}" borderColor="{{false}}" current="{{current}}" bind:click="tabbarSwitch"></dn-tabbar>
+  </view>
+
+  <view class="mt-50px">
+    <view class="dn-card-title">图片中间突起</view>
+    <dn-tabbar tabBar="{{tabBar2}}" isFixed="{{false}}" unlined="{{true}}" borderColor="#fff"  color="#333" selectedColor="#ff5722" current="{{current}}" bind:click="tabbarSwitch"></dn-tabbar>
+  </view>
+
+  <view class="mt-50px">
+    <view class="dn-card-title">应用文字图标</view>
+    <dn-tabbar tabBar="{{tabBar3}}"  hump="{{true}}" unlined="{{true}}"  isFixed="{{false}}" backgroundColor="#333" color="#fff" selectedColor="#ffeb3b" current="{{current}}" bind:click="tabbarSwitch"></dn-tabbar>
+  </view>
+
+  <dn-tabbar tabBar="{{tabBar3}}" shadow hump="{{true}}" current="{{current}}" backgroundColor="#fff" borderColor="#fff"  color="#333" selectedColor="#333" bind:click="tabbarSwitch"></dn-tabbar>
+</view>

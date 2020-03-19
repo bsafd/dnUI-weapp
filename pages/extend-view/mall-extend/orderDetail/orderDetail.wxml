@@ -1,0 +1,164 @@
+<view class="container">
+  <view class="dn-orderHeader">
+    <image src="/static/demo/demo.jpg" mode="widthFix" class="dn-orderHeaderImage"></image>
+    <view class="dn-headerContent">
+      <view>
+        <view class="dn-statusText">{{parse.getStatusText(status)}}</view>
+        <view class="dn-reason">
+          <text class="dn-reasonText">{{parse.getReason(status)}}</text>
+          <dn-countdown time="{{1800}}" color="rgba(254,254,254,0.75)" colonColor="rgba(254,254,254,0.75)" bcolor="transparent" bgcolor="transparent" wx:if="{{status===1}}"></dn-countdown>
+        </view>
+      </view>
+      <dn-icon name="{{parse.getStatusType(status)}}" size="54" color="#fff"></dn-icon>
+    </view>
+  </view>
+  <dn-list-cell arrow="{{true}}" bgcolor="#fefefe">
+    <view class="dn-media-left">
+      <dn-icon name="wuliu" size="26" uk-class="mr-2"></dn-icon>
+    </view>
+    <view class="dn-media-body pr-4">
+      <text class="fs-14">快递已到收货点，请注意查收哦! 投递员: XXX 联系电话: 17788849992</text>
+      <view class="text-muted fs-12 mt-2">2019-06-03 12:02</view>
+    </view>
+  </dn-list-cell>
+  <dn-list-cell last="{{true}}" hover="{{false}}">
+    <view class="dn-media-left">
+      <dn-icon name="location" size="26" uk-class="mr-2"></dn-icon>
+    </view>
+    <view class="dn-media-body pr-4">
+      <view class="text-bold">
+        张一<text class="ml-2">17788849992</text>
+      </view>
+      <view class="text-muted fs-12 mt-2">广东省广州市海珠区阅江西路222号鲜卑路16巷吉安花园 2栋106</view>
+    </view>
+  </dn-list-cell>
+
+  <view class="dn-orderItem">
+    <dn-list-cell hover="{{false}}" lineLeft="{{false}}">
+        商品信息
+    </dn-list-cell>
+    <block wx:for="{{2}}" wx:key="{{index}}">
+      <dn-list-cell indent="indent-xxl" padding="40rpx 30rpx" last="{{index==1?true:false}}">
+        <view class="dn-media-left">
+          <dn-avatar src="{{'/static/demo/'+(index+3)+'.jpg'}}" square width="180rpx"></dn-avatar>
+        </view>
+        <view class="dn-media-body align-between">
+          <view class="fs-14 text-thrline">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+          <view class="text-muted fs-12 mt-auto dn-goodsAttr">黑色，50ml</view>
+        </view>
+        <view class="dn-media-right align-self-start text-right fs-12 pt-1">
+          <view>￥298.00</view>
+          <view class="mt-1">x2</view>
+        </view>
+
+        <!-- <view class="dn-goodsItem">
+          <image src="{{'/static/demo/'+(index+3)+'.jpg'}}" class="dn-goodsImage"></image>
+          <view class="dn-goodsCenter">
+            <view class="dn-goodsName">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+            <view class="dn-goodsAttr">黑色，50ml</view>
+          </view>
+          <view class="dn-priceRight">
+            <view>￥298.00</view>
+            <view>x2</view>
+          </view>
+        </view> -->
+      </dn-list-cell>
+    </block>
+    <view class="dn-goodsInfo">
+      <view class="dn-priceFlex dn-size24">
+        <view>商品总额</view>
+        <view>￥1192.00</view>
+      </view>
+      <view class="dn-priceFlex  dn-size24">
+        <view>优惠券</view>
+        <view>￥0.00</view>
+      </view>
+      <view class="dn-priceFlex  dn-size24">
+        <view>配送费</view>
+        <view>￥0.00</view>
+      </view>
+      <view class="dn-priceFlex fs-14 pb-2">
+        <view class="dn-flexShrink">合计</view>
+        <view class="dn-goodsPrice">
+          <view class="fs-12">￥</view>
+          <view class="dn-priceLarge">1192</view>
+          <view class="fs-12">.00</view>
+        </view>
+      </view>
+      <view class="dn-priceFlex dn-size32">
+        <view class="dn-flexShrink">实付款</view>
+        <view class="dn-goodsPrice text-danger">
+          <view class="fs-12">￥</view>
+          <view class="dn-priceLarge">1192</view>
+          <view class="fs-12">.00</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="mt-2">
+    <dn-list-cell hover="{{false}}">
+      <view class="dn-orderTitle pl-2 pos-rlt">
+        订单信息
+      </view>
+    </dn-list-cell>
+    <view class="dn-orderContent">
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">订单号:</view>
+        <view class="dn-itemContent">48690010100035</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">物流单号:</view>
+        <view class="dn-itemContent">33655511251265578556</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">创建时间:</view>
+        <view class="dn-itemContent">2019-05-26 10:36</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">付款时间:</view>
+        <view class="dn-itemContent">2019-05-26 10:44</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">发货时间:</view>
+        <view class="dn-itemContent">2019-05-27 10:20</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">配送方式:</view>
+        <view class="dn-itemContent">包邮</view>
+      </view>
+      <view class="dn-orderFlex">
+        <view class="dn-itemTitle">订单备注:</view>
+        <view class="dn-itemContent">麻烦尽快发货，打包包裹时请多拿几个泡沫放在纸箱盒内，防止摔碎</view>
+      </view>
+    </view>
+  </view>
+  <view class="dn-safe-area"></view>
+  <view class="dn-tabbar">
+    <view class="mr-3">
+      <dn-button type="dark" plain="{{true}}" width="148rpx" height="56rpx" fontsize="{{26}}" shape="circle">删除订单</dn-button>
+    </view>
+    <view class="mr-3">
+      <dn-button type="danger" plain="{{true}}" width="148rpx" height="56rpx" fontsize="{{26}}" shape="circle">立即支付</dn-button>
+    </view>
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getImg: function(webURL, status) {
+      return webURL + ["img_order_payment3x.png", "img_order_send3x.png", "img_order_received3x.png",
+        "img_order_signed3x.png", "img_order_closed3x.png"
+      ][status - 1]
+    },
+    getStatusType: function(status) {
+      return ["pay", "salefill", "baoguo","shakehandsfill", "juqianshou"][status - 1]
+    },
+    getStatusText: function(status) {
+      return ["等待您付款", "付款成功", "待收货", "订单已完成", "交易关闭"][status - 1]
+    },
+    getReason: function(status) {
+      return ["剩余时间", "等待卖家发货", "还剩X天XX小时自动确认", "", "超时未付款，订单自动取消"][status - 1]
+    }
+  }
+</wxs>

@@ -1,0 +1,128 @@
+<view class="container">
+  <video id="dn-video" src="https://thorui.cn/video/2.mp4" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls autoplay object-fit="fill" custom-cache="{{false}}"></video>
+
+  <view class="dn-container">
+    <view class="fs-12 text-sub">消息参考来源：体坛大精汇</view>
+
+    <view class="dn-operateBox">
+      <dn-tag type="{{isFabulous?'info':'dark'}}" shape="circle" plain="{{true}}" uk-class="dn-tagClass text-center" bind:click="btnFabulous">
+        <dn-icon name="{{isFabulous?'appreciatefill':'appreciate'}}" size="20" color="{{isFabulous?'#5677fc':'#333'}}"></dn-icon>
+        <text class="pl-1 {{isFabulous?'text-info':''}}">{{fabulous}}赞</text>
+      </dn-tag>
+      <button open-type="share" class="dn-shareBtn">
+        <dn-tag type="dark" shape="circle" plain="{{true}}" uk-class="dn-tagClass">
+          <dn-icon name="shangchuan" size="20" color="#333"></dn-icon>
+          <text class="pl-1">分享</text>
+        </dn-tag>
+      </button>
+    </view>
+
+
+    <view class="dn-cmtTitle">精彩评论（20）</view>
+
+    <view>
+      <view class="dn-media px-0" wx:for="{{cmtList}}" wx:key="index">
+        <view class="dn-media-left">
+          <dn-avatar src="/static/demo/{{item.avatar}}" width="64rpx"></dn-avatar>
+        </view>
+        <view class="dn-media-body">
+          <view class="d-flex align-items-center justify-content-between">
+            <view class="text-info">{{item.nickname}}</view>
+            <view class="{{item.isFabulous?'text-info':'text-sub'}}" id="{{index}}" bindtap="cmtFabulous">{{item.fabulous==0?'赞':item.fabulous}}
+              <dn-icon name="{{item.isFabulous?'appreciatefill':'appreciate'}}" size="15" color="{{item.isFabulous?'#5677fc':'#9a9a9a'}}"></dn-icon>
+            </view>
+          </view>
+
+          <view class="text-common">
+            {{item.content}}
+          </view>
+
+          <view class="radius-5 mt-2  overflow" wx:if="{{item.replayNum>0}}">
+            <dn-list-cell bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{item.replayNum<2 && item.reply.length-1==index}}" bindtap="cmtReply">
+              <view class="dn-media-body">
+                <view class="text-sub">{{items.nickname}}</view>
+                <view>{{items.content}}</view>
+              </view>
+            </dn-list-cell>
+            <dn-list-cell bgcolor="#f2f2f2" size="28" last="{{true}}" wx:if="{{item.replayNum>2}}" bindtap="cmtReply">
+              <view class="text-info">共{{item.replayNum}}条回复
+                <dn-icon name="ar" size="18" color="#5677fc" dn-icon-class="tui-arrow"></dn-icon>
+              </view>
+            </dn-list-cell>
+          </view>
+          <view class="d-flex align-items-center text-sub fs-12 mt-1">
+            {{item.time}}
+            <view class="text-info ml-2" hover-class="opcity" hover-start-time="150" bindtap="cmtReply">回复</view>
+          </view>
+
+        </view>
+      </view>
+
+
+
+    </view>
+
+    <!-- <view class="tui-cmtbox">
+      <view class="tui-cmt-cell" wx:for="{{cmtList}}" wx:key="{{index}}">
+        <image src="../../../static/images/news/{{item.avatar}}" class="tui-avatar"></image>
+        <view class="tui-cmt-detail">
+          <view class="tui-header-box">
+            <view class="tui-cmt-nickname">{{item.nickname}}</view>
+            <view class="tui-fabulous {{item.isFabulous?'tui-primary':''}}" id="{{index}}" bindtap="cmtFabulous">{{item.fabulous==0?'赞':item.fabulous}}
+              <dn-icon name="{{item.isFabulous?'agree-fill':'agree'}}" size="15" color="{{item.isFabulous?'#5677fc':'#9a9a9a'}}"></dn-icon>
+            </view>
+          </view>
+          <view class="tui-cmt-content">
+            {{item.content}}
+          </view>
+          <view class="tui-reply-box" wx:if="{{item.replayNum>0}}">
+            <dn-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{item.replayNum<2 && item.reply.length-1==index}}" bindtap="cmtReply">
+              <view class="tui-flex-1 tui-reply-nickname">{{items.nickname}}</view>
+              <view class="tui-flex-1">{{items.content}}</view>
+            </dn-list-cell>
+            <dn-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" last="{{true}}" wx:if="{{item.replayNum>2}}" bindtap="cmtReply">
+              <view class="tui-flex-1  tui-cell-last">共{{item.replayNum}}条回复
+                <dn-icon name="arrowright" size="22" color="#5677fc" dn-icon-class="tui-arrow"></dn-icon>
+              </view>
+            </dn-list-cell>
+          </view>
+          <view class="tui-footer">
+            {{item.time}}
+            <view class="tui-primary tui-ml" hover-class="opcity" hover-start-time="150" bindtap="cmtReply">回复</view>
+          </view>
+        </view>
+      </view>
+
+    </view> -->
+
+    <view class="dn-operation fixbottom bg-white">
+      <view class="dn-operation-left dn-col-7">
+        <input class="dn-operation-input dn-operation-inputbox bg-light ml-2 " bindtap="btnCmt" style="height:64rpx;" placeholder="发表你的评论..."></input>
+      </view>
+      <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-5">
+        <view class="dn-operation-item " hover-class="opcity5" hover-stay-time="150" bindtap="cmtAll">
+          <dn-badge color="danger" user-slot value="501" shape="circle" right="-16rpx" top="-10rpx" size="sm" uk-class="pos-abs uk-class">
+            <dn-icon name="community" size="30"></dn-icon>
+          </dn-badge>
+        </view>
+        <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150" bindtap="collection">
+          <dn-icon name="{{isCollection?'shoucangfill':'shoucang1'}}" size="28" color="{{isCollection?'#5677fc':'#444'}}" ></dn-icon>
+        </view>
+        <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+          <button open-type="share" class="dn-shareBtn">
+            <dn-icon name="fenxiang2" size="28" color='#444'></dn-icon>
+          </button>
+        </view>
+      </view>
+    </view>
+
+  
+
+  </view>
+
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="3" type="primary"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多评论"></dn-nomore>
+  <!--加载loadding-->
+  <view class="tui-safearea-bottom"></view>
+</view>

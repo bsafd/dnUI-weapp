@@ -1,0 +1,160 @@
+<view class="container">
+  <view class="dn-searchbox">
+    <view class="dn-rollingSearch">
+      <icon type="search" size='13' color='#999'></icon>
+      <swiper vertical="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="8000" class="dn-swiper">
+        <swiper-item wx:for="{{hotSearch}}" wx:key="index" class="dn-swiperItem" bindtap="search">
+          <view class="dn-hotItem">大家正在搜：{{item}}</view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!--banner-->
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="150" class="dn-bannerSwiper" circular="{{true}}">
+    <swiper-item wx:for="{{banner}}" wx:key="index" catchtap="bannerDetail">
+      <view class="dn-bannerTitle">{{item.title}}</view>
+      <image src="../../../static/demo/{{item.img}}" class="dn-slideImage" mode="aspectFill" />
+    </swiper-item>
+  </swiper>
+
+  <!--新闻列表-->
+  <view class="">
+    <block wx:for="{{newsList}}" wx:key="index">
+      <dn-list-cell uk-class="d-flex {{item.isVideo || item.imgNum>1 ?  'flex-column':'align-items-start'}}" last="{{newsList.length-1===index}}" id="{{index}}" bind:click="detail">
+        <view class="dn-media-left pos-rlt d-flex {{item.isVideo || item.imgNum>1?'w-100':'w-110px'}} {{item.imgNum>1?'justify-content-between':''}}" wx:if="{{item.imgNum>0}}">
+          <block wx:for-items="{{item.img}}" wx:for-item="items" wx:key="{{index}}">
+            <image src="../../../static/demo/{{items}}" mode="aspectFill" class="d-block {{item.imgNum>1?'w-33p':''}} {{item.isVideo?'w-100 h-150px':'h-80px'}}"></image>
+          </block>
+          <view class="dn-newBadge" wx:if="{{item.isVideo || item.imgNum>3}}">{{item.isVideo?item.time:item.imgNum+'图'}}</view>
+          <view class="dn-newVideo" wx:if="{{item.isVideo}}">
+            <dn-icon name="usefullfill" color="#fff" size="30" uk-class="dn-newVideoIcon"></dn-icon>
+          </view>
+        </view>
+        <view class="dn-media-body align-between {{item.imgNum===1 && !item.isVideo?'h-80px':''}} {{item.isVideo || item.imgNum>1?'mx-0':''}}">
+          <view class="text-twoline {{(!item.isVideo && item.imgNum===1)|| item.imgNum===0?'':'pt-2'}}">{{item.title}}</view>
+          <view class="d-flex justify-content-between fs-12 {{!item.isVideo && item.imgNum===1?'mt-auto':'pt-2'}}">
+            <view class="text-sub">{{item.source}}</view>
+            <view class="d-flex justify-content-between align-items-center text-sub">
+              <view>{{item.cmtsNum}}评论</view>
+              <dn-tag shape="circleRight" size="xs" type="info" plain uk-class="m-1" wx:if="{{item.isTop}}">置顶</dn-tag>
+            </view>
+          </view>
+        </view>
+      </dn-list-cell>
+    </block>
+
+
+    <!-- <block wx:for="{{newsList}}" wx:key="{{index}}">
+      <dn-list-cell tui-cell-class="tui-news-cell {{item.isVideo || item.imgNum>1 ?  'tui-flex-column':'tui-flex-start'}}" last="{{newsList.length-1===index}}" id="{{index}}" bind:click="detail">
+        <view class="tui-news-picbox {{item.isVideo || item.imgNum>1?'w-100':'tui-w220 tui-h165'}} {{item.imgNum>1?'tui-flex-between':''}}" wx:if="{{item.imgNum>0}}">
+          <block wx:for-items="{{item.img}}" wx:for-item="items" wx:key="{{index}}">
+            <image src="../../../static/demo/{{items}}" mode="widthFix" class="d-block {{item.imgNum>1?'tui-one-third':''}} {{item.isVideo?'w-100':''}}"></image>
+          </block>
+          <view class="tui-btm-badge" wx:if="{{item.isVideo || item.imgNum>3}}">{{item.isVideo?item.time:item.imgNum+'图'}}</view>
+          <view class="tui-video" wx:if="{{item.isVideo}}">
+            <dn-icon name="usefullfill" color="#fff" size="24" tui-icon-class="tui-icon"></dn-icon>
+          </view>
+        </view>
+        <view class="tui-news-tbox tui-flex-column tui-flex-between {{item.imgNum===1 && !item.isVideo?'tui-h165 pl-2':''}}">
+          <view class="tui-news-title {{(!item.isVideo && item.imgNum===1)|| item.imgNum===0?'':'pt-2'}}">{{item.title}}</view>
+          <view class="tui-sub-box {{!item.isVideo && item.imgNum===1?'':'pt-2'}}">
+            <view class="tui-sub-source">{{item.source}}</view>
+            <view class="tui-sub-cmt">
+              <view>{{item.cmtsNum}}评论</view>
+              <dn-tag size="small" plain="{{true}}" shape="circleRight" tui-tag-class="tui-tag" wx:if="{{item.isTop}}">
+                <view class="tui-scale">置顶</view>
+              </dn-tag>
+            </view>
+          </view>
+        </view>
+      </dn-list-cell>
+    </block> -->
+
+    <!-- 
+    <dn-list-cell tui-cell-class="tui-news-cell tui-flex-start">
+      <view class="tui-news-picbox tui-w220 tui-h165">
+        <image src="../../../static/demo/list_1.jpg" mode="widthFix" class="d-block"></image>
+      </view>
+      <view class="tui-news-tbox tui-flex-column tui-flex-between tui-h165 pl-2">
+        <view class="tui-news-title">卡拉斯科：俱乐部一些人的态度令我不解；需要解决出现的问题</view>
+        <view class="tui-sub-box ">
+          <view class="tui-sub-source">央视网新闻</view>
+          <view class="tui-sub-cmt">
+            <view>5123评论</view>
+            <tui-tag size="small" plain="{{true}}" shape="circleRight" tui-tag-class="tui-tag">
+              <view class="tui-scale">置顶</view>
+            </tui-tag>
+          </view>
+        </view>
+      </view>
+
+    </dn-list-cell>
+
+    <dn-list-cell tui-cell-class="tui-news-cell tui-flex-start">
+
+      <view class="tui-news-tbox tui-flex-column tui-flex-between ">
+        <view class="tui-news-title">卡拉斯科：俱乐部一些人的态度令我不解；需要解决出现的问题</view>
+        <view class="tui-sub-box pt-2">
+          <view class="tui-sub-source">央视网新闻</view>
+          <view class="tui-sub-cmt">
+            <view>5123评论</view>
+            <tui-tag size="small" plain="{{true}}" shape="circleRight" tui-tag-class="tui-tag">
+              <view class="tui-scale">置顶</view>
+            </tui-tag>
+          </view>
+        </view>
+      </view>
+
+    </dn-list-cell>
+
+    <dn-list-cell tui-cell-class="tui-news-cell tui-flex-column">
+      <view class="tui-news-picbox w-100 tui-flex-between">
+        <image src="../../../static/demo/list_1.jpg" mode="widthFix" class="d-block tui-one-third"></image>
+        <image src="../../../static/demo/list_2.jpg" mode="widthFix" class="d-block tui-one-third"></image>
+        <image src="../../../static/demo/list_3.jpg" mode="widthFix" class="d-block tui-one-third"></image>
+        <view class="tui-btm-badge">20图</view>
+      </view>
+      <view class="tui-news-tbox tui-flex-column tui-flex-between">
+        <view class="tui-news-title pt-2">卡拉斯科：俱乐部一些人的态度令我不解；需要解决出现的问题</view>
+        <view class="tui-sub-box pt-2">
+          <view class="tui-sub-source">央视网新闻</view>
+          <view class="tui-sub-cmt">
+            <view>5123评论</view>
+            <tui-tag size="small" plain="{{true}}" shape="circleRight" tui-tag-class="tui-tag">
+              <view class="tui-scale">置顶</view>
+            </tui-tag>
+          </view>
+        </view>
+      </view>
+
+    </dn-list-cell>
+
+    <dn-list-cell tui-cell-class="tui-news-cell tui-flex-column">
+      <view class="tui-news-picbox w-100">
+        <image src="../../../static/demo/banner_2.jpg" mode="widthFix" class="d-block w-100"></image>
+        <view class="tui-btm-badge">00:58</view>
+        <view class="tui-video">
+          <tui-icon name="play" color="#fff" size="24" tui-icon-class="tui-icon"></tui-icon>
+        </view>
+      </view>
+      <view class="tui-news-tbox tui-flex-column tui-flex-between">
+        <view class="tui-news-title pt-2">卡拉斯科：俱乐部一些人的态度令我不解；需要解决出现的问题</view>
+        <view class="tui-sub-box pt-2">
+          <view class="tui-sub-source">央视网新闻</view>
+          <view class="tui-sub-cmt">
+            <view>5123评论</view>
+            <tui-tag size="small" plain="{{true}}" shape="circleRight" tui-tag-class="tui-tag">
+              <view class="tui-scale">置顶</view>
+            </tui-tag>
+          </view>
+        </view>
+      </view>
+
+    </dn-list-cell> -->
+  </view>
+  <dn-tips id="tui-tips-ctx"></dn-tips>
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="3" type="primary"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn}}" bgcolor="#f2f2f2"></dn-nomore>
+  <!--加载loadding-->
+</view>

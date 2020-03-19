@@ -1,0 +1,11 @@
+<view class="uk-class dn-footer {{fixed?'dn-fixed':''}}" style='background:{{bgcolor}}'>
+  <view class="dn-footer-link" wx:if="{{navigate.length>0}}">
+    <block wx:for="{{navigate}}" wx:key="{{index}}">
+      <navigator class="dn-link" hover-class="dn-link-hover" hover-stop-propagation="{{true}}" style="color:{{item.color || '#596d96'}};font-size:{{item.size || 28}}rpx" open-type="{{item.type}}" url="{{item.url}}" target="{{item.target}}" delta="{{item.delta}}"
+        app-id="{{item.appid}}" path="{{item.path}}" extra-data="{{item.extradata}}" bindsuccess="item.bindsuccess" bindfail="item.bindfail">{{item.text}}</navigator>
+    </block>
+  </view>
+  <view class="dn-footer-copyright" style="color:{{color}};font-size:{{size}}rpx">
+    {{copyright}}
+  </view>
+</view>

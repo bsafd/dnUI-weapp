@@ -1,0 +1,8 @@
+@import '/static/css/dnui.wxss';
+
+.container {
+  padding: 20rpx 30rpx 40rpx 30rpx;
+  box-sizing: border-box;
+
+}
+button{text-transform:uppercase;}

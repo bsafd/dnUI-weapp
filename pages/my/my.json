@@ -1,0 +1,9 @@
+{
+  "backgroundColorTop": "#FFDC1B",
+  "navigationBarBackgroundColor": "#FFDC1B",
+  "navigationBarTitleText": "大牛的优壳",
+  "usingComponents": {
+    "dn-modal": "../../../components/dn-Modal/dn-Modal",
+    "dn-icon": "../../components/dn-Icon/dn-Icon"
+  }
+}

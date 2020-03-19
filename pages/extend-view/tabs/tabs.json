@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "tabs标签页",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-tabs": "../../../components/dn-Tabs/dn-Tabs"
+  }
+}

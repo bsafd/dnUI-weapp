@@ -1,0 +1,11 @@
+<view slot="{{slot}}" wx:if="{{show && !userSlot}}" class="dn-badge-content uk-class {{bgcolor?'bg-'+bgcolor:''}} {{flash?'dn-badge-flash':''}} {{size?'dn-badge-'+size:''}} {{dot?'is-dot':''}} {{'is-'+shape}}"
+      style="color: {{color}};top: {{top}};right:{{right}};">
+      <block wx:if="{{!dot && value}}">{{value}}</block>
+</view>
+<view class="dn-badge" slot="{{slot}}" wx:else>
+    <slot></slot>
+    <view wx:if="{{(dot || value) && show}}" class="dn-badge-content uk-class badgeSlot {{bgcolor?'bg-'+bgcolor:''}} {{flash?'dn-badge-flash':''}} {{size?'dn-badge-'+size:''}} {{dot?'is-dot':''}} {{'is-'+shape}}"
+          style="{{top?'top:'+top+' !important;':''}}{{right?'right:'+right+' !important;':''}}{{color?'color:'+color+' !important;':''}}{{fontsize?'font-size:'+fontsize+'rpx;':''}}">
+          <block wx:if="{{!dot && value}}">{{value}}</block>
+    </view>
+</view>

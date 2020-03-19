@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "基础组件",
+  "usingComponents": {
+    "dn-grid": "../../../components/dn-Grid/dn-Grid",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge",
+    "dn-button": "../../../components/dn-Button/dn-Button"
+  }
+}

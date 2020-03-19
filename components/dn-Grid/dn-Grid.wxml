@@ -1,0 +1,3 @@
+<view class="uk-class dn-grid4 gap-1px gap-y {{unlined?'tui-border-top':''}}">
+  <slot></slot>
+</view>

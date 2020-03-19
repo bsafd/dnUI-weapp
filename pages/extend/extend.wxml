@@ -1,0 +1,30 @@
+<wxs module="wxs" src="../../filter/filter.wxs"></wxs>
+
+
+<view class="container">
+<view class="overflow w-100">
+  <view class="dn-grid dn-grid2 gap-1 gap-y">
+    <view class="dn-gridItem">
+      <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0}}">
+        <template is="extendItem" data="{{item,index:index}}" />
+      </block>
+    </view>
+    <view class="dn-gridItem">
+      <block wx:for="{{list}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <template is="extendItem" data="{{item,index:index}}" />
+      </block>
+    </view>
+  </view>
+</view>
+
+<template name="extendItem">
+    <view class="dn-card dn-card-round dn-card-full {{item.type=='new'?'bg-warning':'bg-simple'}}" id="{{item.page}}" catchtap="detail">
+      <view class="dn-card-header pt-4 pl-4 text-bold text-basic">
+        {{item.name}}<dn-icon name="labelnewfill" color="black" class="text-basic pos-abs top-right" size="30"  wx:if="{{item.type=='new'}}"></dn-icon>
+      </view>
+      <view class="dn-card-body fs-12 text-muted py-5 d-flex justify-content-end" bindtap="">
+        <dn-icon name="{{item.icon ? item.icon:'duihua'}}" class="text-basic" size="60"></dn-icon>
+      </view>
+    </view>
+  </template>
+</view>

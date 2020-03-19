@@ -1,0 +1,48 @@
+@import '/static/css/dnui.wxss';
+page {
+  background: #fff;
+  color: #333;
+}
+.container {
+  padding: 40rpx 30rpx 110rpx 30rpx;
+  box-sizing: border-box;
+}
+.dn-article {
+  /* text-indent: 2em; */
+  font-size: 34rpx;
+  padding-bottom: 40rpx;
+  line-height: 60rpx;
+  text-align: justify;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.dn-articlePic {
+  width: 100%;
+  display: block;
+  margin-bottom: 40rpx;
+}
+
+
+.dn-operateBox {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  padding: 60rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.dn-tagClass {
+  width: 260rpx;
+  font-size: 26rpx !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dn-shareBtn {
+  background: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  height:auto;line-height:0;
+}

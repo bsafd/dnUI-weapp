@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "navigationBarTitleText": "联系人 ",
+  "usingComponents": {
+    "dn-list": "../../../components/dn-List/dn-List"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Loading",
+  "usingComponents": {
+    "dn-loading": "../../../components/dn-Loading/dn-Loading",
+    "dn-loadmore": "../../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../../components/dn-Nomore/dn-Nomore"
+  }
+}

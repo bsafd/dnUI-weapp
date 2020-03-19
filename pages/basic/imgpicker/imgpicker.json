@@ -1,0 +1,11 @@
+{
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "imgPicker 图像选取",
+  "usingComponents": {
+    "dn-imgpicker": "../../../components/dn-imgPicker/dn-imgPicker",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge"
+  }
+}

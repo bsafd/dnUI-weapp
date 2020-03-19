@@ -1,0 +1,141 @@
+
+@import '/static/css/dnfont.wxss';
+.dn-tabbar {
+		width: 100%;
+		height: 100rpx;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+   
+	}
+  .dn-tabbar::before {
+		content: '';
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: scaleY(0.5);
+		transform-origin: 0 100%;
+	}
+  .dn-tabbarshadow { -webkit-box-shadow:0 0 5rpx rgba(0,0,0,0.06);box-shadow:0 0 5rpx rgba(0,0,0,0.06)}
+
+	.dn-tabbar-fixed {
+		position: fixed;
+		z-index: 99999;
+		left: 0;
+		bottom: 0;
+		padding-bottom: env(safe-area-inset-bottom) !important;box-sizing: content-box;
+	}
+
+	
+
+	.dn-tabbar-item {
+		height: 100%;
+		flex: 1;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		padding: 10rpx 0;
+		box-sizing: border-box;
+
+	}
+
+	.dn-icon-box {
+		position: relative;
+	}
+
+	.dn-item-hump {
+		height: 98rpx;
+		z-index: 2;
+	}
+
+	.dn-tabbar-icon {
+		width: 52rpx;
+		height: 52rpx;
+		display: block;
+	}
+
+	.dn-hump-box {
+		width: 120rpx;
+		height: 120rpx;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -50rpx;
+		border-radius: 50%;
+		z-index: 1;
+	}
+
+	.dn-hump-box::before {
+		content: '';
+		height: 200%;
+		width: 200%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: scale(0.5) translateZ(0);
+		transform-origin: 0 0;
+		border-radius: 100%;
+	}
+  .dn-humpshadow {box-shadow: 0 -4rpx 4rpx rgba(0, 0, 0, 0.1) !important;}
+	.dn-tabbar-hump {
+		width: 100rpx;
+		height: 100rpx;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%) rotate(0deg);
+		top: -40rpx;
+		transition: all 0.2s linear;
+	}
+
+	.dn-tabbar-hump image {
+		width: 100rpx;
+		height: 100rpx;
+		display: block;
+	}
+
+	.dn-hump-active {
+		transform: translateX(-50%) rotate(135deg);
+	}
+
+	.dn-text-hump {
+		position: absolute;
+		bottom: 10rpx;
+	}
+
+	.dn-text-scale {
+		font-weight: bold;
+		transform: scale(0.8);
+		font-size: 25rpx;
+		line-height: 28rpx;
+		transform-origin: center 100%;
+	}
+
+	.dn-badge {
+		position: absolute;
+		font-size: 24rpx;
+		height: 32rpx;
+		min-width: 20rpx;
+		padding: 0 6rpx;
+		border-radius: 40rpx;
+		right: 0;
+		top: -5rpx;
+		transform: translateX(70%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    box-sizing: content-box;
+	}
+
+	.dn-badge-dot {
+		position: absolute;
+		height: 16rpx;
+		width: 16rpx;
+		border-radius: 50%;
+		right: -4rpx;
+		top: -4rpx;
+	}

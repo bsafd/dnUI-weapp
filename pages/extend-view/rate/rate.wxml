@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="header">
+    <view class="title">Rate</view>
+    <view class="sub-title">评分：可设置大小颜色，支持半星，支持手势touch选择。</view>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6"> 基本用法</view>
+    <dn-rate current="{{current}}" bind:change="change"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6">设置星星数</view>
+    <dn-rate current="{{index}}" quantity="8" bind:change="change"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6">设置尺寸大小(缩小)</view>
+    <dn-rate current="{{index}}" bind:change="change" size="16"></dn-rate>
+  </view>
+   <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6">设置尺寸大小(放大)</view>
+    <dn-rate current="{{index}}" bind:change="change" size="26"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6"> 设置颜色</view>
+    <dn-rate current="{{index}}" bind:change="change" normal="#ccc" active="#ff7900"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6">未选中为空心</view>
+    <dn-rate current="{{index}}" hollow="{{true}}" bind:change="change"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+    <view class="h6">不可点击</view>
+    <dn-rate current="{{index}}" bind:change="change" disabled="{{true}}"></dn-rate>
+  </view>
+  <view class="d-flex justify-content-between p-4 my-1 bg-white">
+			<view class="h6">不可点击(3.45星)</view>
+			<dn-rate current="{{4}}"  disabled="{{true}}" score="{{0.45}}"></dn-rate>
+		</view>
+		<view class="d-flex justify-content-between p-4 my-1 bg-white">
+			<view class="h6">不可点击(3星半)</view>
+			<dn-rate current="{{4}}"  disabled="{{true}}" score="{{0.5}}"></dn-rate>
+		</view>
+		<view class="d-flex justify-content-between p-4 my-1 bg-white">
+			<view class="h6">不可点击(3.55星)</view>
+			<dn-rate current="{{4}}"  disabled="{{true}}" score="{{0.55}}"></dn-rate>
+		</view>
+		<view class="d-flex justify-content-between p-4 my-1 bg-white">
+			<view class="h6">不可点击(3.6星)</view>
+			<dn-rate current="{{4}}" active="#ff7900"  hollow="{{true}}" disabled="{{true}}" score="{{0.6}}"></dn-rate>
+		</view>
+
+</view>

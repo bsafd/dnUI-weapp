@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "时间轴",
+    "usingComponents": {
+      "dn-icon": "../../../components/dn-Icon/dn-Icon",
+      "dn-timeline": "../../../components/dn-Timeline/dn-Timeline",
+      "dn-timelineItem": "../../../components/dn-TimelineItem/dn-TimelineItem"
+    }
+}

@@ -1,0 +1,144 @@
+
+@import '/static/css/dnui.wxss';
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.dn-searchbox {
+  padding: 16rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.dn-rollingSearch {
+  width: 100%;
+  height: 60rpx;
+  border-radius: 35rpx;
+  padding: 0 40rpx 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #999;
+}
+
+.dn-swiper {
+  font-size: 26rpx;
+  height: 60rpx;
+  flex: 1;
+  padding-left: 12rpx;
+}
+
+.dn-swiperItem {
+  display: flex;
+  align-items: center;
+}
+
+.dn-hotItem {
+  line-height: 26rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dn-bannerSwiper {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.dn-slideImage {
+  width: 100%;
+  height: 300rpx;
+  display: block;
+}
+
+.dn-bannerTitle {
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  z-index: 9999;
+  color: #fff;
+  bottom: 0;
+  padding: 0 30rpx;
+  padding-top: 25rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dn-bannerSwiper .wx-swiper-dots.wx-swiper-dots-horizontal {
+  width: 100%;
+  top: 280rpx;
+  text-align: right;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+}
+
+.dn-bannerSwiper .wx-swiper-dot {
+  width: 8rpx;
+  height: 8rpx;
+  display: inline-flex;
+  background: none;
+  justify-content: space-between;
+}
+
+.dn-bannerSwiper .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8rpx;
+}
+
+.dn-bannerSwiper .wx-swiper-dot-active::before {
+  background: #5677fc;
+}
+
+.dn-bannerSwiper .wx-swiper-dot.wx-swiper-dot-active {
+  width: 18rpx;
+}
+
+.dn-newBadge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 24rpx;
+  color: #fff;
+  padding: 2rpx 12rpx;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  transform: scale(0.8);
+  transform-origin: 100% 100%;
+}
+
+.dn-newVideo {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+}
+.dn-newVideoIcon {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 26rpx;
+  transform:rotate(90deg);
+}
+.w-110px{width: 220rpx;}
+.h-80px{height: 160rpx;}
+.h-150px{height: 300rpx;}
+.w-33p{width:33%}
+
+
+

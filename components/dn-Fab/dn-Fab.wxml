@@ -1,0 +1,36 @@
+<view catchtouchmove="stop">
+  <view class="dn-fab-box {{!left || (left && right)?'dn-fab-right':''}}" style="left:{{parse.getLeft(left,right)}};right:{{parse.getRight(left,right)}};bottom:{{bottom}}rpx">
+    <view class="dn-fab-btn {{isOpen?'dn-visible':''}} {{hidden?'dn-fab-hidden':''}}">
+      <view class="dn-fab-item-box {{left && !right && item.imgUrl?'dn-fab-item-left':''}}" wx:for="{{btnList}}" wx:key="{{index}}" catchtap="handleClick" data-index="{{index}}">
+        <view class="{{left && !right?'dn-text-left':'dn-text-right'}}" wx:if="{{item.imgUrl}}" style="font-size:{{item.fontSize}}rpx;color:{{item.color}}">{{item.text || ""}}</view>
+        <view class="dn-fab-item" style="width:{{width}}rpx;height:{{height}}rpx;background :{{item.bgColor || bgColor}};border-radius:{{radius}}">
+          <view class="dn-fab-title" wx:if="{{!item.imgUrl}}" style="font-size:{{item.fontSize}}rpx;color:{{item.color}}">{{item.text || ""}}</view>
+          <image src="{{item.imgUrl}}" class="dn-fab-img" wx:else style="width:{{item.imgWidth}}rpx;height:{{item.imgHeight}}rpx"></image>
+        </view>
+      </view>
+    </view>
+    <view class="dn-fab-item {{isOpen?'dn-active':''}}" style="width:{{width}}rpx;height:{{height}}rpx;border-radius:{{radius}};background:{{bgColor}};color:{{color}}" catchtap="handleClick" data-index="-1">
+				<view class="dn-fab-icon dn-icon-plus"></view>
+			</view>
+		</view>
+		<view class="dn-fab-mask {{isOpen? 'dn-visible': ''}} " bindtap="handleClickCancel"></view>
+	</view>
+
+ <wxs module="parse">
+  module.exports = {
+    getLeft: function(left,right) {
+      var val = "auto "
+      if (left && !right) {
+        val =left + 'rpx'
+      }
+      return val
+    },
+    getRight:function(left,right){
+      var val = right + 'rpx'
+      if (left && !right) {
+        val = "auto "
+      }
+      return val
+    }
+  }
+</wxs>

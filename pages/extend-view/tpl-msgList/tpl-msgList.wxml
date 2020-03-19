@@ -1,0 +1,35 @@
+<view class="container">
+  <!--tabbar-->
+  <view class="dn-tabbar">
+    <block wx:for="{{tabbar}}" wx:key="{{index}}">
+      <view class="dn-tabbar-item {{current==index?'text-info':''}}" data-index="{{index}}" bindtap="tabbarSwitch">
+        <dn-icon name="{{current==index?item.icon+'fill':item.icon}}" type="{{current==index?'text-info':'text-dark'}}" size="{{item.size}}" class="{{index==0?'':''}}"></dn-icon>
+        <view class="fs-12">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+  <!--tabbar-->
+  <!--searchbox-->
+  <view class="dn-searchbox">
+    <view class="dn-search-input" bindtap="search">
+      <icon type="search" size='15' color='#999'></icon>
+      <text class="ml-2">搜索</text>
+    </view>
+  </view>
+  <!--searchbox-->
+
+  <block wx:for="{{msgList}}" wx:key="{{index}}">
+    <dn-list bind:click="detail" uk-class="" last="{{true}}" border="{{false}}">
+      <image src="../../../static/demo/{{item.pic}}.jpg" class="avatar avatar-lg" mode="widthFix"></image>
+      <view class="dn-media-body align-between">
+        <view class="dn-media-title no-wrap h6">{{item.nickname}}</view>
+        <view class="fs-14 text-sub text-ell">{{item.msg}}</view>
+      </view>
+      <view class="dn-media-right text-right {{item.level==3?'':''}}">
+        <view class="fs-12 text-sub">{{item.time}}</view>
+        <dn-badge bgcolor="{{item.level==2?'warning':'danger'}}" dot="{{item.level==3?true:false}}" flash="{{item.level==3?true:false}}" uk-class="{{item.level!=3?'dn-badge':''}}" value="{{item.level!=3?item.msgNum:''}}" wx:if="{{item.msgNum>0}}"></dn-badge>
+      </view>
+    </dn-list>
+  </block>
+  <view class="dn-safearea-bottom"></view>
+</view>

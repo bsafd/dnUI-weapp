@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="">
+    <view class="dn-media dn-media-center">
+      <dn-avatar src="/static/demo/1.jpg" width="64rpx"></dn-avatar>
+      <view class="dn-media-body">
+        <view class="dn-media-title text-info">米兰的卡先生</view>
+        <view class="fs-11 text-sub">06-22 12:02</view>     
+      </view>
+      <view class="d-flex align-items-center fs-12 {{isFabulous?'text-info':'text-sub'}}" id="{{index}}" bindtap="btnFabulous">{{fabulous==0?'赞':fabulous}}
+        <dn-icon name="{{isFabulous?'appreciatefill':'appreciate'}}" size="18" color="{{isFabulous?'#5677fc':'#9a9a9a'}}" uk-class="ml-1"></dn-icon>
+      </view>
+    </view> 
+    <view class="dn-media pt-0 ">
+        我一直没懂赛前问一个主教练如何评价对手的主教练， 记者究竟是想得到什么答案？☺☺☺☺☺
+    </view> 
+  </view>
+  <view class="pt-1 bg-light"></view>
+
+  <view class="dn-cmtTitle mt-1">全部回复（44）</view>
+  <view class="tui-cmtbox">
+    <view class="" wx:for="{{replyList}}" wx:key="{{index}}">
+
+      <view class="dn-media dn-media-center">
+        <dn-avatar src="/static/demo/1.jpg" width="64rpx"></dn-avatar>
+        <view class="dn-media-body">
+          <view class="dn-media-title text-info">{{item.nickname}}</view>
+          <view class="fs-11 text-sub">{{item.time}}</view>     
+        </view>
+        <view class="d-flex align-items-center fs-12 {{isFabulous?'text-info':'text-sub'}}" id="{{index}}" bindtap="cmtFabulous">{{item.fabulous==0?'赞':item.fabulous}}
+          <dn-icon name="{{item.isFabulous?'appreciatefill':'appreciate'}}" size="18" color="{{item.isFabulous?'#5677fc':'#9a9a9a'}}" uk-class="ml-1"></dn-icon>
+        </view>
+      </view> 
+      <view class="px-3 mb-2" wx:if="{{item.reply.length>0}}">
+        <dn-list-cell bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{true}}" bindtap="cmtReply">
+            <view class="dn-media-body">
+              <view class="text-sub">{{items.nickname}}</view>
+              <view>{{items.content}}</view>
+            </view>
+          </dn-list-cell>
+      </view>
+      <view class="dn-media pt-0 dn-media-border">
+        {{item.content}}
+      </view>
+
+
+
+    </view>
+  </view>
+<!-- 
+  <view class="tui-operation">
+     <!--处理iphonex xr 等手机底部兼容
+    <view class="tui-operation-inner">
+     <view class="tui-btn-comment" bindtap="btnCmt">回复楼主...</view>
+    </view>
+  </view> -->
+
+  <view class="dn-operation fixbottom bg-white">
+    <input class="dn-operation-input w-100 bg-light mx-2" bindtap="btnCmt" style="height:64rpx;" placeholder="回复楼主..."></input>
+  </view>
+
+
+  <!--加载loadding-->
+  <tui-loadmore visible="{{loadding}}" index="3" type="primary"></tui-loadmore>
+  <tui-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多回复"></tui-nomore>
+  <!--加载loadding-->
+  <view class="tui-safearea-bottom"></view>
+</view>

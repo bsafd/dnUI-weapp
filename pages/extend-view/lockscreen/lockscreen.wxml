@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="dn-userinfo">
+    <image class='dn-avatar' src='../../../static/images/logo.jpg'></image>
+    <view class="dn-nickname">魏大牛</view>
+  </view>
+  <view class="dn-pwd-tips">请输入密码</view>
+  <dn-keyboard-input inputvalue="{{pwdArr}}"></dn-keyboard-input>
+  <dn-keyboard show="{{true}}" action="{{false}}" mask="{{false}}" bind:click="keyboardClick">
+    <view class="dn-flex">
+      <view  hover-class="opcity" hover-stay-time="150">忘记密码</view>
+      <view class="dn-fingerprint-box" hover-class="opcity" hover-stay-time="150">
+        <dn-icon name="Fingerprint" size='18' color='#5677fc'></dn-icon>
+        <text class="dn-text">指纹解锁</text>
+      </view>
+    </view>
+  </dn-keyboard>
+</view>

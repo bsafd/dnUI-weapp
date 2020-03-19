@@ -1,0 +1,156 @@
+<!--可以直接引入dnui.wxss使用，也可以使用组件button-->
+<view class="container">
+  
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      不同尺寸按钮
+    </view>
+    <dn-button bind:click="detail" type="primary" uk-class="mb-3">默认的按钮</dn-button>
+    <dn-button bind:click="detail" type="primary" shadow="{{true}}" uk-class="mb-3">带有阴影的按钮</dn-button>
+    <dn-button bind:click="detail" type="primary" uk-class="mb-3 w-auto mr-2">自适应宽度</dn-button>
+    <dn-button bind:click="detail" type="warning" size="sm" uk-class="mb-3 mr-2">中型按钮 sm</dn-button>
+    <dn-button bind:click="detail" type="warning" size="xs" uk-class="mb-3">小型按钮 xs</dn-button>
+  </view>
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      几种形态
+    </view>
+    <dn-button bind:click="detail" type="info" shadow="{{true}}" uk-class="mb-3">shadow</dn-button>
+    <dn-button disabled="{{true}}" type="info" loading="{{true}}" uk-class="mb-3">disabled & loading</dn-button>
+    <dn-button disabled="{{true}}" type="info" uk-class="mb-3">no loading</dn-button>
+    <dn-button bind:click="detail" type="info" shape="radius" uk-class="mb-3">shape="radius"</dn-button>
+    <dn-button bind:click="detail" type="info" shape="circle" uk-class="mb-3">shape="circle"</dn-button>
+    <dn-button bind:click="detail" type="info" plain="{{true}}" uk-class="mb-3">plain</dn-button>
+    <dn-button bind:click="detail" type="info" plain="{{true}}" shape="radius" uk-class="mb-3">plain & radius</dn-button>
+    <dn-button bind:click="detail" type="info" plain="{{true}}" shape="circle" uk-class="mb-3">plain & circle</dn-button>
+  </view>
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      按钮大小 
+    </view>
+			<dn-button type="danger" width="300rpx" height="80rpx" fontsize="30" uk-class="m-1">小按钮</dn-button>
+			<dn-button type="info" width="200rpx" height="60rpx" fontsize="26" uk-class="m-1">小按钮</dn-button>
+			<dn-button type="success" width="200rpx" height="60rpx" fontsize="26" plain="true" uk-class="m-1">小按钮</dn-button>
+			<dn-button type="dark" width="94rpx" height="40rpx" padding fontsize="24" plain="true" uk-class="m-1">小按钮</dn-button>
+			<dn-button type="gd-purple" width="94rpx" height="40rpx" padding fontsize="24"  uk-class="text-white m-1">小按钮</dn-button>
+			<dn-button type="gd-primary" width="160rpx" height="50rpx" fontsize="24" uk-class="text-white m-1">立即抢购</dn-button>
+			<dn-button type="gd-danger" width="160rpx" height="60rpx" fontsize="28" uk-class="text-white m-1">立即抢购</dn-button>
+			<dn-button type="gd-success" disabled="true" width="146rpx" height="60rpx" fontsize="28" uk-class="text-white m-1">已售罄</dn-button>
+      <dn-button bind:click="detail" type="info" width="200rpx" plain="{{true}}" uk-class="m-1">主操作2</dn-button>
+  </view>
+
+    <view class="m-1">
+			<dn-button type="green" height="98rpx" shape="radius">
+				<text class="">08:00</text>
+				<text>开抢, 已设提醒</text>
+			</dn-button>
+		</view>
+		<view class="m-1">
+			<dn-button type="warning" height="98rpx" shape="radius">开抢, 已设提醒</dn-button>
+		</view>
+		<view class="m-1">
+			<dn-button type="slate" disabled="true" height="98rpx" shape="radius">活动已结束</dn-button>
+		</view>
+		<view class="m-1">
+			<dn-button type="danger" height="98rpx" shape="radius">立即抢购</dn-button>
+		</view>
+
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      颜色定义
+    </view>
+    <view class="d-flex justify-content-around flex-wrap">
+      <dn-button bind:click="detail" type="primary" uk-class="m-1" width="320rpx">primary</dn-button>
+      <dn-button bind:click="detail"  uk-class="m-1" width="320rpx">页面主操作</dn-button>
+      <dn-button bind:click="detail" type="white" uk-class="m-1" width="320rpx">white</dn-button>
+      <dn-button bind:click="detail" type="light" uk-class="m-1" width="320rpx">light</dn-button>
+      <dn-button bind:click="detail" type="simple" uk-class="m-1" width="320rpx">simple</dn-button>
+      <dn-button bind:click="detail" type="dark" uk-class="m-1" width="320rpx">dark</dn-button>
+      <dn-button bind:click="detail" type="black" uk-class="m-1" width="320rpx">black</dn-button>
+      <dn-button bind:click="detail" type="info" uk-class="m-1" width="320rpx">info</dn-button>
+      <dn-button bind:click="detail" type="success" uk-class="m-1" width="320rpx">success</dn-button>
+      <dn-button bind:click="detail" type="danger" uk-class="m-1" width="320rpx">danger</dn-button>
+      <dn-button bind:click="detail" type="warning" uk-class="m-1" width="320rpx">warning</dn-button>
+      <dn-button bind:click="detail" type="red" uk-class="m-1" width="320rpx">red</dn-button>
+      <dn-button bind:click="detail" type="breez" uk-class="m-1" width="320rpx">breez</dn-button>
+      <dn-button bind:click="detail" type="dorange" uk-class="m-1" width="320rpx">dorange</dn-button>
+      <dn-button bind:click="detail" type="pink" uk-class="m-1" width="320rpx">pink</dn-button>
+      <dn-button bind:click="detail" type="purple" uk-class="m-1" width="320rpx">purple</dn-button>
+      <dn-button bind:click="detail" type="dpurple" uk-class="m-1" width="320rpx">dpurple</dn-button>
+      <dn-button bind:click="detail" type="indigo" uk-class="m-1" width="320rpx">indigo</dn-button>
+    </view>
+  </view>
+
+  <view class="flex-box">
+    <view class="fs-14 text-bold mb-3">
+      原生按钮
+    </view>
+    <button class="dn-btn dn-btn-xs bg-white m-1" hover-class="ukhoverdk">次要操作</button>
+    <button class="dn-btn dn-btn-xs bg-danger m-1" hover-class="ukhoverdk">辅助操作</button>
+    <button class="dn-btn dn-btn-sm bg-primary m-1" hover-class="ukhoverdk">主要</button>
+    <button class="dn-btn dn-btn-sm bg-white m-1" hover-class="ukhoverdk">次要</button>
+    <button class="dn-btn dn-btn-sm bg-danger m-1" hover-class="ukhoverdk">辅助</button>
+    <button class="dn-btn dn-btn-xs bg-danger-outline m-1" hover-class="ukhoverdk">辅助操作</button>
+    <button class="dn-btn dn-btn-xs bg-success-outline m-1" hover-class="ukhoverdk">辅助操作</button>
+    <button class="dn-btn dn-btn-sm bg-primary-outline m-1" hover-class="ukhoverdk">主要2</button>
+    <button class="dn-btn dn-btn-xs bg-primary dn-btnround m-1" hover-class="ukhoverdk">主操作</button>
+    <button class="dn-btn dn-btn-xs bg-danger dn-btnround m-1" hover-class="ukhoverdk">辅助操作</button>
+    <button class="dn-btn dn-btn-sm bg-warning dn-btnround m-1" hover-class="ukhoverdk">辅助</button>
+    <button class="dn-btn dn-btn-sm bg-green dn-btnround m-1" hover-class="ukhoverdk">辅助</button>
+    <button class="dn-btn dn-btn-xs bg-primary-outline m-1" hover-class="ukhoverdk">主操作</button>
+    <button class="dn-btn dn-btn-xs bg-success-outline m-1" hover-class="ukhoverdk">辅助操作</button>
+  </view>
+
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      默认按钮
+    </view>
+			<button class="dn-btn dn-btn-block bg-white mb-3" hover-class="bg-white-hover">页面次要操作</button>
+      <button class="dn-btn dn-btn-block bg-white mb-3" disabled loading> 页面次要操作 Disabled</button>
+      <button class="dn-btn dn-btn-block bg-danger mb-3" hover-class="bg-danger-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-danger dn-dark-disabled mb-3" loading disabled>页面辅助操作 Disabled</button>
+      <button class="dn-btn dn-btn-block bg-warning mb-3" hover-class="bg-warning-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-warning dn-dark-disabled mb-3" disabled>页面辅助操作 Disabled</button>
+      <button class="dn-btn dn-btn-block bg-success mb-3" hover-class="bg-success-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-success dn-dark-disabled mb-3" disabled>页面辅助操作 Disabled</button>
+  </view>
+
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      空心按钮
+    </view>
+			<dn-button bind:click="detail" type="primary" plain="{{true}}" uk-class="mb-3">页面主操作</dn-button>
+      <dn-button type="primary" plain="{{true}}" disabled='{{true}}' loading="{{true}}" uk-class="mb-3">页面主操作 Disabled</dn-button>
+      <button class="dn-btn dn-btn-block bg-danger-outline mb-3" hover-class="dn-outline-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-danger-outline dn-dark-disabled mb-3" disabled>页面辅助操作 Disabled</button>
+      <button class="dn-btn dn-btn-block bg-warning-outline mb-3" hover-class="dn-outline-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-success-outline mb-3" hover-class="dn-outline-hover">页面辅助操作</button>
+      <button class="dn-btn dn-btn-block bg-breez-outline mb-3" hover-class="dn-outline-hover">页面辅助操作</button>
+  </view>
+
+
+  <view class="my-4">
+    <view class="fs-14 text-bold mb-3">
+      按钮开放能力
+    </view>
+      <dn-button uk-class="mb-3" type="primary" shape="radius" openType="getUserInfo" bind:getuserinfo="getUserInfo">获取用户信息(getUserInfo)</dn-button>
+      <dn-button uk-class="mb-3" type="success" shape="circle" openType="share">转发(share)</dn-button>
+      <dn-button uk-class="mb-3" type="danger" shape="circle" openType="getPhoneNumber" bind:getphonenumber="getPhoneNumber">获取用户手机号(getPhoneNumber)</dn-button>
+      <dn-button uk-class="mb-3" type="info" shape="circle" openType="contact">打开客服会话(contact)</dn-button>
+      <dn-button uk-class="mb-3" type="pink" shape="circle" openType="launchApp">打开APP(launchApp)</dn-button>
+      <dn-button uk-class="mb-3" type="info" shape="circle" plain="{{true}}" openType="openSetting">打开授权设置页(openSetting)</dn-button>
+      <dn-button uk-class="mb-3" type="white" shape="circle" openType="feedback">打开意见反馈页面(feedback)</dn-button>
+
+  </view>
+
+  
+
+
+  
+</view>

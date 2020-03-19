@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "新闻列表",
+  "backgroundColorTop": "#f2f2f2",
+  "backgroundColorBottom": "#f2f2f2",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-tag": "../../../components/dn-Tag/dn-Tag",
+    "dn-list-cell": "../../../components/dn-List/dn-List",
+    "dn-loadmore": "../../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../../components/dn-Nomore/dn-Nomore",
+    "dn-tips": "../../../components/dn-Tips/dn-Tips"
+  }
+}

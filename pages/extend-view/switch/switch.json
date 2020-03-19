@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "dn-button": "../../../components/dn-Button/dn-Button",
+        "dn-switch": "../../../components/dn-Switch/dn-Switch"
+    }
+}

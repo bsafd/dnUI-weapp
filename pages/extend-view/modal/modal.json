@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "modal",
+  "usingComponents": {
+    "dn-modal": "../../../components/dn-Modal/dn-Modal",
+    "dn-button": "../../../components/dn-Button/dn-Button"
+  }
+}

@@ -1,0 +1,284 @@
+<view class="container">
+  <view class="m-3 mb-0">
+    <view class="h6 text-bold">
+      操作条
+    </view>
+  </view>
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-7">
+      <input class="dn-operation-input bg-simple ml-2 " style="height:64rpx;" placeholder="发表你的UOOKKUI言论"></input>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-5">
+      <view class="dn-operation-item " hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="18" shape="circle" right="-16rpx" top="-10rpx" size="sm" uk-class="pos-abs uk-class">
+          <text class="dni dni-liuyan h3 "></text>
+        </dn-badge>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-jiaxing h3"></text>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-share1 h3"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="dn-operation bg-white my-2">
+    <view class="dn-operation-left dn-col-7">
+      <input class="dn-operation-input dn-operation-inputbox bg-light ml-2 " bindtap="btnCmt" style="height:64rpx;" placeholder="发表UOOKKUI言论"></input>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-5">
+      <view class="dn-operation-item " hover-class="opcity5" hover-stay-time="150" bindtap="cmtAll">
+        <dn-badge color="danger" user-slot value="18" shape="circle" right="-16rpx" top="-10rpx" size="sm" uk-class="pos-abs uk-class">
+          <dn-icon name="community" size="30"></dn-icon>
+        </dn-badge>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150" bindtap="collection">
+        <dn-icon name="{{isCollection?'shoucangfill':'shoucang1'}}" size="28" color="{{isCollection?'#5677fc':'#444'}}" ></dn-icon>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <button open-type="share" class="dn-shareBtn">
+          <dn-icon name="fenxiang2" size="28" color='#444'></dn-icon>
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="dn-operation bg-dark px-2 my-2">
+    <view class='d-flex align-items-center justify-content-center dn-operation-inputbox'>
+      <view hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-fasongfill h3"></text>
+      </view>
+      <input class="dn-operation-input ba bg-white text-black ml-2"></input>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <text class="dni dni-emojilight h3"></text>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <text class="dni dni-jiahao h3"></text>
+    </view>
+  </view>
+
+  <view class="dn-operation bg-dark px-2 my-2">
+    <view class='d-flex align-items-center justify-content-center dn-operation-inputbox'>
+      <view hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-fasongfill h3"></text>
+      </view>
+      <input class="dn-operation-input ba  ml-2"></input>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <text class="dni dni-emojilight h3"></text>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <text class="dni dni-jiahao h3"></text>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-7">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-12 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="8" shape="circle" right="-16rpx" top="-10rpx" size="sm" uk-class="pos-abs text-center">
+          <text class="dni dni-dianpufill h4"></text>
+          <view class="fs-12 small">店铺</view>
+        </dn-badge>
+        
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="8" shape="circle"  right="-6rpx" top="-10rpx" size="sm" uk-class="pos-abs text-center">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small ">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right dn-col-5">
+      <dn-button type="dorange" uk-class="dn-btn-class">立即购买</dn-button>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-4">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-11 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="18" shape="circle" right="-6rpx" top="-10rpx" size="sm" uk-class="pos-abs uk-class">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right dn-col-8">
+      <dn-button type="dorange" uk-class="dn-btn-class-2">加入购物车</dn-button>
+      <dn-button type="dark" uk-class="dn-btn-class-2">立即购买</dn-button>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-5">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-11 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-dianpufill h4"></text>
+        <view class="fs-11 small">店铺</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="5" shape="circle"  right="-6rpx" top="-10rpx" size="sm" uk-class="pos-abs">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right dn-col-7">
+      <dn-button type="dark" uk-class="dn-btn-class-2">加入购物车</dn-button>
+      <dn-button type="dorange" uk-class="dn-btn-class-2">立即购买3</dn-button>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-7">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-11 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-dianpufill h4"></text>
+        <view class="fs-11 small">店铺</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="3" shape="circle" right="-6rpx" top="-10rpx"  size="sm" uk-class="pos-abs">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-5">
+      <dn-button type="dorange" uk-class="d-block fs-14" shape="circle" size="sm">立即购买4</dn-button>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-5">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-11 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="8"  right="-6rpx" top="-10rpx" size="sm" uk-class="pos-abs">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-7 pr-2">
+      <dn-button type="dorange" uk-class="d-block fs-14 mr-1"  shape="circle" size="sm">加入购物车</dn-button>
+      <dn-button type="warning" uk-class="d-block fs-14 ml-1" shape="circle" size="sm">立即购买5</dn-button>
+    </view>
+  </view>
+
+  <view class="dn-operation my-2">
+    <view class="dn-operation-left dn-col-5">
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-servicefill h4"></text>
+        <view class="fs-11 small">客服</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <text class="dni dni-dianpufill h4"></text>
+        <view class="fs-11 small">店铺</view>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <dn-badge color="danger" user-slot value="8" flash shape="circle"  right="-6rpx" top="-10rpx" size="sm" uk-class="pos-abs">
+          <text class="dni dni-cartfill h4"></text>
+          <view class="fs-12 small">购物车</view>
+        </dn-badge>
+      </view>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-7 pr-2">
+      <dn-button type="dorange" uk-class="d-block fs-14 mr-1" shape="circle" size="sm" >加入购物车</dn-button>
+      <dn-button type="warning" uk-class="d-block fs-14 ml-1" shape="circle" size="sm">立即购买5</dn-button>
+    </view>
+  </view>
+
+
+  <view class="m-3">
+    <view class="h6 text-bold">
+      三角形
+    </view>
+    <view class="gap-items">
+      <view class="dn-triangle dn-triangle-left"></view>
+      <view class="dn-triangle dn-triangle-right"></view>
+      <view class="dn-triangle dn-triangle-top"></view>
+      <view class="dn-triangle dn-triangle-bottom"></view>
+      <view class="dn-crescent"></view>
+      
+    </view>
+    <!-- <view class="tui-title">
+    平行四边形<view class="dn-parallelogram"></view>
+  </view>
+  
+  <view class="tui-title">
+    月牙
+  </view>
+   -->
+
+    <!-- <view class="tui-star"></view> -->
+    <view class="h6 text-bold mt-4 mb-3">
+      聊天框
+    </view>
+
+    <view>
+      <view class="dn-chatbox dn-chatbox-left">
+        哈喽~，欢迎关注大牛 UI！
+      </view>
+    </view>
+
+    <view class='d-flex justify-content-end'>
+      <view class="dn-chatbox dn-chatbox-right mt-4">
+        哈喽~，欢迎关注大牛 UI！ 请说出您想加入或者优化的功能！
+      </view>
+    </view>
+
+    <view class="h6 text-bold mt-4 mb-3">
+      checkbox默认和自定义样式
+    </view>
+    <view class="tui-flex">
+      <checkbox></checkbox>
+      <checkbox class="dn-checkbox"></checkbox>
+    </view>
+
+
+    <view class="h6 text-bold mt-4 mb-3">问题描述框</view>
+    <view class="ba p-3">
+      <textarea name="desc" placeholder="我望加入XXXX功能，我希望优化XXXX功能，XX功能在XX情况下会出现bug" maxlength="500" placeholder-class="text-hold" />
+      <view class="text-right text-hold fs-12">0/500</view>
+    </view>
+
+    <view class="h6 text-bold mt-4 mb-3">图片上传（请点击加号上传）</view>
+
+    <view class="dn-upload-box">
+      <view class="dn-upload-item" wx:for="{{files}}" wx:key="{{index}}">
+        <image src="{{item}}" class='dn-upload-img' bindtap="previewImage" mode="aspectFill" id="{{item}}"></image>
+        <!-- <tui-icon name="close-fill" tui-icon-class="dn-upload-del" data-index="{{index}}" catchtap="deleteImage"></tui-icon> -->
+        <text class="dni dni-guanbifill dn-upload-del h6" data-index="{{index}}" catchtap="deleteImage"></text>
+      </view>
+      <view class="dn-upload-item dn-upload-add" hidden="{{files.length>=9}}" hover-class="opacity5" hover-stay-time="150" bindtap="chooseImage">
+        <text>+</text>
+      </view>
+    </view>
+
+    
+
+  </view>
+
+  
+
+
+  
+
+</view>

@@ -1,0 +1,29 @@
+<view class="container">
+
+  <view class="btn-box first">
+    <dn-button shape="circle" type="primary" uk-class="mb-3" bindtap="showModal">从底部弹出</dn-button>
+    <dn-button shape="radius" type="info" uk-class="mb-3" bindtap="rightDrawer">从右边弹出</dn-button>
+    <dn-button shape="round" type="success" uk-class="mb-3" bindtap="leftDrawer">从右边弹出</dn-button>
+   </view>
+
+  <!--底部抽屉-->
+  <view class="mask-screen" bindtap="hideModal" hidden="{{!showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="region-box" hidden="{{!showModalStatus}}">
+    <view class="region-txt {{(index==regionArr.length-3 || index==regionArr.length-2 || index==regionArr.length-1)?'grow':''}} {{tabIndex==index?'active':''}}" wx:for="{{regionArr}}" data-index="{{index}}" catchtap="getRegion">{{item}}</view>
+  </view>
+
+  <!--左抽屉-->
+  <drawer mode="left" visible="{{leftDrawer}}" bind:close="closeDrawer" data-mode="left">
+    <view class="d-container h-100 bg-dark">
+      <dn-button shape="circle" type="success" uk-class="mb-3" bindtap="closeDrawer" data-mode="left" uk-class="my-auto">关闭抽屉</dn-button>
+    </view>
+  </drawer>
+
+  <!--右抽屉-->
+   <drawer mode="right" visible="{{rightDrawer}}" bind:close="closeDrawer" data-mode="right">
+    <view class="d-container">
+      <dn-button shape="circle" type="info" uk-class="mb-3" bindtap="closeDrawer" data-mode="right">关闭抽屉</dn-button>
+    </view>
+  </drawer>
+
+</view>

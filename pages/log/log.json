@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "更新日志",
+  "usingComponents": {
+    "dn-icon": "../../components/dn-Icon/dn-Icon",
+    "dn-timeline": "../../components/dn-Timeline/dn-Timeline",
+    "dn-timeline-item": "../../components/dn-TimelineItem/dn-TimelineItem"
+  }
+}

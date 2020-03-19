@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "drawer 抽屉",
+  "usingComponents": {
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "drawer": "../../components/dn-Drawer/dn-Drawer"
+  }
+}

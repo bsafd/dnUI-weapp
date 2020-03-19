@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-tabs": "../../../../components/dn-Tabs/dn-Tabs",
+    "dn-button": "../../../../components/dn-Button/dn-Button",
+    "dn-loadmore": "../../../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../../../components/dn-Nomore/dn-Nomore",
+    "dn-list-cell": "../../../../components/dn-List/dn-List",
+    "dn-sticky": "../../../../components/dn-Sticky/dn-Sticky"
+  }
+}

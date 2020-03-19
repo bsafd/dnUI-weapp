@@ -1,0 +1,16 @@
+<dn-skeleton wx:if="{{skeletonShow}}" backgroundColor="#fafafa" borderRadius="10rpx"></dn-skeleton>
+<view class="container dn-skeleton">
+  <image src="/static/images/notfound.svg" mode="widthFix" class="dn-banner dn-skeleton-rect"></image>
+  <view class="dn-text">
+    <text class=" dn-skeleton-rect">---想像你的想像。</text>
+  </view>
+
+  <view class="dn-view">
+    <view class="py-2">
+      <view class="dn-title dn-skeleton-rect">组件文档地址：</view>
+      <view class="dn-link dn-skeleton-fillet" bindtap="getLink" data-link="http://www.uookk.com">http://www.uookk.com</view>
+    </view>
+   
+  </view>
+
+</view>

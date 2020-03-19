@@ -1,0 +1,4 @@
+ <view class="uk-class dn-loading-init" wx:if="{{visible}}">
+    <view class="dn-loading-center"></view>
+    <view class="dn-loadmore-tips">{{text}}</view>
+  </view>

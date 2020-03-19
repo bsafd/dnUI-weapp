@@ -1,0 +1,6 @@
+
+@import '/static/css/dnui.wxss';
+.container {
+  padding-top:50rpx;
+  padding-bottom: env(safe-area-inset-bottom);
+}

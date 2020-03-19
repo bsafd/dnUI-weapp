@@ -1,0 +1,42 @@
+<view class="dn-page">
+  <scroll-view class="dn-scrollList" scroll-y scroll-into-view="{{scrollViewId}}" style="height:{{winHeight}}px">
+    <!--searchbox-->
+    <view class="dn-searchbox">
+      <view class="dn-search-input" bindtap="search">
+        <icon type="search" size='15' color='#999'></icon>
+        <text class="ml-2">搜索</text>
+      </view>
+    </view>
+    <dn-list uk-class="bg-white" last="{{true}}" bind:click="detail">
+      <image src="../../../static/demo/2.jpg" class="avatar"></image>
+      <view class="dn-media-body">新的朋友</view>
+    </dn-list>
+    <!--searchbox-->
+    <!--联系人列表-->
+    <view class="dn-media-list city-list">
+      <block wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="list" wx:if="{{list.data[0]}}">
+        <view class="dn-media-list-header" id="{{list.letter}}" slot="header">
+          {{list.letter=="well"?'#':list.letter}}
+        </view>
+        <dn-list uk-class="" slot="content" wx:for="{{list.data}}" wx:key="{{index}}" last="{{list.data.length-1==index? true : false}}" bind:click="detail">
+          <image src="../../../static/demo/{{(index%2===0 && index!==0)?'1.jpg':'2.jpg'}}" class="avatar"></image>
+          <view class="dn-media-body">{{item.name}}</view>
+        </dn-list>
+      </block>
+    </view>
+    <!--联系人列表-->
+    <view class="dn-footer">120位联系人</view>
+    <view class="dn-safearea-bottom"></view>
+  </scroll-view>
+
+
+  <view class="dn-indexed-list-bar" style="height:{{indexBarHeight}}px" catchtouchstart="touchStart" catchtouchmove="touchMove" catchtouchend="touchEnd" catchtouchcancel="touchCancel" wx:if="{{!inputShowed}}">
+    <view wx:for="{{lists}}" wx:key="{{index}}" wx:for-item="items" class="fs-11" style="height:{{indexBarItemHeight}}px">
+      {{items.letter=="well"?'#':items.letter}}
+    </view>
+  </view>
+  <view class="dn-indexed-list-alert" wx:if="{{touchmove && lists[touchmoveIndex].letter}}">
+    <text>{{lists[touchmoveIndex].letter=="well"?"#":lists[touchmoveIndex].letter}}</text>
+  </view>
+
+</view>

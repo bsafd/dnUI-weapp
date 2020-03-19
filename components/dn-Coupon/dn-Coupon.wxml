@@ -1,0 +1,23 @@
+<view class="uk-class coupon {{waveleft?'coupon-waveleft':''}} {{waveright?'coupon-waveright':''}} {{bgclass?bgclass:''}}">
+  <view class="{{pos?'coupon-info':'coupon-get'}} {{hole?'coupon-hole':''}} {{border?'coupon-borderdashed':''}}">
+    <view wx:if="{{price}}">
+      <view class="coupon-price"><text>¥</text>{{price}}</view>
+      <view class="coupon-desc">{{price}}元优惠券满{{useprice}}元使用</view>
+      <view class="coupon-time">有效期：{{usetime}}</view>
+    </view>
+    <view wx:else>
+      <slot name="body"></slot>
+    </view>
+  </view>
+  <view class="{{pos?'coupon-get':'coupon-info'}} {{type?'coupon-'+type:''}}">
+    <view wx:if="{{price}}">
+      <text wx:if="{{type==''}}">立即领取</text>
+      <text style="color:inherit !important;opacity:0.6;" wx:if="{{type=='useed'}}">已领取</text>
+      <text style="color:inherit !important;opacity:0.6;" wx:if="{{type=='expired'}}">已失效</text>
+      <text style="color:inherit !important;opacity:0.6;" wx:if="{{type=='already'}}">已领取</text>
+    </view>
+    <view wx:else>
+      <slot name="get"></slot>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+@import '/static/css/dnui.wxss';
+.Vtu_Tab{
+    width: 100%;
+}

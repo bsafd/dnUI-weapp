@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-avatar": "/components/dn-Avatar/dn-Avatar",
+    "dn-icon": "/components/dn-Icon/dn-Icon",
+    "dn-button": "/components/dn-Button/dn-Button",
+    "dn-countdown": "/components/dn-CountDown/dn-CountDown",
+    "dn-list-cell":"/components/dn-List/dn-List"
+  }
+}

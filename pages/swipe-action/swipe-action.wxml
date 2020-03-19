@@ -1,0 +1,60 @@
+<view class="container">
+  <!--
+   注: 1、设置uncloseable为true时点击按钮不能关闭,必须联合toggle来实现
+       2、如果传递action的话必须传递width来设置每个按钮的宽度
+ -->
+      <view class="px-3 dn-media-list-border indent-sm">
+        
+        <view class="dn-media dn-media-center dn-media-list-arrow dn-media-border indent-no">
+          <view class="dn-media-body">服务窗</view>
+        </view>
+
+        <view class="dn-media dn-media-center dn-media-list-arrow dn-media-border indent-lg">
+          <image src="../../static/demo/demo.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"></image>
+          <view class="dn-media-body align-between">
+            <view class="dn-media-title h6">1uncloseable为true时点击按钮不能关闭,必须联合toggle来实现</view>
+            <view class="fs-12 text-fade">2019-06-01</view>
+          </view>
+        </view>
+        <view class="dn-media dn-media-center  dn-media-list-arrow">
+          <image src="../../static/demo/demo.jpg" mode="aspectFill" class="avatar avatar-square avatar-sm"></image>
+          <view class="dn-media-body align-between">
+            <view class="dn-media-title h6">2如果传递action的话必须传递width来设置每个按钮的宽度</view>
+            <view class="fs-12 text-fade">2019-06-01</view>
+          </view>
+          <view class="fs-12 text-fade">2019-06-01</view>
+        </view>
+        <view class="dn-media dn-media-center">
+          <image src="../../static/demo/demo.jpg" mode="aspectFill" class="avatar avatar-square avatar-sm"></image>
+          <view class="dn-media-body align-between">
+            <view class="dn-media-title h6">如果传递action的话必须传递width来设置每个按钮的宽度</view>
+            <view class="fs-12 text-fade">2019-06-01</view>
+          </view>
+          <view class="fs-12 text-fade">2019-06-01</view>
+        </view>
+      </view>
+
+  <swipe-action actions="{{actions}}" toggle="{{toggle}}" unclosable="{{true}}" bindchange="handlerCloseButton" wx:for="{{dataList}}" wx:key="{{index}}" params="{{item}}">
+    <view slot="content">
+      <view class="dn-media dn-media-center dn-media-border indent-sm">
+         <image src="../../static/demo/demo.jpg" mode="aspectFill" class="avatar avatar-square avatar-sm"></image>
+         <view class="dn-media-body align-between">
+           <view class="dn-media-title h6">{{item.title}}</view>
+           <view class="fs-12 text-fade">2019-06-01</view>
+         </view>
+         <view class="fs-12 text-fade">2019-06-01</view>
+      </view>
+
+      <!-- <view class="list-item">
+         <image src="../../static/demo/demo.jpg" mode="aspectFill" class="item-img"></image>
+         <view class="item-box">
+           <view class="item-title">{{item.title}}</view>
+           <view class="fs-12 text-fade">2019-06-01</view>
+         </view>
+      </view> -->
+
+    </view>
+  </swipe-action>
+
+
+</view>

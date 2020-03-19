@@ -1,0 +1,17 @@
+<view class="dn-toast {{visible?'dn-toast-show':''}} {{content?'dn-toast-padding':''}} {{icon?'':'dn-unicon-padding'}}" style="width:{{wxs.getWidth(icon,content)}}">
+  <image src="{{imgUrl}}" class="dn-toast-img" wx:if="{{icon}}"></image>
+  <view class="dn-toast-text {{icon?'':'dn-unicon'}}">{{title}}</view>
+  <view class="dn-toast-text dn-content-ptop" wx:if="{{content && icon}}">{{content}}</view>
+</view>
+
+<wxs module="wxs">
+  module.exports = {
+    getWidth: function(icon, content) {
+      var width = "auto";
+      if (icon) {
+        width = content ? '420rpx' : '360rpx';
+      }
+      return width
+    }
+  }
+</wxs>

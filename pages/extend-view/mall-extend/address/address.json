@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "地址",
+  "usingComponents": {
+    "dn-icon": "../../../../components/dn-Icon/dn-Icon",
+    "dn-button": "../../../../components/dn-Button/dn-Button",
+    "dn-list-cell": "../../../../components/dn-List/dn-List"
+  }
+}

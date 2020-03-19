@@ -1,0 +1,28 @@
+.dn-userinfoBox {
+		padding-bottom: 20rpx;
+		color: #333;
+	}
+
+	.dn-listCell {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 24rpx 60rpx 24rpx 30rpx;
+		font-size: 30rpx;
+	}
+
+	.pr-3 {
+		padding-right: 30rpx;
+	}
+
+	.dn-avatar {
+		width: 100rpx;
+		height: 100rpx;
+		display: block;
+	}
+
+	.dn-content {
+		font-size: 26rpx;
+		color: #666;
+	}

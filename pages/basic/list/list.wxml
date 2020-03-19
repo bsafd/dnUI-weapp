@@ -1,0 +1,282 @@
+<view class="container">
+  <dn-list bind:click="detail" arrow last bgclass="bg-info" hoverClass="bg-info-dk" padding="40rpx 30rpx" color="#fff" uk-class="text-white">
+    <view class="dn-media-left">
+      <dn-avatar src="/static/demo/1.jpg" round border size="xl" uk-class="mr-2"></dn-avatar>
+    </view>
+    <view class="dn-media-body">
+      <view class="dn-media-title h6 mb-1">
+        魏大牛<text class="text-muted fs-14 ml-1">未设置昵称</text>
+      </view>
+      <dn-tag type="info-dk" size="sm" shape="circle" bordercolor="#7F80F9">9535453@qq.com</dn-tag>
+    </view>
+  </dn-list>
+
+
+  <view class="mb-2">
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="alipay-circle-fill" size="26" color="#5556F7" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body ">支付宝会员</view>
+      <view class="mr-4 text-muted fs-13">1个积分待领取</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" last uk-class="">
+      <dn-icon name="dianpufill" size="26" color="#5556F7" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">商家服务</view>
+    </dn-list>
+  </view>
+
+  <view class="mb-2">
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="danjufill" size="26" color="#ffc107" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body ">账单</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="chartpie" size="22" color="#15c377" uk-class="mr-2" style="padding:0 4rpx"></dn-icon>
+      <view class="dn-media-body">总资产</view>
+      <view class="mr-4 text-success fs-13">账户安全保障中</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="rechargefill" size="26" color="#5556F7" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">余额</view>
+      <view class="mr-4 text-muted fs-13">0.00</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="moneybagfill" size="26" color="#F8696A" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">余额宝</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" uk-class="">
+      <dn-icon name="yinhangkafill" size="26" color="#FFD956" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">银行卡</view>
+    </dn-list>
+  </view>
+  <view class="mb-2">
+    <dn-list bind:click="detail" indent="indent" uk-class="">
+      <dn-icon name="ganxiefill" size="26" color="#15c377" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">芝麻信用</view>
+      <dn-tag size="sm" type="success" shape="circle" class="fs-13">探索发现</dn-tag>
+    </dn-list>
+    <dn-list bind:click="detail" indent="indent" arrow uk-class="">
+      <dn-icon name="xihuanfill" size="26" color="#e91e63" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">支付宝公益</view>
+    </dn-list>
+    <dn-list bind:click="detail" indent="indent" arrow uk-class="">
+      <dn-icon name="servicefill" size="26" color="#9c27b0" uk-class="mr-2"></dn-icon>
+      <view class="dn-media-body">我的客服</view>
+    </dn-list>
+    
+    <dn-list bind:click="detail" arrow="{{true}}" indent="indent" border="{{false}}" last="{{true}}" uk-class="">
+      <dn-avatar src="/static/demo/1.jpg" square size="xs" uk-class="mr-2"></dn-avatar>
+      <text class="dn-media-body">我的账号</text>
+      <view class="mr-4 text-muted fs-13">UOOKK UI</view>
+    </dn-list>
+  </view>
+
+  <view class="dn-card dn-card-full mt-4 no-bg">
+    <view class="dn-card-header dn-card-header-border ">
+      <view class="dn-card-title h4 text-bold">
+        <text class="">媒体场景</text>
+        <view class="dn-card-subtitle">可以外层容器中定义类dn-list</view>
+      </view>
+    </view>
+    <view class="dn-media-list ">
+      <dn-list bind:click="detail" arrow="{{true}}" uk-class="">
+        <image src="/static/demo/5.jpg" mode="aspectFill" class="avatar"/>
+        <view class="dn-media-body">
+          <text class="h6">默认是内容居中</text>
+          <view class="text-sub fs-12">右侧带有箭头，下边线缩进30rpx;</view>
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent">
+        <image src="/static/demo/6.jpg" mode="aspectFill" class="avatar avatar-square"/>
+        <view class="dn-media-body ">
+          <text class="h6">下边线缩进</text>
+          <view class="text-muted fs-12">缩进量与左侧图片同步,常规indent</view>
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent-sm" arrow="{{true}}" padding="16rpx 30rpx">
+        <image src="/static/demo/7.jpg" mode="aspectFill" class="avatar avatar-sm"/>
+        <view class="dn-media-body ">个人中心的工具列表应用
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent-sm" arrow="{{true}}" padding="16rpx 30rpx">
+        <image src="/static/demo/8.jpg" mode="aspectFill" class="avatar avatar-sm"/>
+        <view class="dn-media-body ">掌柜的眼镜
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent-lg">
+        <view class="dn-media-left">
+          <image src="/static/demo/4.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+        </view>
+        <view class="dn-media-body ">
+          <text class="h6 text-ell">当内容标题超出了容器部分时可以使用文本截断处理</text>
+          <view class="text-muted fs-12">对长标题进行了处理可以使用text-ell,text-twoline,text-thrline</view>
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent-xl">
+        <view class="dn-media-left">
+          <image src="/static/demo/3.jpg" mode="aspectFill" class="avatar avatar-square avatar-xl"/>
+        </view>
+        <view class="dn-media-body ">
+          <text class="h6">这是内容的标题？</text>
+          <view class="text-muted fs-12">内容区域默认垂直居中于整个容器</view>
+        </view>
+      </dn-list>
+      <dn-list bind:click="detail" indent="indent-no">
+        <view class="dn-media-left">
+          <image src="/static/demo/2.jpg" mode="aspectFill" class="avatar avatar-square avatar-xxl"/>
+        </view>
+        <view class="dn-media-body align-between">
+          <view class="dn-media-title h6">通栏的下边线，内容上下分布在容器？</view>
+          <view class="text-muted fs-12">没有针对大型的媒体做缩进，很难看</view>
+        </view>
+      </dn-list>
+
+      <dn-list bind:click="detail">
+        
+          <image src="/static/demo/1.jpg" mode="aspectFill" class="avatar avatar-square"/>
+       
+        <view class="dn-media-body">
+          <text class="h6">我是魏不说</text>
+          <view class="text-muted fs-12">瞎想, 种草, 摄影, 较真</view>
+        </view>
+        <view class="ml-auto text-right fs-12 text-muted">
+          <text>+$310.50</text>
+          <view class="d-none d-sm-inline">两天前</view>
+        </view>
+
+      </dn-list>
+      <dn-list bind:click="detail" last="{{true}}">
+        <view class="dn-media-left">
+          <image src="/static/demo/2.jpg" mode="aspectFill" class="avatar avatar-square"/>
+        </view>
+        <view class="dn-media-body">
+          <text class="">我是魏不说</text>
+          <view class="text-muted fs-12">瞎想, 种草, 摄影, 较真</view>
+        </view>
+      </dn-list>
+      
+    </view>
+  </view>
+
+  <view class="dn-card no-bg">
+    <view class="dn-card-header mb-2 ">
+      <view class="dn-card-title h4 text-bold">
+        不用组件 - 段落
+        <view class="dn-card-subtitle">可以和箭头属性一起使用</view>
+      </view>
+    </view>
+    <view class="dn-media-list-gap">
+      <view class="dn-media dn-media-center dn-media-list-arrow bg-white" hover-class="dn-media-hover">
+        <view class="dn-media-body">这里是一个标题</view>
+      </view>
+      <view class="dn-media dn-media-center dn-media-list-arrow bg-white" hover-class="dn-media-hover">
+        <view class="dn-media-body">这里是一个标题</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dn-card no-bg">
+    <view class="dn-card-header mb-2 ">
+      <view class="dn-card-title h4 text-bold">
+        排序
+        <view class="dn-card-subtitle">和箭头属性不能同时使用</view>
+      </view>
+    </view>
+    <view class="dn-media-list-order dn-media-list-border">
+      <view class="dn-media dn-media-center bg-white" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+      <view class="dn-media dn-media-center bg-white" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="dn-card no-bg">
+    <view class="dn-card-header mb-2 ">
+      <view class="dn-card-title h4 text-bold">
+        隔行变色
+        <view class="dn-card-subtitle">和箭头属性不能同时使用</view>
+      </view>
+    </view>
+    <view class="dn-media-list-order  dn-media-list-striped">
+      <view class="dn-media dn-media-center" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+      <view class="dn-media dn-media-center" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+      <view class="dn-media dn-media-center" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+      <view class="dn-media dn-media-center" hover-class="dn-media-hover">
+        <view class="dn-media-body">这是一个排序的例子</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="dn-card mt-4 no-bg">
+    <view class="dn-card-header mb-2 ">
+      <view class="dn-card-title h4 text-bold">
+        说明
+        <view class="dn-card-subtitle">可以统一使用下边框</view>
+      </view>
+    </view>
+    <view class="dn-media-list-border bg-white ">
+      <view class="dn-media dn-media-center dn-media-list-arrow" hover-class="dn-media-hover">
+        <view class="dn-media-body">常规状态下边线向右缩进30rpx</view>
+      </view>
+      <view class="dn-media dn-media-center dn-media-list-arrow " hover-class="dn-media-hover">
+        <view class="dn-media-body">不使用组件父容器统一设置下边线</view>
+      </view>
+      <view class="dn-media dn-media-center dn-media-list-arrow" hover-class="dn-media-hover">
+        <view class="dn-media-body">统一设置右侧箭头</view>
+      </view>
+      <view class="dn-media dn-media-center dn-media-list-arrow" hover-class="dn-media-hover">
+        <view class="dn-media-body">带有点击效果</view>
+      </view>
+    </view>
+  </view>
+
+
+  
+
+  
+
+  
+
+  <!--内容部分-->
+  <view class="dn-card dn-card-full mt-4 no-bg">
+    <view class="dn-card-header my-4 ">
+      <view class="dn-card-title h4">
+        <view class="text-bold text-3d">属性定义</view>
+        <view class="dn-card-subtitle">以下定义了列表的所有属性</view>
+      </view>
+    </view>
+    <dn-list bind:click="detail" hover="{{false}}">
+      无任何参数定义，最基本的效果
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}">
+      右侧箭头效果，arrow="{{true}}"
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" border="{{false}}">
+      请注意这是一个没下下边框的例子
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" border="{{false}}" color="#f60">
+      定义了文字颜色，color 属性
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" border="{{false}}" hoverClass="bg-simple">
+      点击触发颜色，hoverClass 属性
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" size="24">
+      定义了文字大小，size 属性，请注意，单位是rpx
+    </dn-list>
+    
+    <dn-list bind:click="detail" arrow="{{true}}" padding="40rpx 60rpx">
+      <view class="dn-media-body">改变了内间距，padding属性</view>
+    </dn-list>
+    <dn-list bind:click="detail" arrow="{{true}}" bgclass="bg-dark" color="#fff">
+      <view class="dn-media-body">定义了背景和字体颜色</view>
+    </dn-list>
+  </view>
+ 
+</view>

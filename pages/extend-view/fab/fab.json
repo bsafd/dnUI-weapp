@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "悬浮按钮",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+      "dn-button": "../../../../components/dn-Button/dn-Button",
+      "dn-fab": "../../../../components/dn-Fab/dn-Fab"
+  }
+}

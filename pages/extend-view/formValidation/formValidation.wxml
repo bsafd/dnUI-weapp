@@ -1,0 +1,76 @@
+<view class="container">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <dn-list hover="{{false}}">
+      
+      <view class="dn-list-left no-wrap">姓名</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="name" placeholder="请输入姓名" maxlength="50" type="text" />
+      </view>
+      
+      <radio-group class="radio-group" name="sex">
+          <label class="v-m d-inline-block">
+            <radio value="1" color="#5677fc" />男
+          </label>
+          <label class="v-m d-inline-block ml-2">
+            <radio value="2" color="#5677fc" />女
+          </label>
+      </radio-group>
+      
+    </dn-list>
+
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">年龄</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="age" placeholder="请输入年龄" maxlength="50" type="number" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">手机号</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="mobile" placeholder="请输入手机号" maxlength="50" type="text" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">邮箱</view>
+      <view class="dn-list-body">  
+        <input placeholder-class="phcolor" class="dn-input" name="email" placeholder="请输入邮箱" maxlength="50" type="text" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">身份证号码</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="idcard" placeholder="请输入身份证号码" maxlength="50" type="text" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">密码</view>
+      <view class="dn-list-body">  
+        <input placeholder-class="phcolor" class="dn-input" name="pwd" placeholder="请输入密码" maxlength="50" type="text" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">确认密码</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="pwd2" placeholder="请输入确认密码" maxlength="50" type="text" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}">
+      <view class="dn-list-left">区间</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="range" placeholder="请输入3-20之间的数" maxlength="50" type="number" />
+      </view>
+    </dn-list>
+    <dn-list hover="{{false}}" last="{{true}}">
+      <view class="dn-list-left">金额</view>
+      <view class="dn-list-body">
+        <input placeholder-class="phcolor" class="dn-input" name="amount" placeholder="请输入金额,允许保留两位小数" maxlength="50" type="digit" />
+      </view>
+    </dn-list>
+    <view class="p-3 text-sub">更多验证请参考文档</view>
+
+    <view class="px-4 py-5">
+      <button class="bg-primary" hover-class="btn-hover" formType="submit" type="primary">Submit</button>
+      <button class="bg-dark mt-3" hover-class="bg-white-hover" formType="reset">Reset</button>
+    </view>
+  </form>
+</view>

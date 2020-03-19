@@ -1,0 +1,25 @@
+<view class="container">
+  <!--顶部消息-->
+  <dn-tips id="dn-tips-ctx" wx:if="{{index==0}}"></dn-tips>
+  <!--顶部消息-->
+
+  <!--居中消息-->
+  <dn-tips position="center" id="dn-tips-ctx" wx:if="{{index==1}}"></dn-tips>
+  <!--居中消息-->
+
+  <!--底部消息-->
+  <dn-tips position="bottom" id="dn-tips-ctx" wx:if="{{index==2}}"></dn-tips>
+  <!--底部消息-->
+  <view class="dn-subsection">
+    <view class="{{index==0?'bg-primary':''}}" data-index="0" bindtap="switchTabs">顶部提示</view>
+    <view class="{{index==1?'bg-primary':''}}" bindtap="switchTabs" data-index="1">居中提示</view>
+    <view class="{{index==2?'bg-primary':''}}" bindtap="switchTabs" data-index="2">底部提示</view>
+  </view>
+  <button class="dn-btn dn-btnround bg-primary my-2" hover-class="bg-primary-hover" data-index="0" bindtap="showTips">一般提示</button>
+  <button class="dn-btn dn-btnround bg-success my-2" hover-class="bg-success-hover" data-index="1" bindtap="showTips">成功提示</button>
+  <button class="dn-btn dn-btnround bg-warning my-2" hover-class="bg-warning-hover" data-index="2" bindtap="showTips">警告提示</button>
+  <button class="dn-btn dn-btnround bg-danger my-2" hover-class="bg-danger-hover" data-index="3" bindtap="showTips">错误提示</button>
+  <button class="dn-btn dn-btnround bg-info my-2" hover-class="bg-info-hover" data-index="4" bindtap="showTips">其他提示</button>
+  <button class="dn-btn dn-btnround bg-purple my-2" hover-class="bg-purple-hover" data-index="5" bindtap="showTips">长文字消息提示</button>
+  <button class="dn-btn dn-btnround bg-dorange my-2" hover-class="bg-dorange-hover" data-index="6" bindtap="showTips">自定义时间消息提示</button>
+</view>

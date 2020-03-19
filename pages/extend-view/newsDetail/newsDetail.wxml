@@ -1,0 +1,120 @@
+<view class="container">
+  <view class="h4 text-bold">
+    我们充分尊重联赛新政，武汉队战术多变训练有素
+  </view>
+  <view class="pt-3 d-flex justify-content-between text-sub fs-14">
+    <view>
+      <text class="text-info pr-2">早安君</text>
+      <text>昨天 17:12</text>
+    </view>
+    <view>阅读 2453</view>
+  </view>
+  <view class="pt-4">
+    <view class="dn-article">
+      北京时间6月22日，重庆斯威队召开了赛前新闻发布会，主教练小克鲁伊夫和球员彭欣力出席。
+    </view>
+    <view class="dn-article">
+      这是一场很重要的比赛，武汉卓尔在中超目前打的还是不错的，现在积分与我们一样。我们面对这个对手做了充分的准备，他们的战术变化很多，我也认为他们是一支训练有素的队伍。虽然这是一场艰难的比赛，我们也充满了动力去拿到我们想要的分数，实现我们的目标。联赛上半程还有两场比赛，我们也会竭尽全力拿到尽量多的分数。
+    </view>
+    <image src="../../../static/demo/demo.jpg" class="dn-articlePic" mode="widthFix"></image>
+    <view class="dn-article">
+      大家下午好，明天非常重要，这星期我们的备战时间比较充裕，我们针对对手做了有效的布置，希望明天给大家呈现精彩的比赛。
+    </view>
+    <view class="dn-article">
+      我相信大家比我更了解他，但是就像刚刚提到的一样，这支球队的战术是丰富而多变的，这就意味着他在应对不同比赛时做了充分的准备。我们非常尊重明天的对手，他们最近状态出色，拿到许多分数。
+    </view>
+    <image src="../../../static/demo/demo2.jpg" class="dn-articlePic" mode="widthFix"></image>
+    <view class="dn-article">
+      对我而言，我还是想保持沉默，我不打算就这个问题做过多的评论。因为这个政策的变化是马上实施了，我们肯定是尊重它，然后在我们力所能及的范围上找到最好的应对的方案，我个人意见并不重要，我们尊重和遵守相关决定。
+    </view>
+
+  </view>
+
+  <view class="fs-12 text-sub">消息参考来源：体坛大精汇</view>
+
+  <view class="dn-operateBox">
+    <dn-tag type="{{isFabulous?'info':'dark'}}" shape="circle" plain="{{true}}" uk-class="dn-tagClass text-center" bind:click="btnFabulous">
+      <dn-icon name="{{isFabulous?'appreciatefill':'appreciate'}}" size="20" color="{{isFabulous?'#5677fc':'#333'}}"></dn-icon>
+      <text class="pl-1 {{isFabulous?'text-info':''}}">{{fabulous}}赞</text>
+    </dn-tag>
+    <button open-type="share" class="dn-shareBtn">
+      <dn-tag type="dark" shape="circle" plain="{{true}}" uk-class="dn-tagClass">
+        <dn-icon name="exit" size="20" color="#333"></dn-icon>
+        <text class="pl-1">分享</text>
+      </dn-tag>
+    </button>
+  </view>
+
+  <view class="dn-cmtTitle">精彩评论（20）</view>
+  <view class="pb-2">
+    <view class="dn-media px-0" wx:for="{{cmtList}}" wx:key="{{index}}">
+      <view class="dn-media-left">
+        <dn-avatar src="/static/demo/{{item.avatar}}" width="64rpx"></dn-avatar>
+      </view>
+      <view class="dn-media-body">
+        <view class="d-flex align-items-center justify-content-between">
+          <view class="text-info">{{item.nickname}}</view>
+          <view class="{{item.isFabulous?'text-info':'text-sub'}}" id="{{index}}" bindtap="cmtFabulous">{{item.fabulous==0?'赞':item.fabulous}}
+            <dn-icon name="{{item.isFabulous?'appreciatefill':'appreciate'}}" size="15" color="{{item.isFabulous?'#5677fc':'#9a9a9a'}}"></dn-icon>
+          </view>
+        </view>
+
+        <view class="text-common">
+          {{item.content}}
+        </view>
+
+        <view class="radius-5 mt-2 overflow" wx:if="{{item.replayNum>0}}">
+          <dn-list-cell tui-cell-class="tui-cell" bgcolor="#f2f2f2" size="28" wx:for-items="{{item.reply}}" wx:for-item="items" wx:key="{{index}}" last="{{item.replayNum<2 && item.reply.length-1==index}}" bindtap="cmtReply">
+            <view class="dn-media-body">
+              <view class="text-sub">{{items.nickname}}</view>
+              <view>{{items.content}}</view>
+            </view>
+          </dn-list-cell>
+          <dn-list-cell bgcolor="#f2f2f2" size="28" last="{{true}}" wx:if="{{item.replayNum>2}}" bindtap="cmtReply">
+            <view class="text-info">共{{item.replayNum}}条回复
+              <dn-icon name="ar" size="18" color="#5677fc" dn-icon-class="tui-arrow"></dn-icon>
+            </view>
+          </dn-list-cell>
+        </view>
+        <view class="d-flex align-items-center text-sub fs-12 mt-1 ">
+          {{item.time}}
+          <view class="text-info ml-2" hover-class="opcity" hover-start-time="150" bindtap="cmtReply">回复</view>
+        </view>
+
+      </view>
+    </view>
+    
+
+
+   
+
+  </view>
+
+  <view class="dn-operation fixbottom bg-white">
+    <view class="dn-operation-left dn-col-7">
+      <input class="dn-operation-input dn-operation-inputbox bg-light ml-2 " bindtap="btnCmt" style="height:64rpx;" placeholder="发表UOOKKUI言论"></input>
+    </view>
+    <view class="dn-operation-right d-flex align-items-center justify-content-center dn-col-5">
+      <view class="dn-operation-item " hover-class="opcity5" hover-stay-time="150" bindtap="cmtAll">
+        <dn-badge color="danger" user-slot value="18" shape="circle" right="-16rpx" top="-10rpx" size="sm" uk-class="pos-abs uk-class">
+          <dn-icon name="community" size="30"></dn-icon>
+        </dn-badge>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150" bindtap="collection">
+        <dn-icon name="{{isCollection?'shoucangfill':'shoucang1'}}" size="28" color="{{isCollection?'#5677fc':'#444'}}" ></dn-icon>
+      </view>
+      <view class="dn-operation-item" hover-class="opcity5" hover-stay-time="150">
+        <button open-type="share" class="dn-shareBtn">
+          <dn-icon name="fenxiang2" size="28" color='#444'></dn-icon>
+        </button>
+      </view>
+    </view>
+  </view>
+
+
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="3" type="primary"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn}}" bgcolor="#fff" text="没有更多评论"></dn-nomore>
+  <!--加载loadding-->
+  <view class="tui-safearea-bottom"></view>
+</view>

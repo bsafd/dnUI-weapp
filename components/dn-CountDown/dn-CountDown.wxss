@@ -1,0 +1,42 @@
+.dn-countdown-box {
+		display: flex;
+		align-items: center;
+	}
+
+	.dn-countdown-box {
+		display: flex;
+		align-items: center;
+	}
+
+	.dn-countdown-item {
+		border: 1rpx solid;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4rpx 8rpx;
+		border-radius: 6rpx;
+		white-space: nowrap;
+		transform: translateZ(0);
+    box-sizing: content-box;
+    flex-shrink:0;
+	}
+
+	.dn-countdown-time {
+		margin: 0;
+		padding: 0;box-sizing: content-box;
+	}
+
+	.dn-countdown-colon {
+		display: flex;
+		justify-content: center;
+		padding: 0 5rpx;
+	}
+
+	.dn-colon-pad {
+		padding: 0 !important;
+	}
+
+	.dn-countdown-scale {
+		transform: scale(0.9);
+		transform-origin: center center;
+	}

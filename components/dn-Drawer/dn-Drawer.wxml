@@ -1,0 +1,7 @@
+<view class="uk-class dn-drawer {{ visible ? 'dn-drawer-show' : '' }} {{ 'dn-drawer-' + mode }}">
+    <view wx:if="{{ mask }}" class="dn-drawer-mask" bindtap="handleMaskClick"></view>
+    <view class="dn-drawer-container">
+        <slot></slot>
+    </view>
+</view>
+

@@ -1,0 +1,44 @@
+<!--提示：功能已封装成组件，可引入组件使用-->
+<view class="container">
+  <view class="header">
+    <view class="title">Loading</view>
+    <view class="sub-title">加载中... </view>
+  </view>
+
+  <!--正在加载 start-->
+  <dn-loadmore visible="{{true}}"></dn-loadmore>
+  <!--正在加载 end-->
+
+  <!--正在加载 start-->
+  <dn-loadmore visible="{{true}}" index="2"></dn-loadmore>
+  <!--正在加载 end-->
+  <!--正在加载 start-->
+  <dn-loadmore visible="{{true}}" index="3"></dn-loadmore>
+  <dn-loadmore visible="{{true}}" index="3" type="primary"></dn-loadmore>
+  <dn-loadmore visible="{{true}}" index="3" type="danger"></dn-loadmore>
+  <dn-loadmore visible="{{true}}" index="3" type="orange"></dn-loadmore>
+  <dn-loadmore visible="{{true}}" index="3" type="success"></dn-loadmore>
+  <!--正在加载 end-->
+
+
+
+  <!--没有更多了 start-->
+   <dn-nomore visible="{{true}}"></dn-nomore>
+
+   <dn-nomore visible="{{true}}" text="自定义文字"></dn-nomore>
+  <!--没有更多了 end-->
+
+
+
+  <!--没有更多了 start-->
+   <dn-nomore visible="{{true}}" isDot="{{true}}"></dn-nomore>
+  <!--没有更多了 end-->
+
+
+
+
+  <!--加载框 start-->
+  <dn-loading visible="{{true}}"></dn-loading>
+  <!--加载框 end-->
+
+</view>

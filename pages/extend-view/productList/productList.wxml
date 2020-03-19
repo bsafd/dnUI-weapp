@@ -1,0 +1,258 @@
+<view class="container">
+  <!--header-->
+  <view class="dn-header-box">
+    <view class="dn-header" style="width:{{width}}px;height:{{height}}px">
+      <dn-icon name="al" color="#000" size="26" uk-class="dn-back" style="margin-top:{{arrowTop}}px" bindtap="back"></dn-icon>
+      <view class="dn-searchbox" style="margin-top:{{inputTop}}px" bindtap="search">
+        <icon type="search" size='13' color='#999'></icon>
+        <text class="pl-2" wx:if="{{!searchKey}}">搜索UOOKK商品</text>
+        <view class="dn-search-key" wx:if="{{searchKey}}">
+          <view class="dn-key-text">{{searchKey}}</view>
+          <dn-icon name="del" size='12' color='#fff'></dn-icon>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--header-->
+  <!--screen-->
+  <view class="dn-header-screen" style="top:{{height}}px">
+    <view class="dn-screen-top">
+      <view class="dn-top-item {{tabIndex==0?'text-danger text-bold':''}}" data-index="0" bindtap="screen">
+        <view>{{selectedName}}</view>
+        <dn-icon name="{{selectH>0?'angleup':'angledown'}}" size="10" color="{{tabIndex==0?'#e41f19':'#444'}}" uk-class="ml-3px"></dn-icon>
+      </view>
+      <view class="dn-top-item {{tabIndex==1?'text-danger text-bold':''}}" bindtap="screen" data-index="1">销量</view>
+      <view class="dn-top-item" bindtap="screen" data-index="2">
+        <dn-icon name="{{isList?'liebiaoxingshi':'qiapianxingshi'}}" size="{{isList?20:18}}" bold="{{isList?false:true}}"></dn-icon>
+      </view>
+      <view class="dn-top-item" bindtap="screen" data-index="3">
+        <text>筛选</text>
+        <dn-icon name="shaixuan" size="12" color="#333" uk-class="ml-3px" bold="{{true}}"></dn-icon>
+      </view>
+
+      <!--下拉选择列表--综合-->
+      <view class="dn-dropdownlist {{selectH>0?'dn-dropdownlist-show':''}}" style="height:{{selectH}}rpx">
+        <view class="dn-dropdownlist-item {{item.selected?'text-bold':''}}" wx:for="{{dropdownList}}" wx:key="{{index}}" catchtap="dropdownItem" data-index="{{index}}">
+          <text class="ml-3px v-m">{{item.name}}</text>
+          <dn-icon name="yes" size="16" color="#e41f19" bold="{{true}}" visible="{{item.selected}}" uk-class="v-m"></dn-icon>
+        </view>
+      </view>
+      <view class="dn-dropdownlist-mask {{selectH>0?'dn-mask-show':''}}" catchtap="hideDropdownList"></view>
+      <!--下拉选择列表--综合-->
+
+    </view>
+    <view class="dn-screen-bottom">
+      <block wx:for="{{attrArr}}" wx:key="{{index}}">
+        <view class="dn-bottom-item {{item.isActive?'dn-btmItem-active':''}} {{attrIndex==index?'dn-btmItem-tap':''}}" data-index="{{index}}" bindtap="btnDropChange">
+          <view class="dn-bottom-text {{attrIndex==index?'text-danger':''}}">{{item.isActive?item.selectedName:item.name}}</view>
+          <dn-icon name="{{attrIndex==index?'angleup':'angledown'}}" size="10" color="{{attrIndex==index || item.isActive?'#e41f19':'#444'}}" uk-class="ml-3px" wx:if="{{item.list.length>0}}"></dn-icon>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--screen-->
+
+  <!--list-->
+  <view class="dn-productList" style="margin-top:{{dropScreenH+18}}rpx">
+    <view class="dn-productContainer">
+      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2!=0 || isList}}">
+        <template is="productItem" data="{{item,index:index,isList:isList}}" />
+      </block>
+    </view>
+    <view class="dn-productContainer" wx:if="{{!isList}}">
+      <block wx:for="{{productList}}" wx:key="{{index}}" wx:if="{{(index+1)%2==0}}">
+        <template is="productItem" data="{{item,index:index}}" />
+      </block>
+    </view>
+  </view>
+  <!--list-->
+
+  <!--模板-->
+  <template name="productItem">
+    <!--商品列表-->
+    <view class="dn-productItem {{isList?'dn-productFlexList py-2':''}}" hover-class="hover" hover-start-time="150" bindtap="detail">
+      <image src="../../../static/demo/{{item.img}}.jpg" class="dn-productImg {{isList?'dn-productImageList':''}}" mode="widthFix" />
+      <view class="dn-productContent">
+        <view class="dn-productTitle">{{item.name}}</view>
+        <view>
+          <view class="pt-2">
+            <text class="dn-productPrice">￥{{item.sale}}</text>
+            <text class="dn-factoryPrice">￥{{item.factory}}</text>
+          </view>
+          <view class="dn-productPay">{{item.payNum}}人付款</view>
+        </view>
+      </view>
+    </view>
+    <!--商品列表-->
+  </template>
+
+  <!--顶部下拉筛选弹层 属性-->
+  <dn-top-dropdown bgcolor="#f7f7f7" show="{{dropScreenShow}}" paddingbtm="110" translatey="{{dropScreenH}}" bind:close="btnCloseDrop">
+    <scroll-view class="dn-scroll-box" scroll-y scroll-top="{{scrollTop}}">
+      <view class="h-10px"></view>
+      <view class="dn-drop-item {{item.selected?'text-bold':''}}" wx:for="{{attrData}}" wx:key="{{index}}" catchtap="btnSelected" data-index="{{index}}">
+        <dn-icon name="yes" size="16" color="#e41f19" bold="{{true}}" visible="{{item.selected}}" uk-class="v-m"></dn-icon>
+        <text class="ml-3px v-m">{{item.name}}</text>
+      </view>
+      <view class="h-15px"></view>
+    </scroll-view>
+    <view class="dn-drop-btnbox">
+      <view class="dn-drop-btn dn-btn-white" hover-class="dn-white-hover" hover-stay-time="150" bindtap="reset">重置</view>
+      <view class="dn-drop-btn dn-btn-red" hover-class="dn-red-hover" hover-stay-time="150" bindtap="btnSure">确定</view>
+    </view>
+  </dn-top-dropdown>
+  <!---顶部下拉筛选弹层 属性-->
+
+
+  <!--左抽屉弹层 筛选 -->
+  <dn-drawer mode="right" visible="{{drawer}}" bind:close="closeDrawer">
+    <view class="dn-drawer-box" style="padding-top:{{height}}px">
+      <scroll-view class="dn-drawer-scroll" scroll-y style="height:{{drawerH}}px">
+        <view class="dn-drawer-title">
+          <text class="dn-title-bold">价格区间</text>
+          <view class="dn-attr-right">
+            <dn-icon name="locationfill" color="#e41f19" size="14" class="mr-3px"></dn-icon>
+            <text>北京朝阳区三环到四环之间</text>
+          </view>
+        </view>
+        <view class="dn-drawer-content">
+          <input placeholder-class="dn-phcolor" class="dn-input" placeholder="最低价" maxlength="11" type='number' />
+          <dn-icon name="jianhao" color="#333" size="14"></dn-icon>
+          <input placeholder-class="dn-phcolor" class="dn-input" placeholder="最高价" maxlength="11" type='number' />
+        </view>
+
+        <view class="dn-drawer-title">
+          <text class="dn-title-bold">全部分类</text>
+          <view class="dn-all-box">
+            <view class="dn-attr-right">全部</view>
+            <dn-icon name="angledown" size="10" color="#444" uk-class="ml-3px"></dn-icon>
+          </view>
+        </view>
+        <view class="dn-drawer-content dn-flex-attr">
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">男装</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">女装</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">运动服饰</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">户外鞋服</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">文化</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">服饰配件</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">流行男鞋</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">艺术</view>
+          </view>
+        </view>
+
+        <view class="dn-drawer-title">
+          <text class="dn-title-bold">品牌</text>
+          <view class="dn-all-box">
+            <view class="dn-attr-right text-danger ">花花公子，七匹狼（SEPTWOLVES）</view>
+            <dn-icon name="angledown" size="10" color="#444" uk-class="ml-3px"></dn-icon>
+          </view>
+        </view>
+        <view class="dn-drawer-content dn-flex-attr">
+          <view class="dn-attr-item dn-btmItem-active">
+            <view class="dn-attr-ellipsis">花花公子</view>
+          </view>
+          <view class="dn-attr-item dn-btmItem-active">
+            <view class="dn-attr-ellipsis">七匹狼（SEPTWOLVES）</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">吉普</view>
+          </view>
+        </view>
+
+        <view class="dn-drawer-title">
+          <text class="dn-title-bold">尺码</text>
+          <view class="dn-all-box">
+            <view class="dn-attr-right">全部</view>
+            <dn-icon name="angleup" size="10" color="#444" uk-class="ml-3px"></dn-icon>
+          </view>
+        </view>
+        <view class="dn-drawer-content dn-flex-attr">
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">27</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">28</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">29</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">30</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">31</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">32</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">33</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">34</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">35</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">36</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">37</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">38</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">39</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">40</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">41</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">42</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">43</view>
+          </view>
+          <view class="dn-attr-item">
+            <view class="dn-attr-ellipsis">44</view>
+          </view>
+        </view>
+        <view class="dn-safearea-bottom"></view>
+      </scroll-view>
+      <view class="dn-attr-btnbox">
+        <view class="dn-attr-safearea">
+          <view class="dn-drawer-btn dn-drawerbtn-black" hover-class="dn-white-hover" hover-stay-time="150">重置</view>
+          <view class="dn-drawer-btn dn-drawerbtn-primary" hover-class="dn-red-hover" hover-stay-time="150" bindtap="closeDrawer">确定(80万+件商品)</view>
+        </view>
+      </view>
+    </view>
+  </dn-drawer>
+  <!--左抽屉弹层 筛选-->
+
+  
+
+  <!--加载loadding-->
+  <dn-loadmore visible="{{loadding}}" index="3" type="red"></dn-loadmore>
+  <dn-nomore visible="{{!pullUpOn && isList}}" bgcolor="#f7f7f7"></dn-nomore>
+  <!--加载loadding-->
+</view>

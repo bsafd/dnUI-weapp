@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "扩展toast",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-toast": "../../../components/extend/toast/toast"
+  }
+}

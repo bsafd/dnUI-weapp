@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "提交订单",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-list-cell": "../../../../components/dn-List/dn-List",
+    "dn-icon": "../../../../components/dn-Icon/dn-Icon",
+    "dn-tag": "../../../../components/dn-Tag/dn-Tag",
+    "dn-button": "../../../../components/dn-Button/dn-Button",
+    "dn-bottom-popup": "../../../../components/dn-BottomPopup/dn-BottomPopup"
+  }
+}

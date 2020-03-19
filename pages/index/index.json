@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "UOOKK 优壳",
+  "usingComponents": {
+    "dn-badge": "../../../components/dn-Badge/dn-Badge"
+  }
+}

@@ -1,0 +1,5 @@
+@import '/static/css/dnui.wxss';
+@import '/static/css/dnfont.wxss';
+.container {
+  padding-bottom: env(safe-area-inset-bottom);
+}

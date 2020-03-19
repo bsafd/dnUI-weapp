@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="dn-card-header">
+    <view class="dn-card-title h5">
+      Basic
+      <view class="dn-card-subtitle">基础组件是项目中独立的模块</view>
+    </view>
+  </view>
+
+
+  <view class="mx-auto my-4 ">
+    <dn-button type="{{dngridNum==1?'warning':'white'}}" size="sm" width="120rpx" shape="radius" bindtap="switchGridNum" data-index="1">一列</dn-button>
+    <dn-button type="{{dngridNum==2?'warning':'white'}}" size="sm" width="120rpx" shape="radius" bindtap="switchGridNum" data-index="2">两列</dn-button>
+    <dn-button type="{{dngridNum==3?'warning':'white'}}" size="sm" width="120rpx" shape="radius" bindtap="switchGridNum" data-index="3">三列</dn-button>
+    <dn-button type="{{dngridNum==4?'warning':'white'}}" size="sm" width="120rpx" shape="radius" bindtap="switchGridNum" data-index="4">四列</dn-button>
+    <dn-button type="{{dngridNum==5?'warning':'white'}}" size="sm" width="120rpx" shape="radius" bindtap="switchGridNum" data-index="5">五列</dn-button>
+  </view>
+  <view class="dn-subsection mx-auto mb-4" style="width:70%">
+    <view class="{{dngapNum=='1px'?'bg-primary':''}}" bindtap="switchGapNum" data-index='1px'>1PX</view>
+    <view class="{{dngapNum==1?'bg-primary':''}}" bindtap="switchGapNum" data-index="1">5PX</view>
+    <view class="{{dngapNum==2?'bg-primary':''}}" bindtap="switchGapNum" data-index="2">10PX</view>
+    <view class="{{dngapNum==3?'bg-primary':''}}" bindtap="switchGapNum" data-index="3">20PX</view>
+  </view>
+  <view class="overflow">
+  <view class="dn-grid dn-grid{{dngridNum}} gap-{{dngapNum}} gap-y">
+    <block wx:for="{{routers}}" wx:key="{{index}}">
+        <view class="dn-gridItem">
+          <navigator url="{{item.url}}/{{item.url}}" hover-class='none'>
+          <view class="bg-white text-center py-3">
+            <view class="">
+              <text class="dni {{item.icon}} h2" />
+            </view>
+            <text class="fs-12">{{item.name}}</text>
+          </view>
+          </navigator>
+        </view>
+    </block>
+  </view>
+  </view>
+
+  
+
+  
+</view>
+

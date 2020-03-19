@@ -1,0 +1,11 @@
+{
+  "backgroundColorTop": "#fafafa",
+  "backgroundColorBottom": "#fafafa",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Card",
+  "usingComponents": {
+    "dn-list": "../../../components/dn-List/dn-List",
+    "dn-card": "../../../components/dn-Card/dn-Card"
+  }
+}

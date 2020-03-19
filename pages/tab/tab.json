@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "tab",
+    "usingComponents": {
+        "dn-button": "../../components/dn-Button/dn-Button",
+        "dn-tab": "../../components/tab/tab",
+        "dn-tabs": "../../components/tabs/tabs"
+    }
+}

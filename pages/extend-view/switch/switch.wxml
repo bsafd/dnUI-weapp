@@ -1,0 +1,92 @@
+<view class="container">
+  <vtu-navbar title="Switch"></vtu-navbar>
+  <view class="center Page_Margin">
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">基础用法</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{value}}" bind:change="bindChange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" size="small" bind:change="bindChange" active-color="red"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="round" bind:change="bindChange" active-color="orange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="round" size="small" bind:change="bindChange" color="success" active-color="orange"></dn-switch>
+        </view>
+      </view>
+    </view>
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">其他样式</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{value}}" type="circle" simple bind:change="bindChange" active-color="orange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="circle" simple size="small" bind:change="bindChange" active-color="orange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="round" simple bind:change="bindChange" color="#9596A4" active-color="skyblue"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="round" simple size="small" bind:change="bindChange" active-color="skyblue"></dn-switch>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">禁用样式</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{false}}" type="circle" bind:change="bindChange" active-color="red" disabled></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{true}}" type="round" bind:change="bindChange" active-color="red" disabled></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{false}}" type="circle" simple bind:change="bindChange" active-color="red" disabled></dn-switch>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">异步</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{value}}" async type="circle" bind:change="bindAsyncChange" active-color="orange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" async type="round" bind:change="bindAsyncChange" active-color="orange"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" async type="round" simple bind:change="bindAsyncChange" active-color="orange"></dn-switch>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">自定义图标</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{value}}" dn-switch-class="aa1231234" async type="circle" color="success" active-color="red" bind:change="bindAsyncChange" icon="dni dni-Alpha" activeicon="dni dni-Beta"></dn-switch>
+        </view>
+        <view class="">
+          <dn-switch checked="{{value}}" type="circle" color="info" active-color="red" bind:change="bindChange" icon="dni dni-yes" activeicon="dni dni-del"></dn-switch>
+        </view>
+      </view>
+    </view>
+
+    <view class="dn-card">
+      <view class="dn-card-header dn-card-header-border dn-card-header-separator">自定义文字</view>
+      <view class="dn-card-body d-flex justify-content-around align-items-center">
+        <view class="">
+          <dn-switch checked="{{value}}" async type="circle" color="#9596A4" bind:change="bindAsyncChange" label="男" activelabel="女"></dn-switch>
+        </view>
+      </view>
+    </view>
+
+  
+  </view>
+</view>

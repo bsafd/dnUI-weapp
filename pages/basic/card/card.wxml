@@ -1,0 +1,209 @@
+<view class="container">
+  <dn-card 
+    title="这是一个基本的卡片"
+    titleclass="text-bold"
+    subtitle = "这是一个副标题，只支持一行文字"
+    sidetitle = "两小时前"
+    headerclass="dn-card-header-border dn-card-header-separator"
+    slotbody
+    slotfooter
+    >
+    <view slot="body">
+      <view class="py-3 text-center">
+        <text class="">默认卡片内容</text>
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="fs-12 text-hold d-flex justify-content-between pt-1" style="border-top:1rpx solid var(--border-sub)">
+        <text class="">默认卡片底部</text>
+        <text class="">查看更多</text>
+      </view>
+    </view>
+  </dn-card>
+
+  <dn-card border round
+    title="加边框圆角带头像，标题可以支持多行内容"
+    titleclass="fs-14 dn-media-title mb-1 "
+    subtitle = "标题使用flex促使首尾布局"
+    avatar="../../static/demo/1.jpg" 
+    headerclass="align-items-center dn-card-header-border"
+    slotbody
+    slotfooter
+    uk-class="shadow-3 my-2"
+    >
+    <view slot="body">
+      <view class="py-3 text-center">
+        <text class="">卡片加了阴影</text>
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="fs-12 text-hold d-flex justify-content-between pt-1" style="border-top:1rpx solid var(--border-sub)">
+        <text class="">默认卡片底部</text>
+        <text class="">查看更多</text>
+      </view>
+    </view>
+  </dn-card>
+
+  <dn-card border round
+    title="头像支持独立的样式"
+    titleclass="fs-14 dn-media-title mb-1 "
+    subtitle = "标题使用flex促使首尾布局"
+    avatar="../../static/demo/1.jpg" 
+    avatarclass="avatar-square radius-5" 
+    headerclass="align-items-center dn-card-header-border"
+    image="../../static/demo/demo.jpg" 
+    imagetype="top"
+    slotbody
+    slotfooter
+    uk-class="shadow-3 my-2"
+    >
+    <view slot="body">
+      <view class="py-3 text-center">
+        <text class="">加载一个媒体图片，并应用top属性</text>
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="fs-12 text-hold d-flex justify-content-between pt-1" style="border-top:1rpx solid var(--border-sub)">
+        <text class="">默认卡片底部</text>
+        <text class="">查看更多</text>
+      </view>
+    </view>
+  </dn-card>
+
+  <dn-card round
+    title="在使用背景色时尽量不使用边框"
+    titleclass="fs-14 dn-media-title mb-1 "
+    subtitle = "尤其在应用背景阴影时会有一个像素的白边"
+    avatar="../../static/demo/1.jpg" 
+    headerclass="align-items-center dn-card-header-border"
+    image="../../static/demo/demo.jpg" 
+    imagetype="bottom"
+    slotbody
+    hoverClass="bg-black"
+    uk-class="shadow-blur my-2 bg-dark"
+    >
+    <view slot="body">
+      <view class="py-3 text-center">
+        <text class="">媒体图片，使用了bottom属性</text>
+      </view>
+    </view>
+
+  </dn-card>
+
+
+  <dn-card 
+    title="UOOKK想像你的想像"
+    avatar="{{card[0].img.url}}" 
+    titleclass="text-info bold"
+    subtitle = "图片属性支持bottom/square/top"
+    sidetitle = "两小时前"
+    image="{{card[0].img.url}}"
+    imagetype="square"  
+    border
+    round
+    headerclass=""
+    slotcontent
+    slotbody
+    slotfooter
+    uk-class="my-2 shadow-warp"
+    >
+    <view slot="content">
+      <view class="text-dorange bg-dorange">
+        <view class="bg-colorlight" style="padding:10rpx 20rpx;font-size:24rpx;">
+				  如果需要使用卡片切换控制按钮，需要将内容包含在 <code>.card-content</code>容器中.
+			  </view>
+			</view>
+    </view>
+    
+    <view slot="body">
+      <view class="py-3 text-center">
+        <text class="">完整的例子</text>
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="fs-12 text-hold d-flex justify-content-between pt-1" style="border-top:1rpx solid var(--border-sub)">
+        <text class="">默认卡片底部</text>
+        <text class="">查看更多</text>
+      </view>
+    </view>
+  </dn-card>
+
+
+  <dn-card 
+    title="一个组合内容例子"
+    avatar="../../static/demo/6.jpg" 
+    titleclass="text-success bold"
+    headerclass="align-items-center"
+    sidetitle = "两小时前"
+    image="{{card[0].img.url}}"
+    imagetype="square"  
+    imageheight="300"  
+    border
+    round
+    hoverClass="bg-white"
+    slotbody
+    slotfooter
+    uk-class="my-2"
+    
+    >
+    <view slot="body">
+      <view class="dn-media-list dn-media-border">
+        <dn-list bind:click="detail" indent="indent" padding="26rpx 10rpx">
+          <view class="dn-media-left">
+            <image src="/static/demo/5.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+          </view>
+          <view class="dn-media-body align-between">
+            <text class="dn-media-title h6 text-ell">普京弹钢琴又圈粉 国家领导人们都有哪些才艺？</text>
+            <view class="text-muted fs-12">如果需要对长标题进行了处理可以使用title类</view>
+          </view>
+        </dn-list>
+        <dn-list bind:click="detail" indent="indent" padding="26rpx 10rpx">
+          <view class="dn-media-left">
+            <image src="/static/demo/6.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+          </view>
+          <view class="dn-media-body align-between">
+            <text class="dn-media-title h6 text-ell">普京弹钢琴又圈粉 国家领导人们都有哪些才艺？</text>
+            <view class="text-muted fs-12">如果需要对长标题进行了处理可以使用title类</view>
+          </view>
+        </dn-list>
+        <dn-list bind:click="detail" indent="indent" padding="26rpx 10rpx">
+          <view class="dn-media-left">
+            <image src="/static/demo/7.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+          </view>
+          <view class="dn-media-body align-between">
+            <text class="dn-media-title h6 text-ell">普京弹钢琴又圈粉 国家领导人们都有哪些才艺？</text>
+            <view class="text-muted fs-12">如果需要对长标题进行了处理可以使用title类</view>
+          </view>
+        </dn-list>
+        <dn-list bind:click="detail" indent="indent" padding="26rpx 10rpx" uk-class="flex-row-reverse dn-media-border-no">
+          <view class="dn-media-left">
+            <image src="/static/demo/4.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+          </view>
+          <view class="dn-media-body align-between">
+            <text class="dn-media-title h6 text-ell">普京弹钢琴又圈粉 国家领导人们都有哪些才艺？</text>
+            <view class="text-muted fs-12">如果需要对长标题进行了处理可以使用title类</view>
+          </view>
+        </dn-list>
+        <dn-list bind:click="detail" indent="indent" padding="26rpx 10rpx" uk-class="flex-row-reverse dn-media-border-no">
+          <view class="dn-media-left">
+            <image src="/static/demo/3.jpg" mode="aspectFill" class="avatar avatar-square avatar-lg"/>
+          </view>
+          <view class="dn-media-body align-between">
+            <text class="dn-media-title h6 text-ell">普京弹钢琴又圈粉 国家领导人们都有哪些才艺？</text>
+            <view class="text-muted fs-12">如果需要对长标题进行了处理可以使用title类</view>
+          </view>
+        </dn-list>
+        
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="fs-12 text-hold d-flex justify-content-between pt-1" style="border-top:1rpx solid var(--border-sub)">
+        <text class="">默认卡片底部</text>
+        <text class="">查看更多</text>
+      </view>
+    </view>
+  </dn-card>
+
+
+
+</view>

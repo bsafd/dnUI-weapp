@@ -1,0 +1,156 @@
+<view class="container">
+ <view class="mt-4">
+    <dn-badge dot="{{true}}" bgcolor="success" uk-class=" mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="info" uk-class=" mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="danger" uk-class=" mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="warning" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="primary" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="black" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="purple" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="red" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="dpurple" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="breez" uk-class="mr-2" ></dn-badge>
+    <dn-badge dot="{{true}}" bgcolor="simple" uk-class="mr-2" ></dn-badge>
+  </view>  
+  <view class="mt-2">
+    <dn-badge shape="ring" bgcolor="danger" uk-class="mr-2" ></dn-badge>
+    <dn-badge shape="ring" bgcolor="success" uk-class="mr-2" ></dn-badge>
+    <dn-badge shape="ring" size="lg" bgcolor="warning" uk-class="mr-2" ></dn-badge>
+    <dn-badge shape="ring" size="xl" bgcolor="info" uk-class="mx-2" ></dn-badge>
+  </view>
+  <view class="mt-4">
+    <view class="fs-14 text-bold my-2">带有数字内容</view>
+    <dn-badge value="122" max="100" uk-class="mr-2"></dn-badge>
+    <dn-badge value="10" uk-class="mr-2"></dn-badge>
+    <dn-badge value="99" uk-class="mr-2"></dn-badge>
+    <dn-badge value="199" max="150" square="{{true}}" uk-class="mr-2"></dn-badge>
+    <dn-badge value="7" size="sm" uk-class="mr-2"></dn-badge>
+    <dn-badge value="127" size="lg" uk-class="mr-2"></dn-badge>
+    <dn-badge value="9" size="xl" uk-class="mx-2"></dn-badge>
+    <dn-badge value="99" uk-class="mr-2"></dn-badge>
+    <dn-badge value="99" flash uk-class="mr-2"></dn-badge>
+  </view> 
+  <view class="mt-4">
+    <view class="fs-14 text-bold my-2">方形</view>
+    <dn-badge value="122" shape="square" bgcolor="success" max="100" uk-class="mr-2"></dn-badge>
+    <dn-badge value="10" shape="square" bgcolor="success" uk-class="mr-2"></dn-badge>
+    <dn-badge value="99" shape="square" bgcolor="success" uk-class="mr-2"></dn-badge>
+    <dn-badge value="199" shape="square" bgcolor="success" max="150" square="{{true}}" uk-class="mr-2"></dn-badge>
+    <dn-badge value="7" shape="square" bgcolor="success" size="sm" uk-class="mr-2"></dn-badge>
+    <dn-badge value="127" shape="square" bgcolor="success" size="lg" uk-class="mr-2"></dn-badge>
+    <dn-badge value="9" shape="square" bgcolor="success" size="xl" uk-class="mx-2"></dn-badge>
+    <dn-badge value="99" shape="square" bgcolor="success" uk-class="mr-2"></dn-badge>
+  </view> 
+  <view class="mt-4">
+    <view class="fs-14 text-bold my-2">圆形</view>
+    <dn-badge value="122" shape="circle" bgcolor="success" max="100" uk-class="mr-2"></dn-badge>
+    <dn-badge value="8" shape="circle" bgcolor="success" uk-class="mr-2"></dn-badge>
+    <dn-badge value="99" shape="circle" bgcolor="success" uk-class="mr-2"></dn-badge>
+    <dn-badge value="199" shape="circle" bgcolor="success" max="150" square="{{true}}" uk-class="mr-2"></dn-badge>
+    <dn-badge value="7" shape="circle" bgcolor="success" size="sm" uk-class="mr-2"></dn-badge>
+    <dn-badge value="127" shape="circle" bgcolor="success" size="lg" uk-class="mr-2"></dn-badge>
+    <dn-badge value="9" shape="circle" bgcolor="success" size="xl" uk-class="mx-2"></dn-badge>
+    <dn-badge value="99" shape="circle" bgcolor="success" uk-class="mr-2"></dn-badge>
+  </view>
+
+
+
+
+  <view class="mt-4">
+    <view class="fs-14 text-bold mt-2">数字插槽</view>
+    <view class="fs-12 text-sub mb-4">闪光在插槽中使用</view>
+
+    <view class="d-flex flex-wrap my-3">
+      <view class="flex-fill">
+        <dn-badge value="122" max="100" user-slot flash bgcolor="info" uk-class="">
+          <image src="../../../static/demo/2.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge value="122" max="100" user-slot bgcolor="success" uk-class="">
+          <image src="../../../static/demo/3.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge value="122" max="99" user-slot bgcolor="primary" uk-class="">
+          <image src="../../../static/demo/4.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge value="122" shape="circle" top="36rpx" right="22rpx" max="120" user-slot bgcolor="danger" uk-class="mr-2">
+          <image src="../../../static/demo/5.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+    </view>
+ 
+    <view class="d-flex flex-wrap my-3 ">
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot bgcolor="info" uk-class="" >
+          <image src="../../../static/demo/2.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot shape="square"  bgcolor="success" uk-class="" >
+          <image src="../../../static/demo/3.jpg" class="avatar avatar-square"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot shape="ring" bgcolor="primary" uk-class="" >
+          <image src="../../../static/demo/4.jpg" class="avatar"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot shape="ring" bgcolor="danger" uk-class="" >
+          <image src="../../../static/demo/5.jpg" class="avatar avatar-square"></image>
+        </dn-badge>
+      </view>
+    </view>
+</view>
+
+
+  <view class="mt-4">
+    <view class="fs-14 text-bold my-2">位置改变</view>
+    <view class="d-flex flex-wrap my-3">
+      <view class="flex-fill">
+        <dn-badge value="122" max="100" user-slot flash bgcolor="info" uk-class="mr-2">
+          <image src="../../../static/demo/2.jpg" class="avatar" circle size="small"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot bgcolor="danger" flash uk-class="mr-2" >
+          <image src="../../../static/demo/5.jpg" class="avatar" circle size="small"></image>
+        </dn-badge>
+      </view>
+    </view>
+  </view> 
+
+  <view class="mt-4">
+    <view class="fs-14 text-bold my-2">图标不支持闪光属性</view>
+    <view class="d-flex flex-wrap my-3">
+      <view class="flex-fill">
+        <dn-badge user-slot value="NEWS" color="#333"  bgcolor="warning" uk-class="mr-2">
+          <image src="../../../static/demo/2.jpg" class="avatar" circle size="small"></image>
+        </dn-badge>
+      </view>
+      <view class="flex-fill">
+        <dn-badge dot="{{true}}" user-slot bgcolor="danger" flash uk-class="mr-2" >
+          <image src="../../../static/demo/5.jpg" class="avatar" circle size="small"></image>
+        </dn-badge>
+      </view>
+    </view>
+  </view> 
+    
+
+  <view class="mt-4">
+    <view class="d-flex flex-wrap my-4">
+      <view class="flex-fill">
+        <dn-badge value="122" max="100" top="-60rpx" user-slot bgcolor="warning" uk-class="mr-2">
+          <dn-button width="200rpx">最大10</dn-button>
+        </dn-badge>
+      </view>
+    </view>
+
+ 
+  </view> 
+
+</view>

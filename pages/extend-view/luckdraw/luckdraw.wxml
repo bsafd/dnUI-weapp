@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="dn-dot dn-dot-{{index+1}}" wx:for="{{circleList}}" wx:key="{{index}}"></view>
+  <view class="dn-container-in">
+    <view class="dn-content-out dn-award-{{index+1}} {{index==indexSelect?'dn-awardSelect':''}}" wx:for="{{awardList}}" wx:key="{{index}}">
+      <image class="dn-award-image" src="../../../static/demo/{{item.img}}"></image>
+    </view>
+    <view class="dn-btn-start {{isRunning?'dn-ative':''}}" bindtap="startDrawing">立即抽奖</view>
+  </view>
+</view>

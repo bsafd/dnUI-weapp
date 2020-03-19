@@ -1,0 +1,34 @@
+@import '../../../static/css/dnui.wxss';
+
+.container{
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.dn-grid.demo view{border-radius:var(--round);padding:10rpx 20rpx;font-size:24rpx;}
+.dn-grid.democolor .dn-gridItem >view{padding:30rpx 20rpx;font-size:24rpx;text-align:center;text-transform:uppercase;width:100% !important;}
+.box{
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.item{
+  width: 48%;
+  padding:30rpx 24rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  color: #fff;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+.color{
+   padding-top: 24rpx;
+}
+.gray{
+  color: #999 !important;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "新增地址",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-button":"../../../../components/dn-Button/dn-Button",
+    "dn-list-cell": "../../../../components/dn-List/dn-List"
+  }
+}

@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="p-3 text-common">
+    <view class="">订单编号：
+      <text class="text-bold">9136257866</text>
+    </view>
+    <view class="">国内承运人：华南众包站</view>
+    <view class="">预计送达：
+      <text class="text-bold">5</text>月<text class="text-bold">1</text>日</view>
+  </view>
+  <view class="dn-order-tracking">
+    <dn-timeline>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-primary">
+          <dn-icon name="yes" color="#fff" size="14" bold="{{true}}"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-basic">已签收</view>
+          <view class="fs-14 py-1 text-fade">您的订单已由本人签收。感谢您在商城购物，欢迎再次光临。</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 18:48:26</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-success">
+          <dn-icon name="people" color="#fff" size="13"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-success">派送中</view>
+          <view class="fs-14 py-1 text-hold">您的订单正在配送途中（快递员：魏大牛.，电话：
+            <text class='dn-primary'>18650068988</text>），请您耐心等待。</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 16:29:07</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-simple">
+          <dn-icon name="yunshuzhongfill" color="#fff" size="13"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-common">运输中</view>
+          <view class="fs-14 py-1 text-hold">您的订单已到达XX【北京XX营业部】</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 16:17:32</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-dot bg-dark"></view>
+        <view slot="content">
+          <view class="fs-14 py-1 text-hold dn-ptop">您的订单已在XX【北京XX营业部】收货完成</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 08:40:32</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-dot bg-success-lt"></view>
+        <view slot="content">
+          <view class="fs-14 py-1 text-hold dn-ptop">您的订单由XXXX送往XX【北京XX营业部】</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 08:17:32</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-warning">
+          <dn-icon name="home" color="#fff" size="12"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-common">仓库处理中</view>
+          <view class="fs-14 py-1 text-fade">打包完成</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 08:09:16</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-danger">
+          <dn-icon name="shakehandsfill" color="#fff" size="12"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-common">已下单</view>
+          <view class="fs-14 py-1 text-fade">您的订单将下传XXX仓库，准备出库</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 02:09:16</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-warning">
+          <dn-icon name="shengyinfill" color="#fff" size="12"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-common">温馨提示</view>
+          <view class="fs-14 py-1 text-hold">您的订单预计5月1日送达您手中</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 02:05:16</view>
+        </view>
+      </dn-timelineItem>
+
+      <dn-timelineItem bgcolor="none">
+        <view slot="node" class="avatar avatar-i avatar-xs bg-simple">
+          <dn-icon name="formfavor" color="#fff" size="12"></dn-icon>
+        </view>
+        <view slot="content">
+          <view class="text-bold text-common">已下单</view>
+          <view class="fs-14 py-1 text-hold">您提交了订单，请等待第三方卖家系统弄确认</view>
+          <view class="fs-12 text-bold text-sub">2019-05-01 02:04:16</view>
+        </view>
+      </dn-timelineItem>
+
+    </dn-timeline>
+  </view>
+</view>

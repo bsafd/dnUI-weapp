@@ -1,0 +1,27 @@
+<view class="container">
+		<view class="header">
+			<view class="title">Alert</view>
+			<view class="sub-title">Alert弹框 </view>
+		</view>
+		<view class="py-1 px-4">
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="showAlert" data-index="1">默认样式</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="showAlert" data-index="2">自定义按钮文本颜色</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="showAlert" data-index="3">自定义按钮文本</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="showAlert" data-index="4">提示信息颜色修改</dn-button>
+			</view>
+			<view class="mb-3">
+				<dn-button type="white" shape="circle" bind:click="showAlert" data-index="5">遮罩可点击关闭</dn-button>
+			</view>
+		</view>
+  		<!--alert-->
+		<dn-alert show="{{visible}}" bind:click="hideAlert" bind:cancel="hideAlert" maskClosable="{{maskClosable}}" btnColor="{{btnColor}}" color="{{color}}" btnText="{{btnText}}">
+			这是一个alert弹框
+		</dn-alert>
+	</view>

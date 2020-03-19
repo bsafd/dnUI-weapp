@@ -1,0 +1,18 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#F7F7F7",
+  "backgroundColorBottom": "#F7F7F7",
+  "navigationBarTitleText": "商品详情 ",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-tag": "../../../components/dn-Tag/dn-Tag",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge",
+    "dn-nomore": "../../../components/dn-Nomore/dn-Nomore",
+    "dn-button": "../../../components/dn-Button/dn-Button",
+    "dn-top-dropdown": "../../../components/dn-TopDropdown/dn-TopDropdown",
+    "dn-bottom-popup": "../../../components/dn-BottomPopup/dn-BottomPopup",
+    "dn-numberbox": "../../../components/dn-NumberBox/dn-NumberBox"
+  }
+}

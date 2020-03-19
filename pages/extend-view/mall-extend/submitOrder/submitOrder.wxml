@@ -1,0 +1,110 @@
+<view class="container">
+  <view class="dn-box">
+   
+    <dn-list-cell arrow="{{true}}" last="{{true}}" padding="30rpx" radius="{{true}}" uk-class="overflow" bind:click="chooseAddr">
+        <view wx:if="{{true}}">
+          <view class="dn-media-body">
+            <text class="h6">王大大</text> 
+            <text class="fs-14 ml-2">139****7708</text>
+            <view class="text-sub fs-12 mt-1">
+              <dn-tag size="xs" type="red" shape="circleRight">公司</dn-tag>
+              广东省深圳市南山区高新科技园中区一路
+            </view>
+          </view>
+        </view>
+        <view wx:else>
+          <dn-icon name="weizhifill" size="20" color="#f83f37" uk-class="mr-2"></dn-icon>
+          <view class="dn-media-body text-danger ">选择收货地址</view>
+        </view>
+      <view class="dn-bgImage"></view>
+    </dn-list-cell>
+
+    <view class="dn-top">
+      <dn-list-cell hover="{{false}}" lineLeft="{{false}}">
+        <view class="dn-goodsTitle">
+          商品信息
+        </view>
+      </dn-list-cell>
+      <block wx:for="{{2}}" wx:key="{{index}}">
+        <dn-list-cell hover="{{false}}" padding="0">
+          <view class="dn-goodsItem">
+            <image src="/static/demo/{{index+3}}.jpg" class="dn-goodsImage mr-2"></image>
+            <view class="dn-goodsCenter">
+              <view class="dn-goodsName">欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜 30ml（欧莱雅彩妆 BB霜 粉BB 遮瑕疵 隔离）</view>
+              <view class="dn-goodsAttr">黑色，50ml</view>
+            </view>
+            <view class="dn-priceRight">
+              <view>￥298.00</view>
+              <view>x2</view>
+            </view>
+          </view>
+        </dn-list-cell>
+      </block>
+      <dn-list-cell hover="{{false}}">
+        <view class="border-box dn-flex">
+          <view>商品总额</view>
+          <view>￥1192.00</view>
+        </view>
+      </dn-list-cell>
+      <dn-list-cell arrow="{{hasCoupon}}" hover="{{hasCoupon}}">
+        <view class="border-box dn-flex">
+          <view>优惠券</view>
+          <view class="{{hasCoupon?'text-danger pr-3':''}}">{{hasCoupon?"满5减1":'没有可用优惠券'}}</view>
+        </view>
+      </dn-list-cell>
+      <dn-list-cell hover="{{true}}" arrow="{{true}}">
+        <view class="border-box dn-flex">
+          <view>发票</view>
+          <view class="text-danger pr-3">不开发票</view>
+        </view>
+      </dn-list-cell>
+      <dn-list-cell hover="{{false}}">
+        <view class="border-box dn-flex">
+          <view>配送费</view>
+          <view>￥0.00</view>
+        </view>
+      </dn-list-cell>
+      <dn-list-cell hover="{{false}}" lineLeft="{{false}}" padding="0">
+        <view class="dn-remarkBox border-box dn-flex">
+          <view>订单备注</view>
+          <input type="text" class="dn-remark" placeholder="选填: 请先和商家协商一致" placeholder-class="dn-phcolor"></input>
+        </view>
+      </dn-list-cell>
+      <dn-list-cell hover="{{false}}" last="{{true}}">
+        <view class="border-box dn-flex dn-totalFlex">
+          <view class="dn-flexEnd text-danger pr-3">
+            <view class="text-black">合计： </view>
+            <view class="dn-size26">￥</view>
+            <view class="dn-priceLarge">1192</view>
+            <view class="dn-size26">.00</view>
+          </view>
+        </view>
+      </dn-list-cell>
+    </view>
+
+    <view class="dn-top">
+      <dn-list-cell last="{{true}}" hover="{{insufficient}}" radius="{{true}}" arrow="{{insufficient}}">
+        <view class="dn-flex">
+          <view class="fs-14 text-bold">余额支付
+            <text class="text-sub">(￥2019.00)</text>
+          </view>
+          <switch color="#30CC67" class="dn-scaleSmall" wx:if="{{!insufficient}}" />
+          <view class="pr-3 text-sub" wx:else>余额不足, 去充值</view>
+        </view>
+      </dn-list-cell>
+    </view>
+  </view>
+  <view class="dn-safe-area"></view>
+  <view class="dn-tabbar">
+    <view class="dn-flexEnd text-danger pr-3 pr-2">
+      <view class="text-black">实付金额: </view>
+      <view class="dn-size26">￥</view>
+      <view class="dn-priceLarge">1192</view>
+      <view class="dn-size26">.00</view>
+    </view>
+    <view class="pr-3">
+      <dn-button width="200rpx" height="70rpx" type="danger" shape="circle" bind:click="btnPay">确认支付</dn-button>
+    </view>
+  </view>
+
+</view>

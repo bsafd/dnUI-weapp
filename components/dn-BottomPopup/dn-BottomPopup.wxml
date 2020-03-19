@@ -1,0 +1,6 @@
+<view catchtouchmove="forbid">
+  <view class="uk-class dn-bottom-popup {{show?'dn-popup-show':''}}" style="background:{{bgcolor}};{{height?'height:'+height+'rpx':''}}">
+    <slot></slot>
+  </view>
+  <view class="dn-popup-mask {{show?'dn-mask-show':''}}" wx:if="{{mask}}" bindtap="handleClose"></view>
+</view>

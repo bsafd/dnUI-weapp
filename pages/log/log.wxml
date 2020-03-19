@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="dn-header">Hi，欢迎使用dnUI！当前版本：
+    <text class="dn-version">V{{version}}</text>
+  </view>
+  <view class="dn-log">
+    <dn-timeline>
+      <dn-timeline-item wx:for="{{logList}}" wx:key="{{index}}">
+        <view slot="node" class="dn-node">
+          <dn-icon name="ctop" color="{{version==item.version?'#F5C01F':'#ddd'}}" size="18"></dn-icon>
+        </view>
+        <view slot="content">
+         <view class="dn-content-log {{version==item.version?'':'dn-log-gray'}}">
+            <view class="dn-version-date">{{logList.length-1==index?item.version:'V'+item.version}}（{{item.date}}）</view>
+            <view wx:for="{{item.log}}" wx:for-item="model" wx:key="{{index}}" class="dn-log-text">{{model}}</view>
+            <view class="dn-doc-box" wx:if="{{index===logList.length-1}}">
+								
+						</view>
+          </view>
+        </view>
+      </dn-timeline-item>
+    </dn-timeline>
+  </view>
+</view>

@@ -1,0 +1,165 @@
+{
+  "pages": [
+    
+    
+    "pages/index/index",
+    
+
+    "pages/css/coupon/coupon",
+   
+    "pages/my/my",
+    "pages/log/log",
+
+    "pages/basic/basic",
+    "pages/basic/badge/badge",
+    "pages/basic/color/color",
+    "pages/basic/card/card",
+    "pages/basic/flex/flex",
+    "pages/basic/footer/footer",
+    "pages/basic/load/load",
+    "pages/basic/tag/tag",
+    "pages/basic/list/list",
+    "pages/basic/other/other",
+    "pages/basic/avatar/avatar",
+    "pages/basic/imgpicker/imgpicker",
+    "pages/basic/button/button",
+    
+    "pages/indexList/indexList",
+
+    "pages/product/product",
+    "pages/picker/picker",
+    "pages/picker-view/picker-view",
+    "pages/maps/maps",
+    "pages/extend/extend",
+    "pages/drawer/drawer",
+    "pages/tab/tab",
+    
+    "pages/login/login",
+    "pages/swipe-action/swipe-action",
+    
+    "pages/news/news",
+    "pages/about/about",
+    
+    "pages/selectCity/selectCity",
+    "pages/weather/weather",
+    "pages/longlat/longlat",
+    "pages/location/location"
+    
+  ],
+  "subPackages": [
+    {
+      "root": "pages/extend-view/",
+      "pages": [
+        "news-search/news-search",
+        "news-video/news-video",
+        "news-cmt-reply/news-cmt-reply",
+        "news-cmt-list/news-cmt-list",
+        "news/news",
+        "news-cmt/news-cmt",
+        "newsDetail/newsDetail",
+
+        "mall-extend/orderDetail/orderDetail",
+        "mall-extend/my/my",
+        "mall-extend/submitOrder/submitOrder",
+        "mall-extend/myOrder/myOrder",
+        
+        "mall-extend/success/success",
+        "mall-extend/userInfo/userInfo",
+        "mall-extend/set/set",
+        "mall-extend/editAddress/editAddress",
+        "mall-extend/address/address",
+        "mall-extend/coupon/coupon",
+        "mall-extend/shopcart/shopcart",
+        "productList/productList",
+        "productDetail/productDetail",
+        "tabbar/tabbar",
+        "switch/switch",
+        "step/step",
+        "mall/mall",
+        "chat/chat",
+         
+        "tpl-msgList/tpl-msgList",    
+        "popup/popup",
+        "luckdraw/luckdraw",
+        "request/request",
+        "skeleton/skeleton",
+        "collapse/collapse",
+        "tabs/tabs",
+        "formValidation/formValidation",
+        "fab/fab",
+        "clipboard/clipboard",
+        "picker-dateTime/picker-dateTime",
+        "toast/toast",
+        "tips/tips",
+        "alert/alert",
+        "goTop/goTop",
+        "carousel/carousel",
+        "countdown/countdown",
+        "rate/rate",
+        "timeline/timeline",
+        "modal/modal",
+        "actionsheet/actionsheet",
+        "rollingNews/rollingNews",
+        "sticky/sticky",
+        "keyboard/keyboard",
+        "lockscreen/lockscreen",
+        "msgtips/msgtips",
+        "numberbox/numberbox",
+        "divider/divider",
+        "friendsList/friendsList",
+        "friendsList-2/friendsList-2"
+        
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "优壳-大牛",
+    "navigationBarTextStyle": "black",
+    "backgroundColorTop": "#fafafa",
+    "backgroundColorBottom": "#fafafa"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "code",
+        "iconPath": "static/images/tabbar/black/home.png",
+        "selectedIconPath": "static/images/tabbar/black/homefill.png"
+      },
+      {
+        "pagePath": "pages/extend/extend",
+        "text": "extend",
+        "iconPath": "static/images/tabbar/black/chahuafei.png",
+        "selectedIconPath": "static/images/tabbar/black/chahuafeifill.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "dnUI",
+        "iconPath": "static/images/tabbar/black/wode2.png",
+        "selectedIconPath": "static/images/tabbar/black/wode3fill.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "plugins": {
+    
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于定位效果展示"
+    }
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

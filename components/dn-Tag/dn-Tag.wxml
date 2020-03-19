@@ -1,0 +1,25 @@
+<view class="uk-class {{size?'dn-tag-'+size:'dn-tag'}} {{parse.getClassName(shape,plain)}} {{parse.getTypeClass(type,plain)}}  " bindtap="handleClick" wx:if="{{visible}}" style="{{type=='default'?'background:'+bgcolor+';':''}}{{fontcolor?'color:'+(fontcolor||bgcolor)+';':''}} {{bordercolor?'border:2rpx solid '+bordercolor+';':''}}">
+  <slot></slot>
+  
+</view>
+<wxs module="parse">
+  module.exports = {
+    getTypeClass: function(type, plain) {
+      return plain ? 'bg-' + type + '-outline' : 'bg-' + type
+    },
+    getClassName: function(shape, plain) {
+      //circle, square，circleLeft，circleRight
+      var className = plain ? 'dn-tag-outline ' : '';
+      if (shape != 'square') {
+        if (shape == "circle") {
+          className = className + 'dn-tag-circle';
+        } else if (shape == "circleLeft") {
+          className = className + 'dn-tag-round-left';
+        } else if (shape == "circleRight") {
+          className = className + 'dn-tag-round-right';
+        }
+      }
+      return className;
+    }
+  }
+</wxs>

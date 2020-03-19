@@ -1,0 +1,17 @@
+{
+  "navigationBarBackgroundColor": "#FFDC1B",
+  "navigationBarTextStyle": "black",
+  "backgroundColorTop": "#FFDC1B",
+  "backgroundColorBottom": "#FFDC1B",
+  "navigationBarTitleText": "UOOKK商城模板",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-icon": "../../../components/dn-Icon/dn-Icon",
+    "dn-tag": "../../../components/dn-Tag/dn-Tag",
+    "dn-badge": "../../../components/dn-Badge/dn-Badge",
+    "dn-card": "../../../components/dn-Card/dn-Card",
+    "dn-loadmore": "../../../components/dn-Loadmore/dn-Loadmore",
+    "dn-nomore": "../../../components/dn-Nomore/dn-Nomore"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Footer",
+  "usingComponents": {
+    "dn-footer": "../../../components/dn-Footer/dn-Footer"
+  }
+}

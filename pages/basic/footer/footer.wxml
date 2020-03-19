@@ -1,0 +1,23 @@
+<view class="container">
+  
+
+  <view class="dn-card-header ml-5">
+    <view class="dn-card-title h4 text-bold">
+      页脚
+      <view class="dn-card-subtitle ">Footer</view>
+    </view>
+  </view>
+
+
+  <dn-footer fixed="{{false}}" copyright="{{copyright}}"></dn-footer>
+  <dn-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate}}" uk-class="mt-3"></dn-footer>
+  <dn-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate2}}" uk-class="mt-3"></dn-footer>
+  <dn-footer fixed="{{false}}" copyright="{{copyright}}" navigate="{{navigate3}}" uk-class="mt-3"></dn-footer>
+
+
+  <dn-footer fixed="{{false}}" copyright="定义了文字大小" navigate="{{navigate3}}" size="34" uk-class="mt-3"></dn-footer>
+
+
+  <dn-footer copyright="Copyright © 2019 大牛 UI All Rights Reserved." navigate="{{navigate}}" bgcolor="#333" color="#FFDC1B"></dn-footer>
+
+</view>

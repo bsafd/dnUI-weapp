@@ -1,0 +1,44 @@
+@import '/static/css/dnui.wxss';
+
+.container {
+  padding-bottom: 110rpx;
+  box-sizing: border-box;
+}
+
+
+.dn-cmtTitle {
+  font-size: 30rpx;
+  font-weight: bold;
+  position: relative;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.dn-cmtTitle::after {
+  content: '';
+  position: absolute;
+  left: 12rpx;
+  top: 30%;
+  width: 6rpx;
+  height: 40%;
+  background: #5677fc;
+}
+
+.dn-cmtCell {
+  padding: 26rpx 30rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.dn-cmtCell::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1rpx solid #eaeef1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+

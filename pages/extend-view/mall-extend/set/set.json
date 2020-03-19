@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "账户设置",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "dn-list-cell": "../../../../components/dn-List/dn-List",
+    "dn-button": "../../../../components/dn-Button/dn-Button"
+  }
+}

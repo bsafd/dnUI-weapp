@@ -1,0 +1,11 @@
+<view class="container">
+
+  <dn-button disabled="{{true}}" shape="circle" type="simple" uk-class="mb-3">禁用状态</dn-button>
+  <dn-button disabled="{{true}}" shape="circle" type="dark" loading="{{true}}" uk-class="mb-3">禁用状态</dn-button>
+  <picker value="{{value}}" mode="multiSelector" bindchange="picker" bindcolumnchange="columnPicker" range="{{multiArray}}" >
+    <dn-button shape="circle" type="primary" uk-class="mb-3">请选择</dn-button>
+  </picker>
+  <view class="result">
+    {{text}}
+  </view>
+</view>

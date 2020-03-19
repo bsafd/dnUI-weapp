@@ -1,0 +1,29 @@
+<view class="dn-safe-area">
+		<view class="dn-address">
+			<block wx:for="{{3}}" wx:key="{{index}}">
+				<dn-list-cell padding="0">
+					<view class="dn-address-flex">
+						<view class="dn-address-left">
+							<view class="dn-address-main">
+								<view class="dn-address-name dn-ellipsis">{{["echo.","王大大","大长腿"][index]}}</view>
+								<view class="dn-address-tel">138****7708</view>
+							</view>
+							<view class="dn-address-detail">
+								<view class="dn-address-label" wx:if="{{index===0}}">默认</view>
+								<view class="dn-address-label" wx:if="{{index!=2}}">{{["公司","住宅","其它"][index]}}</view>
+								<text>广东省深圳市南山区高新科技园中区一路</text>
+							</view>
+						</view>
+						<view class="dn-address-imgbox">
+              <dn-icon name="pen" size="{{24}}"></dn-icon>
+							<!-- <image class="dn-address-img" src="/static/images/mall/my/icon_addr_edit.png" /> -->
+						</view>
+					</view>
+				</dn-list-cell>
+			</block>
+		</view>
+		<!-- 新增地址 -->
+		<view class="dn-address-new">
+			<dn-button type="danger" height="88rpx" bind:click="editAddr">+ 新增收货地址</dn-button>
+		</view>
+	</view>

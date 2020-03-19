@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "购物车",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50,
+  "usingComponents": {
+    "dn-swipe-action": "../../../../components/dn-SwipeAction/dn-SwipeAction",
+    "dn-button": "../../../../components/dn-Button/dn-Button",
+    "dn-numberbox": "../../../../components/dn-NumberBox/dn-NumberBox",
+    "dn-icon": "../../../../components/dn-Icon/dn-Icon",
+    "dn-divider": "../../../../components/dn-Divider/dn-Divider",
+    "dn-loadmore": "../../../../components/dn-Loadmore/dn-Loadmore"
+  }
+}

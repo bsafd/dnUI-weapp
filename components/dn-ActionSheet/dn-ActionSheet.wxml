@@ -1,0 +1,12 @@
+<view class="uk-class dn-actionsheet {{show?'dn-actionsheet-show':''}}">
+  <view class="dn-tips" style="font-size:{{size}}rpx;color:{{color}};" wx:if="{{tips}}">
+    {{tips}}
+  </view>
+  <view class="{{isCancel?'dn-operate-box':''}}">
+    <block wx:for="{{itemList}}" wx:key="{{index}}">
+      <view class="dn-actionsheet-btn dn-actionsheet-divider {{(!isCancel && index==itemList.length-1)?'dn-btn-last':''}}" hover-class="dn-actionsheet-hover" hover-stay-time="150" data-index="{{index}}" style="color:{{item.color || '#1a1a1a'}}" bindtap="handleClickItem">{{item.text}}</view>
+    </block>
+  </view>
+  <view class="dn-actionsheet-btn dn-actionsheet-cancel" hover-class="dn-actionsheet-hover" hover-stay-time="150" wx:if="{{isCancel}}" bindtap="handleClickCancel">取消</view>
+</view>
+<view class="dn-actionsheet-mask {{show?'dn-mask-show':''}}" bindtap="handleClickMask"></view>

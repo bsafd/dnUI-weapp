@@ -1,0 +1,7 @@
+<view class="dn-tips-box {{fixed?'dn-tips-fixed':''}}">
+  <image src="{{imgUrl}}" class="dn-tips-icon" style="width:{{imgWidth}}rpx;height:{{imgHeight}}rpx"></image>
+  <view class="dn-tips-content">
+    <slot></slot>
+  </view>
+  <button class="dn-tips-btn" hover-class="dn-tips-btn-hover" style="width:{{btnWidth}}rpx" wx:if="{{btnText}}" bindtap="handleClick">{{btnText}}</button>
+</view>

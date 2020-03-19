@@ -1,0 +1,152 @@
+<view class="container">
+  <!--tabbar-->
+  <view class="dn-operation fixbottom">
+    <view class='d-flex align-items-center justify-content-center dn-operation-inputbox'>
+      <view hover-class="opcity5" hover-stay-time="150">
+        <dn-icon name="shengyin" size="30" color='#333' uk-class="ml-2 mr-1"></dn-icon>
+      </view>
+      <input class="dn-operation-input bg-white"></input>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <dn-icon name="emoji" size="30" color='#333'></dn-icon>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150" class="mr-2">
+      <dn-icon name="jiahao1" size="30" color='#333'></dn-icon>
+    </view>
+  </view>
+
+  <view class="dn-operation  px-2 my-2">
+    <view class='d-flex align-items-center justify-content-center dn-operation-inputbox'>
+      <view hover-class="opcity5" hover-stay-time="150">
+        <dn-icon name="shengyin" size="30" color='#333' uk-class="ml-2 mr-1"></dn-icon>
+      </view>
+      <input class="dn-operation-input ba bg-white text-black ml-2"></input>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <dn-icon name="emoji" size="30" color='#333'></dn-icon>
+    </view>
+    <view hover-class="opcity5" hover-stay-time="150">
+      <dn-icon name="jiahao1" size="30" color='#333'></dn-icon>
+    </view>
+  </view>
+
+
+  <!--tabbar-->
+  <view class="w-100">
+    <dn-loadmore visible="{{loadding}}" index="3" type="primary" text=""></dn-loadmore>
+    <view hidden="{{!show}}">
+      <view class="dn-label">对方已通过您的好友请求</view>
+      <view class="dn-chat-center">星期三 11:02</view>
+      <view class="dn-chat-right">
+        <view class="dn-chatbox dn-chatbox-right">1哈喽~，欢迎使用UOOKK-dnUI！</view>
+        <image src="../../../static/demo/2.jpg" class="avatar ml-3"></image>
+      </view>
+      <view class="dn-chat-left ">
+        <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+        <view class="dn-chatbox dn-chatbox-left">2哈喽~，欢迎使用UOOKK-dnUI！</view>
+      </view>
+      <view class="dn-chat-left">
+        <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+        <view class="dn-img-chatbox">
+          <image src="../../../static/demo/2.jpg" class="dn-chat-img" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="dn-chat-right">
+        <view class="dn-chatbox dn-chatbox-right dn-chatbox-info">哈喽~，欢迎使用UOOKK-dnUI！</view>
+        <image src="../../../static/demo/2.jpg" class="avatar ml-3"></image>
+      </view>
+      <view class="dn-chat-left">
+        <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+        <view class="dn-chatbox dn-chatbox-left">哈喽~，欢迎使用UOOKK-dnUI！</view>
+      </view>
+      <view class="dn-chat-left">
+        <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+        <view class="dn-img-chatbox">
+          <image src="../../../static/demo/2.jpg" class="dn-chat-img" mode="widthFix"></image>
+        </view>
+      </view>
+    </view>
+
+
+
+    <view class="dn-chat-center">星期四 11:02</view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="dn-chatbox dn-chatbox-left">哈喽~，星期四的日期！</view>
+    </view>
+    <view class="dn-chat-center">星期五 12:09</view>
+    <view class="dn-chat-right">
+      <view class="dn-chatbox dn-chatbox-right ">哈喽~，欢迎使用UOOKK-dnUI！ 请说出您想加入或者优化的功能！</view>
+      <image src="../../../static/demo/2.jpg" class="avatar ml-3"></image>
+    </view>
+    <view class="dn-chat-right">
+      <view class="dn-chatbox dn-chatbox-right dn-chatbox-success mb-2">支持三种颜色</view>
+      <image src="../../../static/demo/2.jpg" class="avatar avatar-square ml-3"></image>
+    </view>
+    <view class="dn-chat-right">
+        <view class="dn-chatbox dn-chatbox-right dn-chatbox-info">使用外围容器将内容分成两</view>
+      <image src="../../../static/demo/2.jpg" class="avatar avatar-square ml-3"></image>
+    </view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="dn-chatbox dn-chatbox-left">哈喽~，欢迎使用UOOKK-dnUI！</view>
+    </view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="dn-img-chatbox">
+        <image src="../../../static/demo/2.jpg" class="dn-chat-img" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="dn-img-chatbox">
+        <image src="../../../static/demo/1.jpg" class="dn-chat-img" mode="widthFix"></image>
+      </view>
+    </view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="d-flex align-items-center">
+        <view class="dn-chatbox dn-chatbox-left d-flex align-items-center mr-1">
+          <image src="../../../static/images/chat/voice.png" class="dn-chat-voice mr-1"></image>
+          <view>8"</view>
+        </view>
+        <dn-badge dot="{{true}}" color="danger"></dn-badge>
+      </view>
+    </view>
+    <view class="dn-chat-left">
+      <image src="../../../static/demo/1.jpg" class="avatar mr-3"></image>
+      <view class="d-flex align-items-center">
+        <view class="dn-chatbox dn-chatbox-left d-flex align-items-center mr-1">
+          <image src="../../../static/images/chat/voice.png" class="dn-chat-voice mr-1"></image>
+          <view style="width:300rpx">20"</view>
+        </view>
+        <dn-badge dot="{{true}}" color="danger"></dn-badge>
+      </view>
+    </view>
+
+    <view class="dn-chat-right">
+      <view class="d-flex align-items-center justify-content-end">
+        <dn-badge dot="{{true}}" color="danger"></dn-badge>
+        <view class="dn-chatbox dn-chatbox-right d-flex align-items-center ml-1 flex-row-reverse">
+          <image src="../../../static/images/chat/voice.png" class="dn-chat-voice rotate-180 ml-1"></image>
+          <view style="width:280rpx;text-align:right">18"</view>
+        </view>
+      </view>
+      <image src="../../../static/demo/2.jpg" class="avatar ml-3"></image>
+    </view>
+
+    <view class="dn-chat-right">
+      <view class="d-flex align-items-center justify-content-end flex-row-reverse">
+        <view class="dn-img-chatbox">
+          <image src="../../../static/demo/1.jpg" class="dn-chat-img" mode="widthFix"></image>
+        </view>
+        <image src="../../../static/images/chat/fail.png" class="dn-chat-fail mr-1"></image>
+      </view>
+      <image src="../../../static/demo/2.jpg" class="avatar ml-3"></image>
+    </view>
+
+
+  </view>
+
+  <view class="dn-safearea-bottom"></view>
+</view>
