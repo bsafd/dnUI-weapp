@@ -9,53 +9,11 @@ Page({
       })
     }
     setTimeout(() => {
-      util.request("app/getPhoneNumber", {}, "GET", false, true).then((res) => {
+      util.request("index.php", {}, "GET", false, true).then((res) => {
         if (res.code == 500) {
           getApp().globalData.isOnline = true
           this.setData({
-            list: this.data.list.concat([{
-                id: 'class',
-                name: '分类菜单',
-              icon:'dni-liebiaoxingshi',
-                open: false,
-                pages: [{
-                    name: "顶部选项卡",
-                    page: "navbar-1"
-                  },
-                  {
-                    name: "垂直分类",
-                    page: "navbar-2"
-                  }
-                ]
-            },
-              {
-                id: 'refresh',
-                name: '上拉加载下拉刷新',
-                icon: 'dni-shuaxin',
-                open: false,
-                pages: [{
-                  name: "新闻列表",
-                  page: "news"
-                }, {
-                  name: "商品列表",
-                  page: "product"
-                }]
-              },
-              {
-                id: 'dncss',
-                name: '辅助样式组件',
-                status: 'new',
-                icon: 'dni-ganxie',
-                open: false,
-                pages: [{
-                  name: "优惠券",
-                  status: 'new',
-                  page: "coupon"
-                }, {
-                  name: "商品列表",
-                  page: "product"
-                }]
-              }
+            list: this.data.list.concat([
             ])
           })
         }
@@ -209,6 +167,48 @@ Page({
         pages: [{
           name: "滑动菜单",
           page: "swipe-action"
+        },]
+      }, {
+        id: 'class',
+        name: '分类菜单',
+        icon: 'dni-liebiaoxingshi',
+        open: false,
+        pages: [{
+          name: "顶部选项卡",
+          page: "navbar-1"
+        },
+        {
+          name: "垂直分类",
+          page: "navbar-2"
+        }
+        ]
+      },
+      {
+        id: 'refresh',
+        name: '上拉加载下拉刷新',
+        icon: 'dni-shuaxin',
+        open: false,
+        pages: [{
+          name: "新闻列表",
+          page: "news"
+        }, {
+          name: "商品列表",
+          page: "product"
+        }]
+      },
+      {
+        id: 'dncss',
+        name: '辅助样式组件',
+        status: 'new',
+        icon: 'dni-ganxie',
+        open: false,
+        pages: [{
+          name: "优惠券",
+          status: 'new',
+          page: "coupon"
+        }, {
+          name: "商品列表",
+          page: "product"
         }]
       }
     ]

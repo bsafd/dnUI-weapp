@@ -70,7 +70,7 @@ Page({
   },
   previewReward: function() {
     wx.previewImage({
-      urls: ["https://static.uookk.com/dnzs.jpg"]
+      urls: ["https://static.uookk.com/static/images/dnzs.jpg"]
     })
   },
   clickZansan() {

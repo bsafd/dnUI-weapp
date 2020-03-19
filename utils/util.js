@@ -255,7 +255,7 @@ const utils = {
   },
   interfaceUrl: function() {
     //接口地址
-    return "https://static.uookk.com/tc/";
+    return "https://static.uookk.com/";
   },
   toast: function(text, duration, success) {
     wx.showToast({

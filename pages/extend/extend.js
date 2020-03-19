@@ -217,7 +217,28 @@ Page({
         desc: "抽奖转盘，例子使用随机值进行抽奖，可以指定中奖奖项。",
       page: "luckdraw",
       like: false
-    }]
+      }, {
+        name: "聊天模板",
+        icon: "community",
+        type: "normal",
+        desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
+        page: "tpl-msgList",
+        like: false
+      }, {
+        name: "新闻模板",
+        icon: "newspaper",
+        type: "normal",
+        desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
+        page: "news",
+        like: false
+      }, {
+        name: "商城模板",
+        icon: "cart",
+        type: "normal",
+        desc: "商城模板包含：商城首页，商城列表，商城详情，购物车等。",
+        page: "mall",
+        like: false
+      }]
   },
   onLoad: function(options) {
     if (!wx.getStorageSync("uookk_" + globalData.version)) {
@@ -226,32 +247,11 @@ Page({
         index: 1
       })
     }
-    util.request("app/getPhoneNumber", {}, "GET", false, true).then((res) => {
+    util.request("index.php", {}, "GET", false, true).then((res) => {
       if (res.code == 500) {
         getApp().globalData.isOnline = true
         this.setData({
-          list: this.data.list.concat([{
-            name: "聊天模板",
-            icon: "community",
-            type: "normal",
-            desc: "聊天模板包含：消息列表，好友列表，聊天界面等。",
-            page: "tpl-msgList",
-            like: false
-          }, {
-            name: "新闻模板",
-              icon: "newspaper",
-              type: "normal",
-              desc: "新闻模板包含：新闻列表，新闻详情，评论等。",
-            page: "news",
-            like: false
-          }, {
-            name: "商城模板",
-            icon: "cart",
-              type: "normal",
-              desc: "商城模板包含：商城首页，商城列表，商城详情，购物车等。",
-            page: "mall",
-            like: false
-          }])
+          list: this.data.list.concat([])
         })
       }
     }).catch((res) => {})

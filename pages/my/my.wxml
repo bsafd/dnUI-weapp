@@ -71,5 +71,5 @@
   </view>
   </view>
 
-<dn-modal show="{{zansan}}" bind:click="handleClickzansan" title="支持一下" images="https://static.uookk.com/dnzs.jpg" color="#333" size="32" button="{{zansanbutton}}"></dn-modal>
+<dn-modal show="{{zansan}}" bind:click="handleClickzansan" title="支持一下" images="https://static.uookk.com/static/images/dnzs.jpg" color="#333" size="32" button="{{zansanbutton}}"></dn-modal>
 </view>
