@@ -97,34 +97,34 @@ dnUI组件库，微信小程序代码片段分享
 #  部分截图
 
 
-| ![](https://static.uookk.com/static/sView/1.jpg)  |   ![](https://static.uookk.com/static/sView/2.jpg)|  ![](https://static.uookk.com/static/sView/3.jpg) |
+| ![](https://static.uookk.com/static/smallView/1.jpg)  |   ![](https://static.uookk.com/static/smallView/2.jpg)|  ![](https://static.uookk.com/static/smallView/3.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/4.jpg) | ![](https://static.uookk.com/static/sView/5.jpg)  |  ![](https://static.uookk.com/static/sView/6.jpg) |
+|  ![](https://static.uookk.com/static/smallView/4.jpg) | ![](https://static.uookk.com/static/smallView/5.jpg)  |  ![](https://static.uookk.com/static/smallView/6.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/7.jpg) | ![](https://static.uookk.com/static/sView/8.jpg)  |  ![](https://static.uookk.com/static/sView/9.jpg) |
+|  ![](https://static.uookk.com/static/smallView/7.jpg) | ![](https://static.uookk.com/static/smallView/8.jpg)  |  ![](https://static.uookk.com/static/smallView/9.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/10.jpg) | ![](https://static.uookk.com/static/sView/11.jpg)  |  ![](https://static.uookk.com/static/sView/12.jpg) |
+|  ![](https://static.uookk.com/static/smallView/10.jpg) | ![](https://static.uookk.com/static/smallView/11.jpg)  |  ![](https://static.uookk.com/static/smallView/12.jpg) |
 
 
 #  部分截图
 
-| ![](https://static.uookk.com/static/sView/13.jpg)  |   ![](https://static.uookk.com/static/sView/14.jpg)|  ![](https://static.uookk.com/static/sView/15.jpg) |
+| ![](https://static.uookk.com/static/smallView/13.jpg)  |   ![](https://static.uookk.com/static/smallView/14.jpg)|  ![](https://static.uookk.com/static/smallView/15.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/16.jpg) | ![](https://static.uookk.com/static/sView/17.jpg)  |  ![](https://static.uookk.com/static/sView/18.jpg) |
+|  ![](https://static.uookk.com/static/smallView/16.jpg) | ![](https://static.uookk.com/static/smallView/17.jpg)  |  ![](https://static.uookk.com/static/smallView/18.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/19.jpg) | ![](https://static.uookk.com/static/sView/20.jpg)  |  ![](https://static.uookk.com/static/sView/21.jpg) |
+|  ![](https://static.uookk.com/static/smallView/19.jpg) | ![](https://static.uookk.com/static/smallView/20.jpg)  |  ![](https://static.uookk.com/static/smallView/21.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/22.jpg) | ![](https://static.uookk.com/static/sView/23.jpg)  |  ![](https://static.uookk.com/static/sView/24.jpg) |
+|  ![](https://static.uookk.com/static/smallView/22.jpg) | ![](https://static.uookk.com/static/smallView/23.jpg)  |  ![](https://static.uookk.com/static/smallView/24.jpg) |
 
 
 #  部分截图
-| ![](https://static.uookk.com/static/sView/25.jpg)  |   ![](https://static.uookk.com/static/sView/26.jpg)|  ![](https://static.uookk.com/static/sView/27.jpg) |
+| ![](https://static.uookk.com/static/smallView/25.jpg)  |   ![](https://static.uookk.com/static/smallView/26.jpg)|  ![](https://static.uookk.com/static/smallView/27.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/28.jpg) | ![](https://static.uookk.com/static/sView/29.jpg)  |  ![](https://static.uookk.com/static/sView/30.jpg) |
+|  ![](https://static.uookk.com/static/smallView/28.jpg) | ![](https://static.uookk.com/static/smallView/29.jpg)  |  ![](https://static.uookk.com/static/smallView/30.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/31.jpg) | ![](https://static.uookk.com/static/sView/31.jpg)  |  ![](https://static.uookk.com/static/sView/33.jpg) |
+|  ![](https://static.uookk.com/static/smallView/31.jpg) | ![](https://static.uookk.com/static/smallView/31.jpg)  |  ![](https://static.uookk.com/static/smallView/33.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://static.uookk.com/static/sView/34.jpg) | ![](https://static.uookk.com/static/sView/35.jpg)  |   |
+|  ![](https://static.uookk.com/static/smallView/34.jpg) | ![](https://static.uookk.com/static/smallView/35.jpg)  |   |
 
 
 
