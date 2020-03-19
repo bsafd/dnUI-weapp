@@ -97,7 +97,7 @@ dnUI组件库，微信小程序代码片段分享
 #  部分截图
 
 
-| ![](https://static.uookk.com/static/smallView/1.jpg)  |   ![](https://static.uookk.com/static/smallView/2.jpg)|  ![](https://static.uookk.com/static/smallView/3.jpg) |
+| ![dnUI](https://static.uookk.com/static/smallView/1.jpg)  |   ![](https://static.uookk.com/static/smallView/2.jpg)|  ![](https://static.uookk.com/static/smallView/3.jpg) |
 | ------------ | ------------ | ------------ |
 |  ![](https://static.uookk.com/static/smallView/4.jpg) | ![](https://static.uookk.com/static/smallView/5.jpg)  |  ![](https://static.uookk.com/static/smallView/6.jpg) |
 | ------------ | ------------ | ------------ |
