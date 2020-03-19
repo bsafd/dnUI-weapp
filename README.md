@@ -97,32 +97,35 @@ dnUI组件库，微信小程序代码片段分享
 #  部分截图
 
 
-| ![](https://static.uookk.com/static/sView/1.jpg)  | ![](https://static.uookk.com/static/sView/2.jpg)  | ![](https://static.uookk.com/static/sView/3.jpg)  |  ![](https://static.uookk.com/static/sView/4.jpg) |
-| ------------ | ------------ | ------------ | ------------ |
-| ![](https://static.uookk.com/static/sView/5.jpg)  |  ![](https://static.uookk.com/static/sView/6.jpg) |   ![](https://static.uookk.com/static/sView/7.jpg)| ![](https://static.uookk.com/static/sView/8.jpg)  |
-|   ![](https://static.uookk.com/static/sView/9.jpg)|  ![](https://static.uookk.com/static/sView/10.jpg) |   |   |
-
-
-#  新闻模板部分截图
-
-| ![](https://static.uookk.com/static/sView/11.jpg)  |   ![](https://static.uookk.com/static/sView/12.jpg)|  ![](https://thorui.cn/img/news/3.png) |
+| ![](https://static.uookk.com/static/sView/1.jpg)  |   ![](https://static.uookk.com/static/sView/2.jpg)|  ![](https://static.uookk.com/static/sView/3.jpg) |
 | ------------ | ------------ | ------------ |
-|  ![](https://thorui.cn/img/news/4.png) | ![](https://thorui.cn/img/news/5.png)  |  ![](https://thorui.cn/img/news/6.png) |
-
-
-#  聊天模板截图
-|  ![](https://thorui.cn/img/chat/1.png) | ![](https://thorui.cn/img/chat/2.png)  |  ![](https://thorui.cn/img/chat/3.png) |
+|  ![](https://static.uookk.com/static/sView/4.jpg) | ![](https://static.uookk.com/static/sView/5.jpg)  |  ![](https://static.uookk.com/static/sView/6.jpg) |
 | ------------ | ------------ | ------------ |
-|  |   |   |
+|  ![](https://static.uookk.com/static/sView/7.jpg) | ![](https://static.uookk.com/static/sView/8.jpg)  |  ![](https://static.uookk.com/static/sView/9.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/10.jpg) | ![](https://static.uookk.com/static/sView/11.jpg)  |  ![](https://static.uookk.com/static/sView/12.jpg) |
 
 
-#  组件功能部分截图
+#  部分截图
 
-|   ![消息提示](https://thorui.cn/img/function/1.jpg)| ![吸顶容器](https://thorui.cn/img/function/2.jpg)  |  ![数字键盘](https://thorui.cn/img/function/3.jpg) |  ![锁频键盘](https://thorui.cn/img/function/4.jpg) |  ![时间轴](https://thorui.cn/img/function/5.jpg) |
-| ------------ | ------------ | ------------ | ------------ | ------------ |
-|  ![消息滚动](https://thorui.cn/img/function/6.jpg) |  ![弹层，下拉选择](https://thorui.cn/img/function/7.jpg) |  ![抽奖转盘](https://thorui.cn/img/function/8.jpg) | ![抽屉](https://thorui.cn/img/function/9.jpg)  | ![滑动菜单](https://thorui.cn/img/function/10.png)  |
-| ![二维码生成](https://thorui.cn/img/function/11.png)  |  ![地图-拖拽定位](https://thorui.cn/img/function/12.png) |![地图-周边地点](https://thorui.cn/img/function/13.png)   |  ![基础组件](https://thorui.cn/img/function/14.png) |  ![索引列表-城市选择](https://thorui.cn/img/function/15.png) |
-| ![索引列表](https://thorui.cn/img/function/16.png)  | ![顶部选项卡](https://thorui.cn/img/function/17.png)  |  ![rate评分](https://thorui.cn/img/function/18.png) |![数字输入框](https://thorui.cn/img/function/19.png) |   |
+| ![](https://static.uookk.com/static/sView/13.jpg)  |   ![](https://static.uookk.com/static/sView/14.jpg)|  ![](https://static.uookk.com/static/sView/15.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/16.jpg) | ![](https://static.uookk.com/static/sView/17.jpg)  |  ![](https://static.uookk.com/static/sView/18.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/19.jpg) | ![](https://static.uookk.com/static/sView/20.jpg)  |  ![](https://static.uookk.com/static/sView/21.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/22.jpg) | ![](https://static.uookk.com/static/sView/23.jpg)  |  ![](https://static.uookk.com/static/sView/24.jpg) |
+
+
+#  部分截图
+| ![](https://static.uookk.com/static/sView/25.jpg)  |   ![](https://static.uookk.com/static/sView/26.jpg)|  ![](https://static.uookk.com/static/sView/27.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/28.jpg) | ![](https://static.uookk.com/static/sView/29.jpg)  |  ![](https://static.uookk.com/static/sView/30.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/31.jpg) | ![](https://static.uookk.com/static/sView/31.jpg)  |  ![](https://static.uookk.com/static/sView/33.jpg) |
+| ------------ | ------------ | ------------ |
+|  ![](https://static.uookk.com/static/sView/34.jpg) | ![](https://static.uookk.com/static/sView/35.jpg)  |   |
+
 
 
 
